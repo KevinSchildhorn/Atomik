@@ -2,10 +2,10 @@ package me.kevinschildhorn.atomik.typography
 
 import me.kevinschildhorn.atomik.typography.base.AtomikTypographyWeight
 import platform.UIKit.UIFontWeight
-import platform.UIKit.UIFontWeightBold
-import platform.UIKit.UIFontWeightRegular
 import platform.UIKit.UIFontWeightBlack
+import platform.UIKit.UIFontWeightBold
 import platform.UIKit.UIFontWeightMedium
+import platform.UIKit.UIFontWeightRegular
 import platform.UIKit.UIFontWeightThin
 import platform.UIKit.UIFontWeightUltraLight
 

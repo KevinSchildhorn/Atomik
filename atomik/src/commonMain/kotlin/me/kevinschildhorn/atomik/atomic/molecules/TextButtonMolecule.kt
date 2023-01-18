@@ -30,6 +30,5 @@ class TextButtonMolecule(
         fontFamily = fontFamily,
     )
 
-
     override val atoms: List<Atom> = listOf(buttonAtom, textAtom)
 }

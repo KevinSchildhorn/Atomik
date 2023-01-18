@@ -25,6 +25,7 @@ replay_pid*
 *.lock
 .gradle/
 .idea/
+build/
 android/build/
 common/build/
 ios/FotoPresenter.xcodeproj/project.xcworkspace/xcuserdata/kevinschildhorn.xcuserdatad/UserInterfaceState.xcuserstate
@@ -32,3 +33,4 @@ ios/FotoPresenter.xcodeproj/xcuserdata/kevinschildhorn.xcuserdatad/xcschemes/xcs
 *.xcuserstate
 *.xcbkptlist
 ios/Pods
+*.hprof

@@ -5,6 +5,7 @@ plugins {
     id("com.android.library")
     id("com.github.ben-manes.versions") version "0.43.0"
     id("org.jlleitschuh.gradle.ktlint") version "11.0.0"
+    id("org.jetbrains.dokka") version "1.7.20"
 }
 
 group = "me.kevinschildhorn"
@@ -32,7 +33,7 @@ kotlin {
                 implementation("androidx.compose.ui:ui:1.3.3")
                 implementation("androidx.compose.foundation:foundation:1.3.1")
                 implementation("androidx.compose.material:material:1.3.1")
-                implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.5.1")
+                implementation("androidx.compose.runtime:runtime:1.3.3")
             }
         }
         val androidTest by getting {
@@ -53,5 +54,13 @@ android {
     defaultConfig {
         minSdk = 24
         targetSdk = 33
+    }
+
+    buildFeatures {
+        compose = true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.3.0"
     }
 }

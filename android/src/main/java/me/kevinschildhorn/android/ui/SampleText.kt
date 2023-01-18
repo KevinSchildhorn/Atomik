@@ -12,7 +12,7 @@ fun SampleText() {
     val atom: TextViewAtom = designSystem.atoms["textAtom"] as TextViewAtom
     Text(
         text = "Hello",
-        color = atom.textColor.androidColor,
-        style = atom.font.asComposeTextStyle(fontFamily)
+        color = atom.textColor.platformColor,
+        style = atom.typography.asComposeTextStyle(fontFamily)
     )
 }

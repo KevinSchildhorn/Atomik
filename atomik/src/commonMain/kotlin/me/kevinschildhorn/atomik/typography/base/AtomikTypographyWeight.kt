@@ -11,5 +11,3 @@ enum class AtomikTypographyWeight {
     EXTRABOLD,
     BLACK,
 }
-
-
