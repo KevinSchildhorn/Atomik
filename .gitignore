@@ -22,3 +22,13 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+*.lock
+.gradle/
+.idea/
+android/build/
+common/build/
+ios/FotoPresenter.xcodeproj/project.xcworkspace/xcuserdata/kevinschildhorn.xcuserdatad/UserInterfaceState.xcuserstate
+ios/FotoPresenter.xcodeproj/xcuserdata/kevinschildhorn.xcuserdatad/xcschemes/xcschememanagement.plist
+*.xcuserstate
+*.xcbkptlist
+ios/Pods
