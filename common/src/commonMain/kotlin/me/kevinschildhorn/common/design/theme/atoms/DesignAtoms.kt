@@ -1,18 +1,19 @@
-package me.kevinschildhorn.common.design.theme.atomic
+package me.kevinschildhorn.common.design.theme.atoms
 
+import me.kevinschildhorn.atomik.atomic.atoms.TextViewAtom
 import me.kevinschildhorn.atomik.atomic.molecules.TextButtonMolecule
 import me.kevinschildhorn.atomik.color.disabledColor
+import me.kevinschildhorn.atomik.typography.base.TypographySet
 import me.kevinschildhorn.atomik.typography.base.TypographyType
+import me.kevinschildhorn.common.design.theme.ColorSets
 import me.kevinschildhorn.common.design.theme.designSystem
+import me.kevinschildhorn.common.design.theme.sharedTypography
 
+enum class Atoms {
+    ErrorTextView,
+    PrimaryButton
+}
 object DesignAtoms {
-    /*
-    object TextView {
-        val labelAtom = TextViewAtom(
-            textColor = designSystem.colorSet.backgroundText,
-            typography = designSystem.typographySet.getTypography(TypographyType.H3),
-        )
-    }*/
     object Buttons {
         val primaryButtonMolecule = TextButtonMolecule(
             color = designSystem.colorSet.primary,
@@ -24,25 +25,12 @@ object DesignAtoms {
             fontFamily = designSystem.fontFamily,
         )
     }
-    /*
 
     object TextView {
         val errorViewAtom = TextViewAtom(
-            textColor = UIDesign.color().errorText,
-            font = UIDesign.typography.h2
-        )
-
-        val screenTitle = TextViewAtom(
-            textColor = UIDesign.color().backgroundText,
-            font = UIDesign.typography.h3
+            textColor = ColorSets.light.errorText,
+            typography = sharedTypography.h4!!,
+            fontFamily = null,
         )
     }
-
-    object TextField {
-        val defaultTextFieldAtom = TextFieldAtom(
-            borderColor = UIDesign.color().primary,
-            textColor = UIDesign.color().primaryText,
-            font = UIDesign.typography.h2
-        )
-    }*/
 }

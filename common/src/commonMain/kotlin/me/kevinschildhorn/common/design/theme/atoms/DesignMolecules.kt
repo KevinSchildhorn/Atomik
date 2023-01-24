@@ -1,4 +1,4 @@
-package me.kevinschildhorn.common.design.theme.atomic
+package me.kevinschildhorn.common.design.theme.atoms
 
 object DesignMolecules {
     /*
