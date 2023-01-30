@@ -5,10 +5,10 @@ package me.kevinschildhorn.atomik.typography.base
  *
  * Is an interface that is used to hold the typographies used in the project. Implemented in [PlatformTypographySet] and [CustomTypographySet] and [DefaultTypographySet]
  *
- * @property[defaultTypography] the Typography that is passed if the requested color cannot be found
+ * @property[fallbackTypography] the Typography that is passed if the requested color cannot be found
  */
 interface TypographySet {
-    val defaultTypography: AtomikTypography
+    val fallbackTypography: AtomikTypography
 
     /**
      * Gets the color based on a name

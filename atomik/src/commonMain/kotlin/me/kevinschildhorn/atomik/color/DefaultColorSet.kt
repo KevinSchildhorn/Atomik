@@ -18,7 +18,7 @@ data class DefaultColorSet(
     val surfaceText: AtomikColor,
     val errorText: AtomikColor,
 ) : ColorSet {
-    override val defaultColor: AtomikColor = primary
+    override val fallbackColor: AtomikColor = primary
     override fun getColor(name: String): AtomikColor =
         when (name) {
             "primary" -> primary

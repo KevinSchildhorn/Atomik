@@ -5,10 +5,10 @@ package me.kevinschildhorn.atomik.color.base
  *
  * Is an interface that is used to hold the colors used in the project. Implemented in [DefaultColorSet] and [CustomColorSet]
  *
- * @property[defaultColor] the color that is passed if the requested color cannot be found
+ * @property[fallbackColor] the color that is passed if the requested color cannot be found
  */
 interface ColorSet {
-    val defaultColor: AtomikColor
+    val fallbackColor: AtomikColor
 
     /**
      * Gets the color based on a name

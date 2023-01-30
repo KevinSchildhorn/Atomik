@@ -16,21 +16,21 @@ data class DefaultTypographySet(
     val button: AtomikTypography? = null,
     val footnote: AtomikTypography? = null,
 ) : TypographySet {
-    override val defaultTypography: AtomikTypography
+    override val fallbackTypography: AtomikTypography
         get() = body
 
     override fun getTypography(type: TypographyType): AtomikTypography =
         when (type) {
-            TypographyType.H1 -> h1 ?: defaultTypography
-            TypographyType.H2 -> h2 ?: defaultTypography
-            TypographyType.H3 -> h3 ?: defaultTypography
-            TypographyType.H4 -> h4 ?: defaultTypography
-            TypographyType.H5 -> h5 ?: defaultTypography
-            TypographyType.Subtitle -> subtitle ?: defaultTypography
-            TypographyType.Caption -> caption ?: defaultTypography
+            TypographyType.H1 -> h1 ?: fallbackTypography
+            TypographyType.H2 -> h2 ?: fallbackTypography
+            TypographyType.H3 -> h3 ?: fallbackTypography
+            TypographyType.H4 -> h4 ?: fallbackTypography
+            TypographyType.H5 -> h5 ?: fallbackTypography
+            TypographyType.Subtitle -> subtitle ?: fallbackTypography
+            TypographyType.Caption -> caption ?: fallbackTypography
             TypographyType.Body -> body
-            TypographyType.Button -> button ?: defaultTypography
-            TypographyType.Footnote -> footnote ?: defaultTypography
+            TypographyType.Button -> button ?: fallbackTypography
+            TypographyType.Footnote -> footnote ?: fallbackTypography
             else -> body
         }
 }
