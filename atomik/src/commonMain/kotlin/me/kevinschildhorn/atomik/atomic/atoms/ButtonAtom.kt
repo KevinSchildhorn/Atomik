@@ -8,7 +8,7 @@ import me.kevinschildhorn.atomik.color.base.AtomikEnabledColor
 
 class ButtonAtom(
     override val enabledColor: AtomikEnabledColor,
-    override val radius: Int,
+    override val radius: Int = 0,
     override val height: Int?,
 ) : Atom(), EnablableAtom, RoundedAtom, FixedSizeAtom {
     override val type: AtomType = AtomType.BUTTON

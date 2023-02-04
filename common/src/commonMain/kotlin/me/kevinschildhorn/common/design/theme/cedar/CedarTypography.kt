@@ -43,18 +43,42 @@ cdr_text_default_button_line_spacing	24.00dp
  */
 
 // Stuart App
-enum class CedarTypography(val value: String, val type: TypographyType, val typography: AtomikTypography) {
-    Display("cdr_text_default_display"),
-    Title1("cdr_text_default_title_1"),
-    Title2("cdr_text_default_title_2"),
-    Title3("cdr_text_default_title_3"),
-    Headline("cdr_text_default_headline"),
-    Subheadline("cdr_text_default_subheadline"),
-    Body1("cdr_text_default_body_1"),
-    Body2("cdr_text_default_body_2"),
-    Caption1("cdr_text_default_caption_1"),
-    Caption2("cdr_text_default_caption_2"),
-    Button("cdr_text_default_button"),
+enum class CedarTypography(
+    val value: String,
+    val type: TypographyType,
+    val typography: AtomikTypography
+) {
+    Display(
+        "cdr_text_default_display",
+        TypographyType.LargeTitle,
+        AtomikTypography(AtomikTypographyWeight.MEDIUM, 34)
+    ),
+    Title1(
+        "cdr_text_default_title_1",
+        TypographyType.Title,
+        AtomikTypography(AtomikTypographyWeight.SEMIBOLD, 26)
+    ),
+    Title2(
+        "cdr_text_default_title_2",
+        TypographyType.Title2,
+        AtomikTypography(AtomikTypographyWeight.SEMIBOLD, 24)
+    ),
+    Title3(
+        "cdr_text_default_title_3",
+        TypographyType.Title3,
+        AtomikTypography(AtomikTypographyWeight.SEMIBOLD, 19)
+    ),
+    Headline("cdr_text_default_headline", TypographyType.Headline, AtomikTypography(size = 17)),
+    Subheadline(
+        "cdr_text_default_subheadline",
+        TypographyType.Subheadline,
+        AtomikTypography(size = 15)
+    ),
+    Body1("cdr_text_default_body_1", TypographyType.Body, AtomikTypography(size = 15)),
+    Body2("cdr_text_default_body_2", TypographyType.Body2, AtomikTypography(size = 12)),
+    Caption1("cdr_text_default_caption_1", TypographyType.Caption, AtomikTypography(size = 12)),
+    Caption2("cdr_text_default_caption_2", TypographyType.Caption2, AtomikTypography(size = 11)),
+    Button("cdr_text_default_button", TypographyType.Button, AtomikTypography(size = 15)),
 }
 
 val cedarTypographySet = CustomTypographySet(
