@@ -2,7 +2,6 @@
 
 Atomik is a Kotlin Multiplatform library that acts as an implementation of a design system in your shared code. It's in an experimental early stage, and should be used for testing purposes only.
 
-
 ## Getting Started
 
 To start using `Atomik`, follow these docs:
@@ -35,6 +34,7 @@ The five layers are:
 
 ## Atomik
 
+### Design System
 
 ```kotlin
 open class DesignSystem(
@@ -44,4 +44,7 @@ open class DesignSystem(
     open var fontFamily: AtomikFontFamily? = null
 )
 ```
+
+An Atomik Design System handles three parts of the design System: color, typography and components.
+
 
