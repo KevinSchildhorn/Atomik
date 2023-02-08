@@ -5,7 +5,6 @@ import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Scaffold
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -14,7 +13,6 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import me.kevinschildhorn.android.ui.TabBar
-import me.kevinschildhorn.android.ui.screens.DefaultDesignScreen
 import me.kevinschildhorn.android.ui.screens.DesignScaffolding
 import me.kevinschildhorn.android.ui.screens.Screen
 import me.kevinschildhorn.android.ui.screens.compose.DefaultDesignComposable
