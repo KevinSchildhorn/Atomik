@@ -3,9 +3,8 @@ package me.kevinschildhorn.common.design.theme.atoms
 import me.kevinschildhorn.atomik.atomic.atoms.TextViewAtom
 import me.kevinschildhorn.atomik.atomic.molecules.TextButtonMolecule
 import me.kevinschildhorn.atomik.color.disabledColor
-import me.kevinschildhorn.atomik.typography.base.TypographySet
 import me.kevinschildhorn.atomik.typography.base.TypographyType
-import me.kevinschildhorn.common.design.theme.ColorSets
+import me.kevinschildhorn.common.design.theme.custom.DefaultColorSet
 import me.kevinschildhorn.common.design.theme.designSystem
 import me.kevinschildhorn.common.design.theme.sharedTypography
 
@@ -28,7 +27,7 @@ object DesignAtoms {
 
     object TextView {
         val errorViewAtom = TextViewAtom(
-            textColor = ColorSets.light.errorText,
+            textColor = DefaultColorSet.light.errorText,
             typography = sharedTypography.h4!!,
             fontFamily = null,
         )

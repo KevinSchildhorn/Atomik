@@ -12,7 +12,9 @@ enum class TypographyType {
     Title2,
     Title3,
     Headline,
+    Heading,
     Subheadline,
+    Subheadline2,
     Subtitle,
     Subtitle2,
     Body,
@@ -22,5 +24,5 @@ enum class TypographyType {
     Caption2,
     Overline,
     Footnote,
-    Callout,
+    Callout
 }

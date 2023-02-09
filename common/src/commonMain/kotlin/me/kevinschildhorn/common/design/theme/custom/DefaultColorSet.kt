@@ -1,9 +1,9 @@
-package me.kevinschildhorn.common.design.theme
+package me.kevinschildhorn.common.design.theme.custom
 
 import me.kevinschildhorn.atomik.color.DefaultColorSet
 import me.kevinschildhorn.atomik.color.base.AtomikColor
 
-object ColorSets {
+object DefaultColorSet {
     val light = DefaultColorSet(
         primary = AtomikColor(0xFFFFA500),
         secondary = AtomikColor(0xFFFFD383),
