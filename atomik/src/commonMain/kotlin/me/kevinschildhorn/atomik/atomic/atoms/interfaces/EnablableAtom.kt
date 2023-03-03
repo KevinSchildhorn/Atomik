@@ -1,7 +1,11 @@
 package me.kevinschildhorn.atomik.atomic.atoms.interfaces
 
-import me.kevinschildhorn.atomik.color.base.AtomikEnabledColor
+import me.kevinschildhorn.atomik.atomic.atoms.Atom
+import me.kevinschildhorn.atomik.color.base.AtomikColorType
 
-interface EnablableAtom {
-    val enabledColor: AtomikEnabledColor
+interface EnablableAtom : ColorAtom {
+    val disabledColor: AtomikColorType?
 }
+
+val Atom.enablableAtom: EnablableAtom?
+    get() = this.asAtom<EnablableAtom>()

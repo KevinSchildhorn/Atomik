@@ -1,5 +1,5 @@
 package me.kevinschildhorn.atomik.atomic.molecules
-
+/*
 import me.kevinschildhorn.atomik.atomic.atoms.Atom
 import me.kevinschildhorn.atomik.atomic.atoms.ImageAtom
 import me.kevinschildhorn.atomik.atomic.atoms.TextFieldAtom
@@ -14,3 +14,4 @@ class TextFieldMolecule<T>(
     override val atoms: List<Atom>
         get() = listOf(errorAtom, textEntryAtom, rightImageAtom)
 }
+*/

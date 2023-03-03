@@ -2,8 +2,8 @@ package me.kevinschildhorn.atomik.typography
 
 import me.kevinschildhorn.atomik.typography.base.AtomikTypography
 import me.kevinschildhorn.atomik.typography.base.TypographySet
-import me.kevinschildhorn.atomik.typography.base.TypographyType
-
+import me.kevinschildhorn.atomik.typography.base.AtomikTypographyType
+/*
 data class DefaultTypographySet(
     val h1: AtomikTypography? = null,
     val h2: AtomikTypography? = null,
@@ -19,18 +19,19 @@ data class DefaultTypographySet(
     override val fallbackTypography: AtomikTypography
         get() = body
 
-    override fun getTypography(type: TypographyType): AtomikTypography =
+    override fun getTypography(type: AtomikTypographyType): AtomikTypography =
         when (type) {
-            TypographyType.H1 -> h1 ?: fallbackTypography
-            TypographyType.H2 -> h2 ?: fallbackTypography
-            TypographyType.H3 -> h3 ?: fallbackTypography
-            TypographyType.H4 -> h4 ?: fallbackTypography
-            TypographyType.H5 -> h5 ?: fallbackTypography
-            TypographyType.Subtitle -> subtitle ?: fallbackTypography
-            TypographyType.Caption -> caption ?: fallbackTypography
-            TypographyType.Body -> body
-            TypographyType.Button -> button ?: fallbackTypography
-            TypographyType.Footnote -> footnote ?: fallbackTypography
+            AtomikTypographyType.H1 -> h1 ?: fallbackTypography
+            AtomikTypographyType.H2 -> h2 ?: fallbackTypography
+            AtomikTypographyType.H3 -> h3 ?: fallbackTypography
+            AtomikTypographyType.H4 -> h4 ?: fallbackTypography
+            AtomikTypographyType.H5 -> h5 ?: fallbackTypography
+            AtomikTypographyType.Subtitle -> subtitle ?: fallbackTypography
+            AtomikTypographyType.Caption -> caption ?: fallbackTypography
+            AtomikTypographyType.Body -> body
+            AtomikTypographyType.Button -> button ?: fallbackTypography
+            AtomikTypographyType.Footnote -> footnote ?: fallbackTypography
             else -> body
         }
 }
+*/

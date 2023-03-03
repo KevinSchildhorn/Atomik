@@ -1,6 +1,5 @@
 package me.kevinschildhorn.common.design.theme.cedar
 
-import me.kevinschildhorn.atomik.atomic.atoms.TextButtonAtom
 /*
 class CedarComponents {
     /*

@@ -4,10 +4,11 @@ import me.kevinschildhorn.atomik.atomic.atoms.interfaces.AtomType
 import me.kevinschildhorn.atomik.atomic.atoms.interfaces.EnablableAtom
 import me.kevinschildhorn.atomik.atomic.atoms.interfaces.FixedSizeAtom
 import me.kevinschildhorn.atomik.atomic.atoms.interfaces.RoundedAtom
-import me.kevinschildhorn.atomik.color.base.AtomikEnabledColor
-
+import me.kevinschildhorn.atomik.color.base.AtomikColorType
+/*
 class ButtonAtom(
-    override val enabledColor: AtomikEnabledColor,
+    override val color: AtomikColorType,
+    override val disabledColor: AtomikColorType?,
     override val radius: Int = 0,
     override val height: Int?,
 ) : Atom(), EnablableAtom, RoundedAtom, FixedSizeAtom {
@@ -15,3 +16,4 @@ class ButtonAtom(
 
     override val width: Int? = null
 }
+*/

@@ -15,5 +15,5 @@ interface TypographySet {
      * @param[type] The type of typograpnhy you want to get
      * @return the [AtomikTypography] based on the type passed
      */
-    fun getTypography(type: TypographyType): AtomikTypography
+    fun getTypography(type: AtomikTypographyType): AtomikTypography
 }

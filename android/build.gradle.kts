@@ -16,6 +16,7 @@ repositories {
 }
 
 dependencies {
+
     implementation("androidx.appcompat:appcompat:1.6.0")
     implementation(project(":common"))
     implementation(project(":atomik"))
@@ -30,6 +31,8 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-tooling:1.4.0-alpha05")
     debugImplementation("androidx.customview:customview:1.2.0-alpha02")
     debugImplementation("androidx.customview:customview-poolingcontainer:1.0.0")
+    implementation("androidx.cardview:cardview:1.0.0")
+
 }
 
 

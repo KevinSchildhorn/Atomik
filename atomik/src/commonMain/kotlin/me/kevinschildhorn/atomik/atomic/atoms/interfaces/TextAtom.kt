@@ -1,11 +1,16 @@
 package me.kevinschildhorn.atomik.atomic.atoms.interfaces
 
+import me.kevinschildhorn.atomik.atomic.atoms.Atom
 import me.kevinschildhorn.atomik.color.base.AtomikColor
+import me.kevinschildhorn.atomik.color.base.AtomikColorType
 import me.kevinschildhorn.atomik.typography.base.AtomikFontFamily
-import me.kevinschildhorn.atomik.typography.base.AtomikTypography
+import me.kevinschildhorn.atomik.typography.base.AtomikTypographyType
 
-interface TextAtom {
+interface TextAtom : AtomInterface {
     val textColor: AtomikColor
-    val typography: AtomikTypography
+    val typography: AtomikTypographyType
     val fontFamily: AtomikFontFamily?
 }
+
+val Atom.textAtom: TextAtom?
+    get() = this.asAtom<TextAtom>()

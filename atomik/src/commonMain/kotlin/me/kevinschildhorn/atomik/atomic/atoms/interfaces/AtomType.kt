@@ -4,5 +4,6 @@ enum class AtomType {
     BUTTON,
     TEXT,
     IMAGE,
-    TEXTFIELD
+    TEXTFIELD,
+    VIEW,
 }

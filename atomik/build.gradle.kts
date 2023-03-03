@@ -14,6 +14,7 @@ version = "1.0"
 kotlin {
     android()
     ios()
+
     sourceSets {
         val commonMain by getting {
             dependencies {

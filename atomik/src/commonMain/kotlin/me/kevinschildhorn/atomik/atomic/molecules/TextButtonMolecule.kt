@@ -1,34 +1,20 @@
 package me.kevinschildhorn.atomik.atomic.molecules
 
+/*
 import me.kevinschildhorn.atomik.atomic.atoms.Atom
-import me.kevinschildhorn.atomik.atomic.atoms.ButtonAtom
 import me.kevinschildhorn.atomik.atomic.atoms.TextViewAtom
-import me.kevinschildhorn.atomik.color.base.AtomikColor
-import me.kevinschildhorn.atomik.color.base.AtomikEnabledColor
-import me.kevinschildhorn.atomik.typography.base.AtomikFontFamily
-import me.kevinschildhorn.atomik.typography.base.AtomikTypography
+import me.kevinschildhorn.atomik.atomic.atoms.interfaces.EnablableAtom
+import me.kevinschildhorn.atomik.atomic.atoms.interfaces.RoundedAtom
+import me.kevinschildhorn.atomik.color.base.AtomikColorType
 
 class TextButtonMolecule(
-    color: AtomikColor,
-    disabledColor: AtomikColor,
-    radius: Int = 0,
-    height: Int?,
-    textColor: AtomikColor,
-    typography: AtomikTypography,
-    fontFamily: AtomikFontFamily?,
-) : BaseMolecule() {
+    override val color: AtomikColorType,
+    override val disabledColor: AtomikColorType,
+    override val radius: Int,
+    val textViewAtom: TextViewAtom,
+) : BaseMolecule(), EnablableAtom, RoundedAtom {
 
-    val buttonAtom = ButtonAtom(
-        enabledColor = AtomikEnabledColor(color, disabledColor),
-        radius = radius,
-        height = height
-    )
+    override val atoms: List<Atom> = listOf(textViewAtom)
 
-    val textAtom = TextViewAtom(
-        textColor = textColor,
-        typography = typography,
-        fontFamily = fontFamily,
-    )
-
-    override val atoms: List<Atom> = listOf(buttonAtom, textAtom)
 }
+*/

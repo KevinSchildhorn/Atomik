@@ -1,10 +1,9 @@
 package me.kevinschildhorn.common.design.theme.cedar
 
 import me.kevinschildhorn.atomik.typography.CustomTypographySet
-import me.kevinschildhorn.atomik.typography.CustomTypographySetTyped
 import me.kevinschildhorn.atomik.typography.base.AtomikTypography
 import me.kevinschildhorn.atomik.typography.base.AtomikTypographyWeight
-import me.kevinschildhorn.atomik.typography.base.TypographyType
+import me.kevinschildhorn.atomik.typography.base.AtomikTypographyType
 
 //https://www.figma.com/community/file/1057382149759850021
 // https://rei.github.io/rei-cedar-docs/tokens/all-tokens/
@@ -41,44 +40,44 @@ button
 cdr_text_default_button_size	15.00sp
 cdr_text_default_button_line_spacing	24.00dp
  */
-
+/*
 // Stuart App
 enum class CedarTypography(
     val value: String,
-    val type: TypographyType,
+    val type: AtomikTypographyType,
     val typography: AtomikTypography
 ) {
     Display(
         "cdr_text_default_display",
-        TypographyType.LargeTitle,
+        AtomikTypographyType.LargeTitle,
         AtomikTypography(AtomikTypographyWeight.MEDIUM, 34)
     ),
     Title1(
         "cdr_text_default_title_1",
-        TypographyType.Title,
+        AtomikTypographyType.Title,
         AtomikTypography(AtomikTypographyWeight.SEMIBOLD, 26)
     ),
     Title2(
         "cdr_text_default_title_2",
-        TypographyType.Title2,
+        AtomikTypographyType.Title2,
         AtomikTypography(AtomikTypographyWeight.SEMIBOLD, 24)
     ),
     Title3(
         "cdr_text_default_title_3",
-        TypographyType.Title3,
+        AtomikTypographyType.Title3,
         AtomikTypography(AtomikTypographyWeight.SEMIBOLD, 19)
     ),
-    Headline("cdr_text_default_headline", TypographyType.Headline, AtomikTypography(size = 17)),
+    Headline("cdr_text_default_headline", AtomikTypographyType.Headline, AtomikTypography(size = 17)),
     Subheadline(
         "cdr_text_default_subheadline",
-        TypographyType.Subheadline,
+        AtomikTypographyType.Subheadline,
         AtomikTypography(size = 15)
     ),
-    Body1("cdr_text_default_body_1", TypographyType.Body, AtomikTypography(size = 15)),
-    Body2("cdr_text_default_body_2", TypographyType.Body2, AtomikTypography(size = 12)),
-    Caption1("cdr_text_default_caption_1", TypographyType.Caption, AtomikTypography(size = 12)),
-    Caption2("cdr_text_default_caption_2", TypographyType.Caption2, AtomikTypography(size = 11)),
-    Button("cdr_text_default_button", TypographyType.Button, AtomikTypography(size = 15)),
+    Body1("cdr_text_default_body_1", AtomikTypographyType.Body, AtomikTypography(size = 15)),
+    Body2("cdr_text_default_body_2", AtomikTypographyType.Body2, AtomikTypography(size = 12)),
+    Caption1("cdr_text_default_caption_1", AtomikTypographyType.Caption, AtomikTypography(size = 12)),
+    Caption2("cdr_text_default_caption_2", AtomikTypographyType.Caption2, AtomikTypography(size = 11)),
+    Button("cdr_text_default_button", AtomikTypographyType.Button, AtomikTypography(size = 15)),
 }
 
 val cedarTypographySet = CustomTypographySet(
@@ -86,4 +85,4 @@ val cedarTypographySet = CustomTypographySet(
     typographies = CedarTypography.values().map {
         it.type to it.typography
     }.toMap()
-)
+)*/

@@ -2,7 +2,7 @@ package me.kevinschildhorn.atomik.typography
 
 import me.kevinschildhorn.atomik.typography.base.AtomikTypography
 import me.kevinschildhorn.atomik.typography.base.TypographySet
-import me.kevinschildhorn.atomik.typography.base.TypographyType
+import me.kevinschildhorn.atomik.typography.base.AtomikTypographyType
 
 @Suppress("unused", "usedFromiOS")
 actual class PlatformTypographySet actual constructor(typographySet: DefaultTypographySet) :
@@ -22,19 +22,19 @@ actual class PlatformTypographySet actual constructor(typographySet: DefaultTypo
     override val fallbackTypography: AtomikTypography
         get() = body
 
-    override fun getTypography(type: TypographyType): AtomikTypography =
+    override fun getTypography(type: AtomikTypographyType): AtomikTypography =
         when (type) {
-            TypographyType.LargeTitle -> largeTitle
-            TypographyType.Title -> title
-            TypographyType.Title2 -> title2
-            TypographyType.Title3 -> title3
-            TypographyType.Headline -> headline
-            TypographyType.Subheadline -> subheadline
-            TypographyType.Body -> body
-            TypographyType.Callout -> callout
-            TypographyType.Caption -> caption
-            TypographyType.Caption2 -> caption2
-            TypographyType.Footnote -> footnote
+            AtomikTypographyType.LargeTitle -> largeTitle
+            AtomikTypographyType.Title -> title
+            AtomikTypographyType.Title2 -> title2
+            AtomikTypographyType.Title3 -> title3
+            AtomikTypographyType.Headline -> headline
+            AtomikTypographyType.Subheadline -> subheadline
+            AtomikTypographyType.Body -> body
+            AtomikTypographyType.Callout -> callout
+            AtomikTypographyType.Caption -> caption
+            AtomikTypographyType.Caption2 -> caption2
+            AtomikTypographyType.Footnote -> footnote
             else -> fallbackTypography
         }
 }
