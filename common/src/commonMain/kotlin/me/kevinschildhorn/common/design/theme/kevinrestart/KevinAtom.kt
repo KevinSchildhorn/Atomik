@@ -11,13 +11,13 @@ private val tempType = object : AtomikTypographyType {
     override val id: String
         get() = ""
     override val typography: AtomikTypography
-        get() = AtomikTypography(size = 16)
+        get() = AtomikTypography(size = 16) // SIZE GOOD
 }
 
 private val errorTextAtom = FigmaTextAtom(
     constraintX = AtomikConstraintX.SCALE,
     constraintY = AtomikConstraintY.SCALE,
-    textColor = kevinColorSet.getColor("errorText"),
+    textColor = kevinColorSet.getColor("errorText"), // GOOD
     typography = tempType,
     padding = 12,
 )
@@ -25,6 +25,6 @@ private val errorTextAtom = FigmaTextAtom(
 val errorViewAtom = FigmaShapeAtom(
     constraintX = AtomikConstraintX.SCALE,
     constraintY = AtomikConstraintY.ALIGN_TOP,
-    color = kevinColorSet.getColor("Alert & Status/Red/Red 100"),
+    color = kevinColorSet.getColor("Alert & Status/Red/Red 100"), // GOOD
     subComponents = listOf(errorTextAtom)
 )
