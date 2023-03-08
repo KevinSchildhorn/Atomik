@@ -4,7 +4,7 @@ import me.kevinschildhorn.atomik.color.base.AtomikColor
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
-internal class AtomikColorTest {
+class AtomikColorTest {
 
     data class ColorTest(
         val hexColor: Long,
@@ -17,19 +17,19 @@ internal class AtomikColorTest {
 
     private val colorTestNoAlpha = ColorTest(
         hexColor = 0xa63028,
-        hexColorString = "#a63028",
+        hexColorString = "#A63028",
         r = 166,
         g = 48,
         b = 40,
     )
 
     private val colorTestAlpha = ColorTest(
-        hexColor = 0xa63028DE,
-        hexColorString = "#a63028DE",
+        hexColor = 0xa63028E6,
+        hexColorString = "#A63028E6",
         r = 166,
         g = 48,
         b = 40,
-        a = 0.87F
+        a = 0.90F
     )
 
     @Test
@@ -54,6 +54,17 @@ internal class AtomikColorTest {
         assertAll(colorTestAlpha, color)
     }
 
+    @Test
+    fun testColorHex() {
+        val color = AtomikColor(colorTestNoAlpha.hexColor)
+        assertAll(colorTestNoAlpha, color)
+    }
+
+    @Test
+    fun testColorHexWithAlpha() {
+        val color = AtomikColor(colorTestAlpha.hexColor)
+        assertAll(colorTestAlpha, color)
+    }
 
     private fun assertAll(ColorTest: ColorTest, color: AtomikColor){
         assertEquals(expected = ColorTest.a, actual = color.a)

@@ -19,18 +19,18 @@ class AtomikColor {
      * @constructor Creates a color based on the hex value(i.e. 0xFFFFFF)
      */
     constructor(hex: Long) {
-        this.hexString = "#${hex.toString(16)}"
+        this.hexString = "#${hex.toString(16)}".uppercase()
 
         if (hexString.isLongForm) {
-            this.r = (hex and 0xFF0000 shr 24).toInt()
-            this.g = (hex and 0xFF00 shr 16).toInt()
-            this.b = (hex and 0xFF shr 8).toInt()
-            this.a = (hex and 0xFF).toFloat() / 255
+            this.r = (hex and 0xFF000000 shr 24).toInt()
+            this.g = (hex and 0xFF0000 shr 16).toInt()
+            this.b = (hex and 0xFF00 shr 8).toInt()
+            this.a = ((hex and 0xFF).toFloat() / 255).rounded
         } else {
             this.r = (hex and 0xFF0000 shr 16).toInt()
             this.g = (hex and 0xFF00 shr 8).toInt()
             this.b = (hex and 0xFF).toInt()
-            this.a = 1
+            this.a = 1F
         }
     }
 
@@ -43,14 +43,15 @@ class AtomikColor {
      *  b - Blue Value (0-255)
      *  a - Alpha value (0-1)
      */
-    constructor(r: Int, g: Int, b: Int, a: Float = 1F) {
+    constructor(r: Int, g: Int, b: Int, a: Float? = null) {
         this.r = r
         this.g = g
         this.b = b
-        this.a = a
+        this.a = a ?: 1F
+        val alphaString: String = a?.let { (it * 256).toInt().asHexString } ?: ""
         this.hexString = "#${
-            r.asHexString + g.asHexString + b.asHexString + (a * 255).asHexString
-        }"
+            r.asHexString + g.asHexString + b.asHexString + alphaString
+        }".uppercase()
     }
 
 
@@ -59,4 +60,7 @@ class AtomikColor {
 
     private val Int.asHexString: String
         get() = toString(16).padStart(2, '0')
+
+    private val Float.rounded: Float
+        get() = (this * 100).toInt() / 100F
 }
