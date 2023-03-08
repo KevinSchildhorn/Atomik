@@ -12,6 +12,7 @@ import AtomikSampleShared
 struct AtomikSampleApp: App {
 
     init() {
+        /*
         DesignSystemKt.designSystem.fontFamily =
             AtomikAtomikFontFamily(uiFonts: [
                 .bold: UIFont(name: "Quicksand-Bold", size: 12)!,
@@ -20,11 +21,19 @@ struct AtomikSampleApp: App {
                 .normal: UIFont(name: "Quicksand-Regular", size: 12)!,
                 .semibold: UIFont(name: "Quicksand-SemiBold", size: 12)!
             ])
+         */
     }
 
     var body: some Scene {
         WindowGroup {
-            SampleText(text: "Hello")
+            VStack {
+                HStack {
+                    ErrorView(text: "Hello World")
+                    Spacer()
+                }
+                Spacer()
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
     }
 }

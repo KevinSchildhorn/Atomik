@@ -4,6 +4,7 @@ import me.kevinschildhorn.atomik.typography.base.AtomikTypography
 import me.kevinschildhorn.atomik.typography.base.TypographySet
 import me.kevinschildhorn.atomik.typography.base.AtomikTypographyType
 
+/*
 @Suppress("unused", "usedFromiOS")
 actual class PlatformTypographySet actual constructor(typographySet: DefaultTypographySet) :
     TypographySet {
@@ -38,3 +39,4 @@ actual class PlatformTypographySet actual constructor(typographySet: DefaultTypo
             else -> fallbackTypography
         }
 }
+*/

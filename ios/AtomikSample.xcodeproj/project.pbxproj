@@ -10,8 +10,10 @@
 		82F5E776FABE78FF276BC091 /* Pods_AtomikSample_AtomikSampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A948F965EE843C49EF973386 /* Pods_AtomikSample_AtomikSampleUITests.framework */; };
 		91DE3042442C223BB184AAC1 /* Pods_AtomikSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 734802E665A645A761C6CEE0 /* Pods_AtomikSample.framework */; };
 		D2E0879108866DBB808D0007 /* Pods_AtomikSampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC8C541535920F34F1F37BE1 /* Pods_AtomikSampleTests.framework */; };
-		F10515BE294D05BE00F9E4B5 /* SampleText.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10515BD294D05BE00F9E4B5 /* SampleText.swift */; };
+		F10515BE294D05BE00F9E4B5 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10515BD294D05BE00F9E4B5 /* ErrorView.swift */; };
 		F10515C0294D076400F9E4B5 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10515BF294D076400F9E4B5 /* Font.swift */; };
+		F1266ECD29B7C72100F70DF6 /* +ConstrainedAtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1266ECC29B7C72100F70DF6 /* +ConstrainedAtom.swift */; };
+		F1266ECF29B7C9C400F70DF6 /* +AtomikColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1266ECE29B7C9C400F70DF6 /* +AtomikColor.swift */; };
 		F16C62C328C914D1001CE2F9 /* AtomikSampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16C62C228C914D1001CE2F9 /* AtomikSampleApp.swift */; };
 		F16C62C728C914D3001CE2F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F16C62C628C914D3001CE2F9 /* Assets.xcassets */; };
 		F16C62CA28C914D3001CE2F9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F16C62C928C914D3001CE2F9 /* Preview Assets.xcassets */; };
@@ -56,8 +58,10 @@
 		C565D303851E2F1CF8EE4D89 /* Pods-FotoPresenter-FotoPresenterUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FotoPresenter-FotoPresenterUITests.debug.xcconfig"; path = "Target Support Files/Pods-FotoPresenter-FotoPresenterUITests/Pods-FotoPresenter-FotoPresenterUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		DA2F185F285131EECAF12BDD /* Pods-FotoPresenterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FotoPresenterTests.debug.xcconfig"; path = "Target Support Files/Pods-FotoPresenterTests/Pods-FotoPresenterTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E8BF2113A48F529FF4DF7587 /* Pods-AtomikSampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AtomikSampleTests.release.xcconfig"; path = "Target Support Files/Pods-AtomikSampleTests/Pods-AtomikSampleTests.release.xcconfig"; sourceTree = "<group>"; };
-		F10515BD294D05BE00F9E4B5 /* SampleText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleText.swift; sourceTree = "<group>"; };
+		F10515BD294D05BE00F9E4B5 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		F10515BF294D076400F9E4B5 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		F1266ECC29B7C72100F70DF6 /* +ConstrainedAtom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+ConstrainedAtom.swift"; sourceTree = "<group>"; };
+		F1266ECE29B7C9C400F70DF6 /* +AtomikColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+AtomikColor.swift"; sourceTree = "<group>"; };
 		F164300E2978D8C200F7EABC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F16C62BF28C914D1001CE2F9 /* AtomikSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AtomikSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F16C62C228C914D1001CE2F9 /* AtomikSampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtomikSampleApp.swift; sourceTree = "<group>"; };
@@ -137,9 +141,18 @@
 		F10515BB294D057B00F9E4B5 /* atoms */ = {
 			isa = PBXGroup;
 			children = (
-				F10515BD294D05BE00F9E4B5 /* SampleText.swift */,
+				F10515BD294D05BE00F9E4B5 /* ErrorView.swift */,
 			);
 			path = atoms;
+			sourceTree = "<group>";
+		};
+		F1266ECB29B7C6F500F70DF6 /* Atomik */ = {
+			isa = PBXGroup;
+			children = (
+				F1266ECC29B7C72100F70DF6 /* +ConstrainedAtom.swift */,
+				F1266ECE29B7C9C400F70DF6 /* +AtomikColor.swift */,
+			);
+			path = Atomik;
 			sourceTree = "<group>";
 		};
 		F16C62B628C914D1001CE2F9 = {
@@ -167,6 +180,7 @@
 		F16C62C128C914D1001CE2F9 /* AtomikSample */ = {
 			isa = PBXGroup;
 			children = (
+				F1266ECB29B7C6F500F70DF6 /* Atomik */,
 				F164300E2978D8C200F7EABC /* Info.plist */,
 				F1AAEC352978533500781812 /* fonts */,
 				F1A42C82291EA3E100CDAEAD /* uilayer */,
@@ -494,8 +508,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F10515C0294D076400F9E4B5 /* Font.swift in Sources */,
-				F10515BE294D05BE00F9E4B5 /* SampleText.swift in Sources */,
+				F10515BE294D05BE00F9E4B5 /* ErrorView.swift in Sources */,
+				F1266ECF29B7C9C400F70DF6 /* +AtomikColor.swift in Sources */,
 				F16C62C328C914D1001CE2F9 /* AtomikSampleApp.swift in Sources */,
+				F1266ECD29B7C72100F70DF6 /* +ConstrainedAtom.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

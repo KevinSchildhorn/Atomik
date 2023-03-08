@@ -12,7 +12,7 @@ import me.kevinschildhorn.android.databinding.SampleViewBinding
 import me.kevinschildhorn.atomik.DesignSystem
 import me.kevinschildhorn.atomik.atomic.atoms.xml.applyColorAtom
 import me.kevinschildhorn.atomik.atomic.atoms.xml.applyTextAtom
-import me.kevinschildhorn.common.design.theme.kevinrestart.errorViewAtom
+import me.kevinschildhorn.common.design.theme.kevinrestart.KevinAtoms
 
 internal class DefaultDesignView @JvmOverloads constructor(
     context: Context,
@@ -31,7 +31,7 @@ internal class DefaultDesignView @JvmOverloads constructor(
     }
 
     private fun initErrorView() = with(binding.errorView) {
-        val textViewAtom = errorViewAtom
+        val textViewAtom = KevinAtoms.errorViewAtom
         applyColorAtom(textViewAtom)
 
         applyTextAtom(textViewAtom.subAtom())
