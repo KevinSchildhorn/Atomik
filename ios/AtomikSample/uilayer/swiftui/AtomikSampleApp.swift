@@ -11,6 +11,8 @@ import AtomikSampleShared
 @main
 struct AtomikSampleApp: App {
 
+    @State var toggle: Bool = false
+
     init() {
         /*
         DesignSystemKt.designSystem.fontFamily =
@@ -27,9 +29,14 @@ struct AtomikSampleApp: App {
     var body: some Scene {
         WindowGroup {
             VStack {
-                HStack {
-                    ErrorView(text: "Hello World")
-                    Spacer()
+                TopBar(value: $toggle)
+                if !toggle {
+                    HStack {
+                        ErrorView(text: "Hello World")
+                        Spacer()
+                    }
+                } else {
+                    UIKitWrapper()
                 }
                 Spacer()
             }

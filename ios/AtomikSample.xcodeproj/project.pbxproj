@@ -20,6 +20,9 @@
 		F16C62D428C914D4001CE2F9 /* AtomikSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16C62D328C914D4001CE2F9 /* AtomikSampleTests.swift */; };
 		F16C62DE28C914D4001CE2F9 /* AtomikSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16C62DD28C914D4001CE2F9 /* AtomikSampleUITests.swift */; };
 		F16C62E028C914D4001CE2F9 /* AtomikSampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16C62DF28C914D4001CE2F9 /* AtomikSampleUITestsLaunchTests.swift */; };
+		F17B1E0B29BD75CE007E9F17 /* TopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17B1E0A29BD75CE007E9F17 /* TopBar.swift */; };
+		F17B1E0D29BD7ABE007E9F17 /* UIKitWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17B1E0C29BD7ABE007E9F17 /* UIKitWrapper.swift */; };
+		F17B1E1029BD7B02007E9F17 /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17B1E0F29BD7B02007E9F17 /* SampleViewController.swift */; };
 		F1AAEC3B2978533500781812 /* quicksand_regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1AAEC362978533500781812 /* quicksand_regular.ttf */; };
 		F1AAEC3C2978533500781812 /* quicksand_semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1AAEC372978533500781812 /* quicksand_semibold.ttf */; };
 		F1AAEC3D2978533500781812 /* quicksand_medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1AAEC382978533500781812 /* quicksand_medium.ttf */; };
@@ -72,6 +75,9 @@
 		F16C62D928C914D4001CE2F9 /* AtomikSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AtomikSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F16C62DD28C914D4001CE2F9 /* AtomikSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtomikSampleUITests.swift; sourceTree = "<group>"; };
 		F16C62DF28C914D4001CE2F9 /* AtomikSampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtomikSampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F17B1E0A29BD75CE007E9F17 /* TopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBar.swift; sourceTree = "<group>"; };
+		F17B1E0C29BD7ABE007E9F17 /* UIKitWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitWrapper.swift; sourceTree = "<group>"; };
+		F17B1E0F29BD7B02007E9F17 /* SampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewController.swift; sourceTree = "<group>"; };
 		F1AAEC362978533500781812 /* quicksand_regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = quicksand_regular.ttf; sourceTree = "<group>"; };
 		F1AAEC372978533500781812 /* quicksand_semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = quicksand_semibold.ttf; sourceTree = "<group>"; };
 		F1AAEC382978533500781812 /* quicksand_medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = quicksand_medium.ttf; sourceTree = "<group>"; };
@@ -215,9 +221,18 @@
 			path = AtomikSampleUITests;
 			sourceTree = "<group>";
 		};
+		F17B1E0E29BD7AE8007E9F17 /* uikit */ = {
+			isa = PBXGroup;
+			children = (
+				F17B1E0F29BD7B02007E9F17 /* SampleViewController.swift */,
+			);
+			path = uikit;
+			sourceTree = "<group>";
+		};
 		F1A42C82291EA3E100CDAEAD /* uilayer */ = {
 			isa = PBXGroup;
 			children = (
+				F17B1E0E29BD7AE8007E9F17 /* uikit */,
 				F1C6DED4291AB8EC000B9431 /* swiftui */,
 				F10515BF294D076400F9E4B5 /* Font.swift */,
 			);
@@ -241,6 +256,8 @@
 			children = (
 				F16C62C228C914D1001CE2F9 /* AtomikSampleApp.swift */,
 				F10515BB294D057B00F9E4B5 /* atoms */,
+				F17B1E0A29BD75CE007E9F17 /* TopBar.swift */,
+				F17B1E0C29BD7ABE007E9F17 /* UIKitWrapper.swift */,
 			);
 			path = swiftui;
 			sourceTree = "<group>";
@@ -508,9 +525,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F10515C0294D076400F9E4B5 /* Font.swift in Sources */,
+				F17B1E0B29BD75CE007E9F17 /* TopBar.swift in Sources */,
+				F17B1E0D29BD7ABE007E9F17 /* UIKitWrapper.swift in Sources */,
 				F10515BE294D05BE00F9E4B5 /* ErrorView.swift in Sources */,
 				F1266ECF29B7C9C400F70DF6 /* +AtomikColor.swift in Sources */,
 				F16C62C328C914D1001CE2F9 /* AtomikSampleApp.swift in Sources */,
+				F17B1E1029BD7B02007E9F17 /* SampleViewController.swift in Sources */,
 				F1266ECD29B7C72100F70DF6 /* +ConstrainedAtom.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
