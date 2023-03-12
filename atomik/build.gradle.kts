@@ -1,7 +1,8 @@
-
+import org.jetbrains.kotlin.gradle.plugin.mpp.Framework.BitcodeEmbeddingMode.BITCODE
 
 plugins {
     kotlin("multiplatform")
+    kotlin("native.cocoapods")
     id("com.android.library")
     id("com.github.ben-manes.versions") version "0.43.0"
     id("org.jlleitschuh.gradle.ktlint") version "11.0.0"
@@ -12,6 +13,16 @@ group = "me.kevinschildhorn"
 version = "1.0"
 
 kotlin {
+    cocoapods {
+        summary = "Some description for a Kotlin/Native module"
+        homepage = "Link to a Kotlin/Native module homepage"
+        framework {
+            baseName = "AtomikShared"
+            isStatic = false
+            embedBitcode(BITCODE)
+        }
+    }
+
     android()
     ios()
 
