@@ -3,13 +3,20 @@ package me.kevinschildhorn.android
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.foundation.layout.Column
 import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
-import me.kevinschildhorn.android.ui.SampleText
+import androidx.compose.ui.tooling.preview.Preview
+import me.kevinschildhorn.android.ui.TabBar
+import me.kevinschildhorn.android.ui.screens.DesignScaffolding
+import me.kevinschildhorn.android.ui.screens.Screen
+import me.kevinschildhorn.android.ui.screens.compose.DefaultDesignComposable
+import me.kevinschildhorn.android.ui.screens.xml.DefaultDesignView
 
 class MainActivity : AppCompatActivity() {
 
@@ -25,10 +32,35 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    @Preview
     @Composable
     fun App() {
-        Column {
-            SampleText()
+        val screenState = remember { mutableStateOf(Screen.A) }
+        Scaffold(
+            bottomBar = {
+                TabBar(
+                    buttons = mapOf(
+                        "A" to { screenState.value = Screen.A },
+                        "B" to { screenState.value = Screen.B },
+                        "C" to { screenState.value = Screen.C },
+                    )
+                )
+            }
+        ) { _ ->
+            when (screenState.value) {
+                Screen.A -> DesignScaffolding(
+                    composeView = { DefaultDesignComposable() },
+                    androidView = { DefaultDesignView(it) }
+                )
+                Screen.B -> DesignScaffolding(
+                    composeView = { DefaultDesignComposable() },
+                    androidView = { DefaultDesignView(it) }
+                )
+                Screen.C -> DesignScaffolding(
+                    composeView = { DefaultDesignComposable() },
+                    androidView = { DefaultDesignView(it) }
+                )
+            }
         }
     }
 }

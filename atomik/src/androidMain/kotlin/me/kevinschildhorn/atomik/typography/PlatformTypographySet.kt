@@ -3,23 +3,23 @@ package me.kevinschildhorn.atomik.typography
 import androidx.compose.ui.text.font.FontFamily
 import me.kevinschildhorn.atomik.typography.base.AtomikTypography
 import me.kevinschildhorn.atomik.typography.base.TypographySet
-import me.kevinschildhorn.atomik.typography.base.TypographyType
+import me.kevinschildhorn.atomik.typography.base.AtomikTypographyType
+/*
+actual class PlatformTypographySet// actual constructor(typographySet: DefaultTypographySet) : TypographySet {
 
-actual class PlatformTypographySet actual constructor(typographySet: DefaultTypographySet) :
-    TypographySet {
-    val h1: AtomikTypography = typographySet.h1 ?: typographySet.defaultTypography
-    val h2: AtomikTypography = typographySet.h2 ?: typographySet.defaultTypography
-    val h3: AtomikTypography = typographySet.h3 ?: typographySet.defaultTypography
-    val h4: AtomikTypography = typographySet.h4 ?: typographySet.defaultTypography
-    val h5: AtomikTypography = typographySet.h5 ?: typographySet.defaultTypography
+    val h1: AtomikTypography = typographySet.h1 ?: typographySet.fallbackTypography
+    val h2: AtomikTypography = typographySet.h2 ?: typographySet.fallbackTypography
+    val h3: AtomikTypography = typographySet.h3 ?: typographySet.fallbackTypography
+    val h4: AtomikTypography = typographySet.h4 ?: typographySet.fallbackTypography
+    val h5: AtomikTypography = typographySet.h5 ?: typographySet.fallbackTypography
     val h6: AtomikTypography = h5
-    val subtitle1: AtomikTypography = typographySet.subtitle ?: typographySet.defaultTypography
-    val subtitle2: AtomikTypography = typographySet.subtitle ?: typographySet.defaultTypography
+    val subtitle1: AtomikTypography = typographySet.subtitle ?: typographySet.fallbackTypography
+    val subtitle2: AtomikTypography = typographySet.subtitle ?: typographySet.fallbackTypography
     val body: AtomikTypography = typographySet.body
     val body2: AtomikTypography = body
-    val button: AtomikTypography = typographySet.button ?: typographySet.defaultTypography
-    val caption: AtomikTypography = typographySet.caption ?: typographySet.defaultTypography
-    val overline: AtomikTypography = typographySet.footnote ?: typographySet.defaultTypography
+    val button: AtomikTypography = typographySet.button ?: typographySet.fallbackTypography
+    val caption: AtomikTypography = typographySet.caption ?: typographySet.fallbackTypography
+    val overline: AtomikTypography = typographySet.footnote ?: typographySet.fallbackTypography
 
     fun asComposeTypography(fontFamily: FontFamily) = androidx.compose.material.Typography(
         h1 = h1.asComposeTextStyle(fontFamily),
@@ -37,23 +37,23 @@ actual class PlatformTypographySet actual constructor(typographySet: DefaultTypo
         overline = overline.asComposeTextStyle(fontFamily),
     )
 
-    override val defaultTypography: AtomikTypography = typographySet.defaultTypography
+    override val fallbackTypography: AtomikTypography = typographySet.fallbackTypography
 
-    override fun getTypography(type: TypographyType): AtomikTypography =
+    override fun getTypography(type: AtomikTypographyType): AtomikTypography = fallbackTypography/*
         when (type) {
-            TypographyType.H1 -> h1
-            TypographyType.H2 -> h2
-            TypographyType.H3 -> h3
-            TypographyType.H4 -> h4
-            TypographyType.H5 -> h5
-            TypographyType.H6 -> h6
-            TypographyType.Subtitle -> subtitle1
-            TypographyType.Subtitle2 -> subtitle2
-            TypographyType.Body -> body
-            TypographyType.Body2 -> body2
-            TypographyType.Button -> button
-            TypographyType.Caption -> caption
-            TypographyType.Overline -> overline
-            else -> defaultTypography
+            AtomikTypographyType.H1 -> h1
+            AtomikTypographyType.H2 -> h2
+            AtomikTypographyType.H3 -> h3
+            AtomikTypographyType.H4 -> h4
+            AtomikTypographyType.H5 -> h5
+            AtomikTypographyType.H6 -> h6
+            AtomikTypographyType.Subtitle -> subtitle1
+            AtomikTypographyType.Subtitle2 -> subtitle2
+            AtomikTypographyType.Body -> body
+            AtomikTypographyType.Body2 -> body2
+            AtomikTypographyType.Button -> button
+            AtomikTypographyType.Caption -> caption
+            AtomikTypographyType.Overline -> overline
+            else -> fallbackTypography
         }
-}
+}*/

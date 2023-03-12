@@ -16,17 +16,25 @@ repositories {
 }
 
 dependencies {
+
     implementation("androidx.appcompat:appcompat:1.6.0")
     implementation(project(":common"))
     implementation(project(":atomik"))
-    val compose_version = "1.3.0"
-    implementation("androidx.lifecycle:lifecycle-runtime-compose:2.6.0-alpha03")
-    implementation("androidx.compose.ui:ui:$compose_version")
-    implementation("androidx.compose.foundation:foundation:$compose_version")
-    implementation("androidx.compose.material:material:$compose_version")
-    implementation("androidx.compose.runtime:runtime:$compose_version")
+    implementation("androidx.lifecycle:lifecycle-runtime-compose:2.6.0-alpha05")
+    implementation("androidx.compose.ui:ui:1.3.3")
+    implementation("androidx.compose.foundation:foundation:1.3.1")
+    implementation("androidx.compose.material:material:1.3.1")
+    implementation("androidx.compose.runtime:runtime:1.3.3")
     implementation("androidx.activity:activity-compose:1.6.1")
+    implementation("androidx.compose.ui:ui-tooling-preview:1.3.3")
+    implementation("androidx.compose.ui:ui-viewbinding:1.3.3")
+    debugImplementation("androidx.compose.ui:ui-tooling:1.4.0-alpha05")
+    debugImplementation("androidx.customview:customview:1.2.0-alpha02")
+    debugImplementation("androidx.customview:customview-poolingcontainer:1.0.0")
+    implementation("androidx.cardview:cardview:1.0.0")
+
 }
+
 
 android {
     compileSdk = 33
@@ -42,4 +50,9 @@ android {
             isMinifyEnabled = false
         }
     }
+    buildFeatures {
+        viewBinding = true
+        compose = true
+    }
+
 }

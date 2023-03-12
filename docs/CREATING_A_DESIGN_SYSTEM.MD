@@ -20,6 +20,8 @@ open class DesignSystem(
 
 ### ColorSet
 
+![Color Set](images/colorset.png)
+
 `ColorSet` is an interface that can be implemented, however there's also a `DefaultColorSet` for a standard set. There is also a `CustomColorSet` that can be used for more granularity.
 
 `ColorSets` are made up of various `AtomikColor`, which are created with hex codes
@@ -41,6 +43,9 @@ open class DesignSystem(
 ```
 
 ### TypographySet
+
+![Typography Set](images/typographyset.png)
+
 
 `TypographySet` is an interface that can be implemented, however there's also a `DefaultTypographySet` for a standard set. There is also a `CustomTypographySet` that can be used for granularity.
 

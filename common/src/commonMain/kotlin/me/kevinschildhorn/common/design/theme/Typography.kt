@@ -1,5 +1,5 @@
 package me.kevinschildhorn.common.design.theme
-
+/*
 import me.kevinschildhorn.atomik.typography.DefaultTypographySet
 import me.kevinschildhorn.atomik.typography.base.AtomikTypography
 import me.kevinschildhorn.atomik.typography.base.AtomikTypographyWeight
@@ -14,3 +14,4 @@ internal val sharedTypography = DefaultTypographySet(
     body = AtomikTypography(size = 16),
     caption = AtomikTypography(weight = AtomikTypographyWeight.BOLD, size = 14),
 )
+*/

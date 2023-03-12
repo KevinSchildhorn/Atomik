@@ -1,0 +1,6 @@
+framework module Pods_AtomikSample {
+  umbrella header "Pods-AtomikSample-umbrella.h"
+
+  export *
+  module * { export * }
+}

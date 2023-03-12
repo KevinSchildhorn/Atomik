@@ -2,11 +2,13 @@ package me.kevinschildhorn.atomik.color.base
 
 import androidx.compose.ui.graphics.Color
 
-actual class AtomikColor actual constructor(hex: Long) {
-    var platformColor: Color
-        private set
+val AtomikColor.composeColor: Color
+    get() = Color(
+        red = r.toFloat() / 255,
+        green = g.toFloat() / 255,
+        blue = b.toFloat() / 255,
+        alpha = a
+    )
 
-    init {
-        this.platformColor = Color(hex)
-    }
-}
+val AtomikColor.hexColor: Int
+    get() = android.graphics.Color.parseColor(hexString)
