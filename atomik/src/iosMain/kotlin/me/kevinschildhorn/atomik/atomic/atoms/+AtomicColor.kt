@@ -1,7 +1,9 @@
-package me.kevinschildhorn.atomik.color.base
+package me.kevinschildhorn.atomik.atomic.atoms
 
+import me.kevinschildhorn.atomik.color.base.AtomikColor
 import platform.UIKit.UIColor
 
+@Suppress("unused")
 val AtomikColor.uiColor: UIColor
     get() = UIColor(
         red = r.toDouble() / 255,

@@ -6,7 +6,7 @@ import me.kevinschildhorn.atomik.DesignSystem
 
 @Preview
 @Composable
-fun DefaultDesignComposable(designSystem: DesignSystem? = null) {
+fun DefaultDesignComposable(/*designSystem: DesignSystem? = null*/) {
     ErrorView(text = "Hello World")
 /*
     val textState = remember { mutableStateOf(TextFieldValue()) }
