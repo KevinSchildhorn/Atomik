@@ -7,17 +7,6 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		18B7B00D8D9C7EDC8DDDD726E490D4E4 /* atomik */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 79D00173A70F9A425A106D7D7478A167 /* Build configuration list for PBXAggregateTarget "atomik" */;
-			buildPhases = (
-				2A3F2AEE8EB27F9CEFE978D94C4CDDC7 /* [CP-User] Build atomik */,
-			);
-			dependencies = (
-			);
-			name = atomik;
-			productName = atomik;
-		};
 		52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */ = {
 			isa = PBXAggregateTarget;
 			buildConfigurationList = AE7B4FB01588B9E6DF09CB79FC7CE7BD /* Build configuration list for PBXAggregateTarget "SwiftLint" */;
@@ -26,82 +15,80 @@
 			dependencies = (
 			);
 			name = SwiftLint;
-			productName = SwiftLint;
+		};
+		6C761010655A448B72210F8FF6A193E8 /* AtomikShared */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 20A016C74106DA98577C35557C6C9FBB /* Build configuration list for PBXAggregateTarget "AtomikShared" */;
+			buildPhases = (
+				AB54CF20B64DD43C5E2F89429A5C5659 /* [CP-User] Build AtomikShared */,
+			);
+			dependencies = (
+			);
+			name = AtomikShared;
 		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		0FC4159B61DC40DB1E8EB6E3FEE57D4C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		C598DE381776FEF005DBE77A56BF531A /* Pods-Atomik-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F68DE15B894D6943A9AC5D19BE869521 /* Pods-Atomik-dummy.m */; };
-		F3A233FF3911F8083B3FD51221BCACA7 /* Pods-Atomik-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 668CC7FC779E41C7629AACE749878770 /* Pods-Atomik-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E92F842D2754A363607333A8EB596FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		9C13EADE1CA191CE210A6ABC396815B8 /* Pods-Atomik-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 668CC7FC779E41C7629AACE749878770 /* Pods-Atomik-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C6494D9ADE700E65224A2F471368AF6D /* Pods-Atomik-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F68DE15B894D6943A9AC5D19BE869521 /* Pods-Atomik-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		333C1AE2B39378588D095FB8FE8394FE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 18B7B00D8D9C7EDC8DDDD726E490D4E4;
-			remoteInfo = atomik;
-		};
-		A4227C67E136D6F5B2E86C48942F5AF7 /* PBXContainerItemProxy */ = {
+		020038FD28B2B1DB70C94B1D46D6D7A9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 52B60EC2A583F24ACBB69C113F5488B9;
 			remoteInfo = SwiftLint;
 		};
+		D5AC60F29B71D6CD85AFAE2E077CD1FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6C761010655A448B72210F8FF6A193E8;
+			remoteInfo = AtomikShared;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0CFC0998EBD129065797CA628409FD86 /* atomik.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = atomik.debug.xcconfig; sourceTree = "<group>"; };
-		32A07A1740FBC186ADC6F7A897DCD99A /* atomik.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = atomik.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		3EC0124719FE8EF5FDDD72C26F8A2F57 /* SwiftLint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.debug.xcconfig; sourceTree = "<group>"; };
-		4F6317E78295754F3BDD303F596651AF /* atomik.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = atomik.release.xcconfig; sourceTree = "<group>"; };
+		5F3DB4784F5362893A10954185E8AE53 /* AtomikShared.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AtomikShared.framework; path = build/cocoapods/framework/AtomikShared.framework; sourceTree = "<group>"; };
 		64539D29CD142E9E26E71B195DEFFCE9 /* Pods-Atomik.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Atomik.release.xcconfig"; sourceTree = "<group>"; };
 		668CC7FC779E41C7629AACE749878770 /* Pods-Atomik-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Atomik-umbrella.h"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		75D17B158F8CBC6708FABD4B86764284 /* Pods-Atomik.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Atomik.debug.xcconfig"; sourceTree = "<group>"; };
-		7BE1A1CD19498A7BF80E20F9E1B06BD5 /* AtomikShared.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AtomikShared.framework; path = build/cocoapods/framework/AtomikShared.framework; sourceTree = "<group>"; };
 		7EAB1DA481EDDC005A251D3A5E6BE4CD /* SwiftLint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.release.xcconfig; sourceTree = "<group>"; };
 		853352CD632ACE33474F4528D4B9C668 /* Pods-Atomik-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Atomik-acknowledgements.markdown"; sourceTree = "<group>"; };
+		86D86036A6068853E0747B91D94A6EE1 /* AtomikShared.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AtomikShared.release.xcconfig; sourceTree = "<group>"; };
 		9C9E3A5466E31560ADD345C009CF72BF /* Pods-Atomik-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Atomik-acknowledgements.plist"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C984928167673ED30FAF9236652F73B1 /* Pods-Atomik-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Atomik-Info.plist"; sourceTree = "<group>"; };
+		CD0F03CA4C2D5AAF62332A568D52B0CD /* AtomikShared.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = AtomikShared.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		F0C2211937D8341238BABF3A55A9BB32 /* Pods-Atomik */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Atomik"; path = Pods_Atomik.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F68DE15B894D6943A9AC5D19BE869521 /* Pods-Atomik-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Atomik-dummy.m"; sourceTree = "<group>"; };
 		FA24A992E5E4413F1BE31FB811CE9E97 /* Pods-Atomik.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Atomik.modulemap"; sourceTree = "<group>"; };
+		FB3D0865E386FDA040D81A554928D46F /* AtomikShared.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AtomikShared.debug.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		721C0AF45AC1900DDCFAFEF45B7A72E5 /* Frameworks */ = {
+		F4AE6DB6659205AB4BA344A60C263F7F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FC4159B61DC40DB1E8EB6E3FEE57D4C /* Foundation.framework in Frameworks */,
+				6E92F842D2754A363607333A8EB596FB /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		112E2CD291D1A53B5791FDA562439178 /* atomik */ = {
+		247D9E373FA9D43BCE1AE564BCFCC531 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				51886B027FA055470D2EC53C2A885F3E /* Frameworks */,
-				DEA10E8F40C7482E704CA98E38705209 /* Pod */,
-				9DA4E655A23D05D6B278881F9941A601 /* Support Files */,
+				5F3DB4784F5362893A10954185E8AE53 /* AtomikShared.framework */,
 			);
-			name = atomik;
-			path = ../../atomik;
-			sourceTree = "<group>";
-		};
-		3139166EBDBD08419AA9D5185F4ED1D7 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				112E2CD291D1A53B5791FDA562439178 /* atomik */,
-			);
-			name = "Development Pods";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		4B0EE637CDC50A5520F95C007F45DCE8 /* Pods-Atomik */ = {
@@ -120,12 +107,15 @@
 			path = "Target Support Files/Pods-Atomik";
 			sourceTree = "<group>";
 		};
-		51886B027FA055470D2EC53C2A885F3E /* Frameworks */ = {
+		55CBC75B6EF385FEE50C71633B8DFF56 /* AtomikShared */ = {
 			isa = PBXGroup;
 			children = (
-				7BE1A1CD19498A7BF80E20F9E1B06BD5 /* AtomikShared.framework */,
+				247D9E373FA9D43BCE1AE564BCFCC531 /* Frameworks */,
+				B8BBC7446A68A84733484A71E678E8E1 /* Pod */,
+				E8E3045D095FAE4CC60CC1599F48343C /* Support Files */,
 			);
-			name = Frameworks;
+			name = AtomikShared;
+			path = ../../atomik;
 			sourceTree = "<group>";
 		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
@@ -134,6 +124,14 @@
 				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		7D0F6E29298979FA5B7D50A50F427961 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				55CBC75B6EF385FEE50C71633B8DFF56 /* AtomikShared */,
+			);
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		7FDA596DBE0337ACDFE55A210D54EF26 /* Support Files */ = {
@@ -154,16 +152,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		9DA4E655A23D05D6B278881F9941A601 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				0CFC0998EBD129065797CA628409FD86 /* atomik.debug.xcconfig */,
-				4F6317E78295754F3BDD303F596651AF /* atomik.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../AtomikiOS/Pods/Target Support Files/atomik";
-			sourceTree = "<group>";
-		};
 		9E0BBBE9DA3B2992CEE7E8996312D662 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -180,11 +168,19 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		B8BBC7446A68A84733484A71E678E8E1 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				CD0F03CA4C2D5AAF62332A568D52B0CD /* AtomikShared.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				3139166EBDBD08419AA9D5185F4ED1D7 /* Development Pods */,
+				7D0F6E29298979FA5B7D50A50F427961 /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				965877409E01FB3D85D85E90E6B30185 /* Pods */,
 				9E0BBBE9DA3B2992CEE7E8996312D662 /* Products */,
@@ -205,25 +201,28 @@
 			children = (
 				7FDA596DBE0337ACDFE55A210D54EF26 /* Support Files */,
 			);
+			name = SwiftLint;
 			path = SwiftLint;
 			sourceTree = "<group>";
 		};
-		DEA10E8F40C7482E704CA98E38705209 /* Pod */ = {
+		E8E3045D095FAE4CC60CC1599F48343C /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				32A07A1740FBC186ADC6F7A897DCD99A /* atomik.podspec */,
+				FB3D0865E386FDA040D81A554928D46F /* AtomikShared.debug.xcconfig */,
+				86D86036A6068853E0747B91D94A6EE1 /* AtomikShared.release.xcconfig */,
 			);
-			name = Pod;
+			name = "Support Files";
+			path = "../AtomikiOS/Pods/Target Support Files/AtomikShared";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		93B9B73FAB0A0F8EADF1D91665324374 /* Headers */ = {
+		22FE7CB89FE92A4CB5B0A4A279A9D0B0 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3A233FF3911F8083B3FD51221BCACA7 /* Pods-Atomik-umbrella.h in Headers */,
+				9C13EADE1CA191CE210A6ABC396815B8 /* Pods-Atomik-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,18 +231,18 @@
 /* Begin PBXNativeTarget section */
 		F5D92289F5F84971B08AC6981AC3B777 /* Pods-Atomik */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5552D0229ED040E26C872A143EC7B9A1 /* Build configuration list for PBXNativeTarget "Pods-Atomik" */;
+			buildConfigurationList = 92DFE63879B038BB7C729261D1160C4A /* Build configuration list for PBXNativeTarget "Pods-Atomik" */;
 			buildPhases = (
-				93B9B73FAB0A0F8EADF1D91665324374 /* Headers */,
-				BF60A1BAA3385F566AEC09876164ECD5 /* Sources */,
-				721C0AF45AC1900DDCFAFEF45B7A72E5 /* Frameworks */,
-				EEC24F8B11A581F89D9D856F8F614ECE /* Resources */,
+				22FE7CB89FE92A4CB5B0A4A279A9D0B0 /* Headers */,
+				60950FD470455F01BC63FD1516E1315A /* Sources */,
+				F4AE6DB6659205AB4BA344A60C263F7F /* Frameworks */,
+				79A4BD4F10825E40A9028529BE2388EE /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				DDD056BC7BD9AC9308B4144EC3518F29 /* PBXTargetDependency */,
-				7584117A7F13D9E038236E3F2E1B2728 /* PBXTargetDependency */,
+				BF369EEA1A851E75D7D432690F32D3F1 /* PBXTargetDependency */,
+				31EC4464262CE947ECEC649C8FB94158 /* PBXTargetDependency */,
 			);
 			name = "Pods-Atomik";
 			productName = Pods_Atomik;
@@ -257,7 +256,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1300;
-				LastUpgradeCheck = 1420;
+				LastUpgradeCheck = 1300;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -272,7 +271,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				18B7B00D8D9C7EDC8DDDD726E490D4E4 /* atomik */,
+				6C761010655A448B72210F8FF6A193E8 /* AtomikShared */,
 				F5D92289F5F84971B08AC6981AC3B777 /* Pods-Atomik */,
 				52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */,
 			);
@@ -280,7 +279,7 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		EEC24F8B11A581F89D9D856F8F614ECE /* Resources */ = {
+		79A4BD4F10825E40A9028529BE2388EE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -290,12 +289,12 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2A3F2AEE8EB27F9CEFE978D94C4CDDC7 /* [CP-User] Build atomik */ = {
+		AB54CF20B64DD43C5E2F89429A5C5659 /* [CP-User] Build AtomikShared */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			name = "[CP-User] Build atomik";
+			name = "[CP-User] Build AtomikShared";
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "                if [ \"YES\" = \"$OVERRIDE_KOTLIN_BUILD_IDE_SUPPORTED\" ]; then\n                  echo \"Skipping Gradle build task invocation due to OVERRIDE_KOTLIN_BUILD_IDE_SUPPORTED environment variable set to \"YES\"\"\n                  exit 0\n                fi\n                set -ev\n                REPO_ROOT=\"$PODS_TARGET_SRCROOT\"\n                \"$REPO_ROOT/../../gradlew\" -p \"$REPO_ROOT\" $KOTLIN_PROJECT_PATH:syncFramework                     -Pkotlin.native.cocoapods.platform=$PLATFORM_NAME                     -Pkotlin.native.cocoapods.archs=\"$ARCHS\"                     -Pkotlin.native.cocoapods.configuration=\"$CONFIGURATION\"\n";
@@ -303,32 +302,86 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		BF60A1BAA3385F566AEC09876164ECD5 /* Sources */ = {
+		60950FD470455F01BC63FD1516E1315A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C598DE381776FEF005DBE77A56BF531A /* Pods-Atomik-dummy.m in Sources */,
+				C6494D9ADE700E65224A2F471368AF6D /* Pods-Atomik-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		7584117A7F13D9E038236E3F2E1B2728 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = atomik;
-			target = 18B7B00D8D9C7EDC8DDDD726E490D4E4 /* atomik */;
-			targetProxy = 333C1AE2B39378588D095FB8FE8394FE /* PBXContainerItemProxy */;
-		};
-		DDD056BC7BD9AC9308B4144EC3518F29 /* PBXTargetDependency */ = {
+		31EC4464262CE947ECEC649C8FB94158 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftLint;
 			target = 52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */;
-			targetProxy = A4227C67E136D6F5B2E86C48942F5AF7 /* PBXContainerItemProxy */;
+			targetProxy = 020038FD28B2B1DB70C94B1D46D6D7A9 /* PBXContainerItemProxy */;
+		};
+		BF369EEA1A851E75D7D432690F32D3F1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AtomikShared;
+			target = 6C761010655A448B72210F8FF6A193E8 /* AtomikShared */;
+			targetProxy = D5AC60F29B71D6CD85AFAE2E077CD1FF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		0E019126AF6CE5E0B44DB91CE2E82A0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB3D0865E386FDA040D81A554928D46F /* AtomikShared.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		121CBB6A5E722CA5038AB17128D272AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64539D29CD142E9E26E71B195DEFFCE9 /* Pods-Atomik.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Atomik/Pods-Atomik-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Atomik/Pods-Atomik.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		446BA1B9A1F1F2F95D04E5F82EB1B0F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -364,7 +417,6 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -393,6 +445,43 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		5B831FD0D37F83BB17B584696A867EF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75D17B158F8CBC6708FABD4B86764284 /* Pods-Atomik.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Atomik/Pods-Atomik-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Atomik/Pods-Atomik.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
@@ -431,7 +520,6 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -459,51 +547,13 @@
 			};
 			name = Release;
 		};
-		A8EF63BE9DBA65716A8762A34992DAE1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 64539D29CD142E9E26E71B195DEFFCE9 /* Pods-Atomik.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Atomik/Pods-Atomik-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Atomik/Pods-Atomik.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		AD81E62ACCB0B7A923FC8AA288F9921E /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7EAB1DA481EDDC005A251D3A5E6BE4CD /* SwiftLint.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -513,22 +563,6 @@
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
-		};
-		B63843941F035645A2CD505D69A9D470 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0CFC0998EBD129065797CA628409FD86 /* atomik.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
 		};
 		EADD1F50ABC8096A0D6CB18822BB4EE4 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -536,7 +570,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -546,50 +580,13 @@
 			};
 			name = Debug;
 		};
-		F1ED51D505D78063F7F53F2DC311DEC6 /* Debug */ = {
+		F665CB1FE6077652291814AEC5B75B32 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 75D17B158F8CBC6708FABD4B86764284 /* Pods-Atomik.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Atomik/Pods-Atomik-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Atomik/Pods-Atomik.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		F5533CB12AF85A82F1A405F5D2DF9E6A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4F6317E78295754F3BDD303F596651AF /* atomik.release.xcconfig */;
+			baseConfigurationReference = 86D86036A6068853E0747B91D94A6EE1 /* AtomikShared.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -603,6 +600,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		20A016C74106DA98577C35557C6C9FBB /* Build configuration list for PBXAggregateTarget "AtomikShared" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E019126AF6CE5E0B44DB91CE2E82A0D /* Debug */,
+				F665CB1FE6077652291814AEC5B75B32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -612,20 +618,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5552D0229ED040E26C872A143EC7B9A1 /* Build configuration list for PBXNativeTarget "Pods-Atomik" */ = {
+		92DFE63879B038BB7C729261D1160C4A /* Build configuration list for PBXNativeTarget "Pods-Atomik" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F1ED51D505D78063F7F53F2DC311DEC6 /* Debug */,
-				A8EF63BE9DBA65716A8762A34992DAE1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		79D00173A70F9A425A106D7D7478A167 /* Build configuration list for PBXAggregateTarget "atomik" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B63843941F035645A2CD505D69A9D470 /* Debug */,
-				F5533CB12AF85A82F1A405F5D2DF9E6A /* Release */,
+				5B831FD0D37F83BB17B584696A867EF5 /* Debug */,
+				121CBB6A5E722CA5038AB17128D272AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

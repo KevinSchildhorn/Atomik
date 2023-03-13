@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1300"
+   LastUpgradeVersion = "1420"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "52B60EC2A583F24ACBB69C113F5488B9"
-               BuildableName = "SwiftLint"
-               BlueprintName = "SwiftLint"
-               ReferencedContainer = "container:Pods.xcodeproj">
+               BlueprintIdentifier = "F18ABBA729BF7E2100989A13"
+               BuildableName = "Atomik.framework"
+               BlueprintName = "Atomik"
+               ReferencedContainer = "container:Atomik.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,6 +28,17 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F18ABBB129BF7E2100989A13"
+               BuildableName = "AtomikTests.xctest"
+               BlueprintName = "AtomikTests"
+               ReferencedContainer = "container:Atomik.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -47,6 +58,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "F18ABBA729BF7E2100989A13"
+            BuildableName = "Atomik.framework"
+            BlueprintName = "Atomik"
+            ReferencedContainer = "container:Atomik.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

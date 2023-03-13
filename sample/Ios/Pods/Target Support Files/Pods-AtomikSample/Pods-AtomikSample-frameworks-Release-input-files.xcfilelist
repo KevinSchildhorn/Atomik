@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-AtomikSample/Pods-AtomikSample-frameworks.sh
+${BUILT_PRODUCTS_DIR}/atomik/atomik.framework
 ${PODS_ROOT}/../../common/build/cocoapods/framework/AtomikSampleShared.framework

@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "52B60EC2A583F24ACBB69C113F5488B9"
-               BuildableName = "SwiftLint"
-               BlueprintName = "SwiftLint"
+               BlueprintIdentifier = "6C761010655A448B72210F8FF6A193E8"
+               BuildableName = "AtomikShared"
+               BlueprintName = "AtomikShared"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

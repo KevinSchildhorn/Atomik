@@ -16,6 +16,7 @@ kotlin {
     cocoapods {
         summary = "Some description for a Kotlin/Native module"
         homepage = "Link to a Kotlin/Native module homepage"
+        name = "AtomikShared"
         framework {
             baseName = "AtomikShared"
             isStatic = false

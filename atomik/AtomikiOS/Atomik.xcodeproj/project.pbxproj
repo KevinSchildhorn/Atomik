@@ -12,7 +12,9 @@
 		F18ABBB329BF7E2100989A13 /* Atomik.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F18ABBA829BF7E2100989A13 /* Atomik.framework */; };
 		F18ABBB829BF7E2100989A13 /* AtomikTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18ABBB729BF7E2100989A13 /* AtomikTests.swift */; };
 		F18ABBB929BF7E2100989A13 /* Atomik.h in Headers */ = {isa = PBXBuildFile; fileRef = F18ABBAB29BF7E2100989A13 /* Atomik.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F18ABBC329BF7EB900989A13 /* AtomikTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18ABBC229BF7EB900989A13 /* AtomikTest.swift */; };
+		F18ABBC529BF915400989A13 /* ConstrainedAtom+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18ABBC429BF915400989A13 /* ConstrainedAtom+Ext.swift */; };
+		F18ABBC729BF91AE00989A13 /* AtomikColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18ABBC629BF91AE00989A13 /* AtomikColor+Ext.swift */; };
+		F18ABBC929BF924400989A13 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18ABBC829BF924400989A13 /* UIView+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +36,9 @@
 		F18ABBAC29BF7E2100989A13 /* Atomik.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Atomik.docc; sourceTree = "<group>"; };
 		F18ABBB229BF7E2100989A13 /* AtomikTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AtomikTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F18ABBB729BF7E2100989A13 /* AtomikTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtomikTests.swift; sourceTree = "<group>"; };
-		F18ABBC229BF7EB900989A13 /* AtomikTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtomikTest.swift; sourceTree = "<group>"; };
+		F18ABBC429BF915400989A13 /* ConstrainedAtom+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConstrainedAtom+Ext.swift"; sourceTree = "<group>"; };
+		F18ABBC629BF91AE00989A13 /* AtomikColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AtomikColor+Ext.swift"; sourceTree = "<group>"; };
+		F18ABBC829BF924400989A13 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +103,9 @@
 			children = (
 				F18ABBAB29BF7E2100989A13 /* Atomik.h */,
 				F18ABBAC29BF7E2100989A13 /* Atomik.docc */,
-				F18ABBC229BF7EB900989A13 /* AtomikTest.swift */,
+				F18ABBC429BF915400989A13 /* ConstrainedAtom+Ext.swift */,
+				F18ABBC629BF91AE00989A13 /* AtomikColor+Ext.swift */,
+				F18ABBC829BF924400989A13 /* UIView+Ext.swift */,
 			);
 			path = Atomik;
 			sourceTree = "<group>";
@@ -247,8 +253,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F18ABBC329BF7EB900989A13 /* AtomikTest.swift in Sources */,
+				F18ABBC729BF91AE00989A13 /* AtomikColor+Ext.swift in Sources */,
+				F18ABBC929BF924400989A13 /* UIView+Ext.swift in Sources */,
 				F18ABBAD29BF7E2100989A13 /* Atomik.docc in Sources */,
+				F18ABBC529BF915400989A13 /* ConstrainedAtom+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
