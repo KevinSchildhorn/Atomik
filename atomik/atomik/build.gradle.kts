@@ -12,12 +12,6 @@ plugins {
 group = "me.kevinschildhorn"
 version = "1.0"
 
-tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
-    kotlinOptions {
-        jvmTarget = "15"
-    }
-}
-
 kotlin {
     cocoapods {
         summary = "Some description for a Kotlin/Native module"
