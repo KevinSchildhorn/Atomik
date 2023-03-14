@@ -9,7 +9,7 @@ buildscript {
         maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
     }
     dependencies {
-        classpath("com.android.tools.build:gradle:7.4.1")
+        classpath("com.android.tools.build:gradle:7.4.2")
         classpath(kotlin("gradle-plugin", "1.8.0"))
     }
 }

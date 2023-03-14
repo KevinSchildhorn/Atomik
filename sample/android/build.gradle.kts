@@ -15,10 +15,9 @@ repositories {
 }
 
 dependencies {
-
     implementation("androidx.appcompat:appcompat:1.6.0")
-    implementation(project(":sample:common"))
     implementation(project(":atomik:atomik"))
+    implementation(project(":sample:common"))
     implementation("androidx.lifecycle:lifecycle-runtime-compose:2.6.0-alpha05")
     implementation("androidx.compose.ui:ui:1.3.3")
     implementation("androidx.compose.foundation:foundation:1.3.1")
