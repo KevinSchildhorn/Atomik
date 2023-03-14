@@ -8,7 +8,7 @@ plugins {
     id("org.jlleitschuh.gradle.ktlint") version "11.0.0"
 }
 
-group = "me.kevinschildhorn"
+group = "me.kevinschildhorn.atomiksamplecommon"
 version = "1.0"
 
 kotlin {

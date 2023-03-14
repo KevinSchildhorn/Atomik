@@ -5,12 +5,18 @@ plugins {
     id("com.github.ben-manes.versions") version "0.43.0"
     id("org.jlleitschuh.gradle.ktlint") version "11.0.0"
     id("org.jetbrains.dokka") version "1.7.10"
+    id("maven-publish")
 }
 
-group = "me.kevinschildhorn"
+group = "com.kevinschildhorn"
 version = "1.0"
 
 kotlin {
+    publishing {
+        repositories {
+            mavenLocal()
+        }
+    }
     /*
     cocoapods {
         summary = "Some description for a Kotlin/Native module"

@@ -1,11 +1,9 @@
-group = "me.kevinschildhorn"
-version = "1.0"
-
 buildscript {
     repositories {
         google()
         gradlePluginPortal()
         mavenCentral()
+        mavenLocal()
         maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
     }
     dependencies {
@@ -18,6 +16,7 @@ allprojects {
     repositories {
         google()
         mavenCentral()
+        mavenLocal()
         maven("https://androidx.dev/storage/compose-compiler/repository/")
         maven("https://maven.pkg.jetbrains.space/kotlin/p/kotlin/dev/")
     }

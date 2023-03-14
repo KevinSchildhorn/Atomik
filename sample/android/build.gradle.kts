@@ -4,11 +4,12 @@ plugins {
     id("org.jlleitschuh.gradle.ktlint") version "11.0.0"
 }
 
-group = "me.kevinschildhorn"
+group = "com.kevinschildhorn.atomiksample"
 version = "1.0"
 
 repositories {
     mavenCentral()
+    mavenLocal()
     maven {
         url = uri("https://plugins.gradle.org/m2/")
     }
@@ -16,7 +17,8 @@ repositories {
 
 dependencies {
     implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation(project(":atomik"))
+    //implementation(project(":atomik"))
+    implementation("com.kevinschildhorn:atomik:0.0.1")
     implementation(project(":sample:common"))
     implementation("androidx.lifecycle:lifecycle-runtime-compose:2.6.0")
     implementation("androidx.compose.ui:ui:1.4.0-rc01")
