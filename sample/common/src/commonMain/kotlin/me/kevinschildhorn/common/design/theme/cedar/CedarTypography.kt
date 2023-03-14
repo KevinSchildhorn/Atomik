@@ -1,11 +1,6 @@
 package me.kevinschildhorn.common.design.theme.cedar
 
-import me.kevinschildhorn.atomik.typography.CustomTypographySet
-import me.kevinschildhorn.atomik.typography.base.AtomikTypography
-import me.kevinschildhorn.atomik.typography.base.AtomikTypographyWeight
-import me.kevinschildhorn.atomik.typography.base.AtomikTypographyType
-
-//https://www.figma.com/community/file/1057382149759850021
+// https://www.figma.com/community/file/1057382149759850021
 // https://rei.github.io/rei-cedar-docs/tokens/all-tokens/
 
 /*

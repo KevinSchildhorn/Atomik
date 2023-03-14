@@ -1,0 +1,6 @@
+framework module atomik {
+  umbrella header "atomik-umbrella.h"
+
+  export *
+  module * { export * }
+}

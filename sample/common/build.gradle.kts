@@ -30,7 +30,7 @@ kotlin {
                 implementation(kotlin("stdlib-common"))
                 implementation("co.touchlab:kermit:1.2.2")
                 implementation("co.touchlab:kermit-koin:1.2.2")
-                implementation(project(":atomik:atomik"))
+                implementation(project(":atomik"))
             }
         }
     }
@@ -45,7 +45,7 @@ android {
         targetSdk = 33
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_15
-        targetCompatibility = JavaVersion.VERSION_15
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
 }

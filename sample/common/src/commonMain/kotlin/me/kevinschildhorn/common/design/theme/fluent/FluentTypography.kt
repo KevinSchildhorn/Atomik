@@ -1,11 +1,5 @@
 package me.kevinschildhorn.common.design.theme.fluent
 
-import me.kevinschildhorn.atomik.color.base.AtomikColor
-import me.kevinschildhorn.atomik.color.base.AtomikColorType
-import me.kevinschildhorn.atomik.typography.CustomTypographySet
-import me.kevinschildhorn.atomik.typography.base.AtomikTypography
-import me.kevinschildhorn.atomik.typography.base.AtomikTypographyWeight
-import me.kevinschildhorn.atomik.typography.base.AtomikTypographyType
 /*
 enum class FluentTypographies(override val id: String, override val typography: AtomikTypography) : AtomikTypographyType {
     Caption("caption", AtomikTypography(AtomikTypographyWeight.NORMAL, 12, "roboto")),

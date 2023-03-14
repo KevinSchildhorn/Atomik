@@ -4,6 +4,8 @@ target 'AtomikSample' do
   use_frameworks!
 
 pod 'common', :path => '../common/'
+pod 'atomik', :path => '../../atomik/AtomikiOS'
+
 pod 'SwiftLint'
 
   target 'AtomikSampleTests' do
