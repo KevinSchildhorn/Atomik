@@ -10,8 +10,8 @@ import androidx.appcompat.widget.LinearLayoutCompat
 import androidx.core.view.setPadding
 import me.kevinschildhorn.android.databinding.SampleViewBinding
 import me.kevinschildhorn.atomik.DesignSystem
-import me.kevinschildhorn.atomik.atomic.atoms.xml.applyColorAtom
-import me.kevinschildhorn.atomik.atomic.atoms.xml.applyTextAtom
+// import me.kevinschildhorn.atomik.atomic.atoms.xml.applyColorAtom
+// import me.kevinschildhorn.atomik.atomic.atoms.xml.applyTextAtom
 import me.kevinschildhorn.common.design.theme.kevinrestart.KevinAtoms
 
 internal class DefaultDesignView @JvmOverloads constructor(
@@ -32,10 +32,10 @@ internal class DefaultDesignView @JvmOverloads constructor(
 
     private fun initErrorView() = with(binding.errorView) {
         val textViewAtom = KevinAtoms.errorViewAtom
-        applyColorAtom(textViewAtom)
+        //applyColorAtom(textViewAtom)
 
-        applyTextAtom(textViewAtom.subAtom())
-        this.text = "Hello World"
+        //applyTextAtom(textViewAtom.subAtom())
+        // this.text = hello()// "Hello World"
 /*
         setTextSize(TypedValue.COMPLEX_UNIT_SP, 14F)
         setTextColor(android.graphics.Color.BLACK)
