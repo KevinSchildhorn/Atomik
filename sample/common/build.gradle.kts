@@ -30,7 +30,7 @@ kotlin {
                 implementation(kotlin("stdlib-common"))
                 implementation("co.touchlab:kermit:1.2.2")
                 implementation("co.touchlab:kermit-koin:1.2.2")
-                implementation(project(":atomik:atomik"))
+                implementation(project(":atomik"))
             }
         }
     }
