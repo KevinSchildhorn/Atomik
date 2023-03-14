@@ -48,10 +48,10 @@ kotlin {
             dependencies {
                 api("androidx.appcompat:appcompat:1.6.1")
                 api("androidx.core:core-ktx:1.9.0")
-                implementation("androidx.compose.ui:ui:1.4.0-rc01")
-                implementation("androidx.compose.foundation:foundation:1.4.0-rc01")
-                implementation("androidx.compose.material:material:1.4.0-rc01")
-                implementation("androidx.compose.runtime:runtime:1.4.0-rc01")
+                implementation("androidx.compose.ui:ui:1.3.3")
+                implementation("androidx.compose.foundation:foundation:1.3.1")
+                implementation("androidx.compose.material:material:1.3.1")
+                implementation("androidx.compose.runtime:runtime:1.3.3")
             }
         }
         val iosMain by getting {
@@ -69,6 +69,7 @@ android {
         minSdk = 24
         targetSdk = 33
     }
+
     buildFeatures {
         compose = true
     }

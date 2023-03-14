@@ -2,6 +2,7 @@ plugins {
     id("com.android.application")
     kotlin("android")
     id("org.jlleitschuh.gradle.ktlint") version "11.0.0"
+    id("org.jetbrains.compose") version "1.3.1"
 }
 
 group = "com.kevinschildhorn.atomiksample"
@@ -17,18 +18,19 @@ repositories {
 
 dependencies {
     implementation("androidx.appcompat:appcompat:1.6.1")
-    //implementation(project(":atomik"))
-    implementation("com.kevinschildhorn:atomik:0.0.1")
+    implementation(project(":atomik"))
+    // implementation("com.kevinschildhorn:atomik:0.0.1")
     implementation(project(":sample:common"))
     implementation("androidx.lifecycle:lifecycle-runtime-compose:2.6.0")
-    implementation("androidx.compose.ui:ui:1.4.0-rc01")
-    implementation("androidx.compose.foundation:foundation:1.4.0-rc01")
-    implementation("androidx.compose.material:material:1.4.0-rc01")
-    implementation("androidx.compose.runtime:runtime:1.4.0-rc01")
+    implementation("androidx.compose.ui:ui:1.3.3")
+    implementation("androidx.compose.foundation:foundation:1.3.1")
+    implementation("androidx.compose.material:material:1.3.1")
+    implementation("androidx.compose.runtime:runtime:1.3.3")
     implementation("androidx.activity:activity-compose:1.6.1")
-    implementation("androidx.compose.ui:ui-tooling-preview:1.4.0-rc01")
-    implementation("androidx.compose.ui:ui-viewbinding:1.4.0-rc01")
-    debugImplementation("androidx.compose.ui:ui-tooling:1.4.0-rc01")
+    implementation("androidx.compose.ui:ui-tooling-preview:1.3.3")
+    implementation("androidx.compose.ui:ui-viewbinding:1.3.3")
+    debugImplementation("androidx.compose.ui:ui-tooling:1.3.3")
+
     debugImplementation("androidx.customview:customview:1.2.0-alpha02")
     debugImplementation("androidx.customview:customview-poolingcontainer:1.0.0")
     implementation("androidx.cardview:cardview:1.0.0")
@@ -59,5 +61,8 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
     }
 }
