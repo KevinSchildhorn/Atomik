@@ -1,6 +1,5 @@
 package me.kevinschildhorn.atomik.atomic.atoms
 
-/*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.BiasAlignment
 import me.kevinschildhorn.atomik.atomic.atoms.interfaces.AtomikConstraintX
@@ -41,4 +40,3 @@ private val ConstrainedAtom.horizontalBias: Float
 
 val ConstrainedAtom.alignment: Alignment
     get() = BiasAlignment(horizontalBias, verticalBias)
-*/

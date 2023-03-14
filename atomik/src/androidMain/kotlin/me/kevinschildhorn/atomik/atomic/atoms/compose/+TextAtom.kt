@@ -1,5 +1,5 @@
 package me.kevinschildhorn.atomik.atomic.atoms
-/*
+
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.sp
@@ -24,4 +24,3 @@ fun TextAtom.textStyle(fontFamily: FontFamily): TextStyle =
         fontSize = this.typography.typography.size.sp,
         color = this.textColor.composeColor
     )
-*/

@@ -1,5 +1,5 @@
 package me.kevinschildhorn.atomik.color.base
-/*
+
 import androidx.compose.ui.graphics.Color
 
 val AtomikColor.composeColor: Color
@@ -12,4 +12,3 @@ val AtomikColor.composeColor: Color
 
 val AtomikColor.hexColor: Int
     get() = android.graphics.Color.parseColor(hexString)
-*/
