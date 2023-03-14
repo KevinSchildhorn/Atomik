@@ -52,11 +52,10 @@ class AtomikColor {
         this.a = a ?: 1F
         val alphaString: String = a?.let { (it * 255).roundToInt().asHexString } ?: ""
         this.hexString = "#${
-            r.asHexString + g.asHexString + b.asHexString + alphaString
+        r.asHexString + g.asHexString + b.asHexString + alphaString
         }".uppercase()
         print(hexString)
     }
-
 
     private val String.isLongForm: Boolean
         get() = this.length == 8 + 1

@@ -1,8 +1,8 @@
 package me.kevinschildhorn.atomik.typography
 
 import me.kevinschildhorn.atomik.typography.base.AtomikTypography
-import me.kevinschildhorn.atomik.typography.base.TypographySet
 import me.kevinschildhorn.atomik.typography.base.AtomikTypographyType
+import me.kevinschildhorn.atomik.typography.base.TypographySet
 
 class CustomTypographySet(
     override val fallbackTypography: AtomikTypography,

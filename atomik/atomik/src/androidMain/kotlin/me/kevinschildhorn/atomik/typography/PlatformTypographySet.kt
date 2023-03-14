@@ -1,9 +1,5 @@
 package me.kevinschildhorn.atomik.typography
 
-import androidx.compose.ui.text.font.FontFamily
-import me.kevinschildhorn.atomik.typography.base.AtomikTypography
-import me.kevinschildhorn.atomik.typography.base.TypographySet
-import me.kevinschildhorn.atomik.typography.base.AtomikTypographyType
 /*
 actual class PlatformTypographySet// actual constructor(typographySet: DefaultTypographySet) : TypographySet {
 
@@ -39,7 +35,7 @@ actual class PlatformTypographySet// actual constructor(typographySet: DefaultTy
 
     override val fallbackTypography: AtomikTypography = typographySet.fallbackTypography
 
-    override fun getTypography(type: AtomikTypographyType): AtomikTypography = fallbackTypography/*
+    override fun getTypography(type: AtomikTypographyType): AtomikTypography = fallbackTypography
         when (type) {
             AtomikTypographyType.H1 -> h1
             AtomikTypographyType.H2 -> h2

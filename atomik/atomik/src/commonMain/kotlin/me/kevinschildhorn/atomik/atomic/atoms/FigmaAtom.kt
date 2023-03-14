@@ -37,7 +37,8 @@ class FigmaShapeAtom(
     override val paddingRight: Int? = paddingHorizontal,
     override val paddingTop: Int? = paddingVertical,
     override val paddingBottom: Int? = paddingVertical,
-) : FigmaBaseAtom(type, width, height, constraintX, constraintY), ColorAtom,
+) : FigmaBaseAtom(type, width, height, constraintX, constraintY),
+    ColorAtom,
     PaddingAtom
 
 class FigmaTextAtom(
@@ -59,5 +60,6 @@ class FigmaTextAtom(
     override val paddingRight: Int? = paddingHorizontal,
     override val paddingTop: Int? = paddingVertical,
     override val paddingBottom: Int? = paddingVertical,
-) : FigmaBaseAtom(type, width, height, constraintX, constraintY), TextAtom,
+) : FigmaBaseAtom(type, width, height, constraintX, constraintY),
+    TextAtom,
     PaddingAtom

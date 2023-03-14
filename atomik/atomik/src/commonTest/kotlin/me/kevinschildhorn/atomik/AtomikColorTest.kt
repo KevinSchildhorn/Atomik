@@ -86,7 +86,7 @@ class AtomikColorTest {
         assertAll(colorTestAlpha, color)
     }
 
-    private fun assertAll(ColorTest: ColorTest, color: AtomikColor){
+    private fun assertAll(ColorTest: ColorTest, color: AtomikColor) {
         assertEquals(expected = ColorTest.a, actual = color.a)
         assertEquals(expected = ColorTest.r, actual = color.r)
         assertEquals(expected = ColorTest.g, actual = color.g)

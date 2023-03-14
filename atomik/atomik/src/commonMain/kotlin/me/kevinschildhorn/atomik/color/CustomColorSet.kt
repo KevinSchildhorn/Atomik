@@ -10,7 +10,6 @@ class CustomColorSet(
     override fun getColor(name: String): AtomikColor = colors[name] ?: fallbackColor
 }
 
-
 class CustomColorSetTyped<E : Enum<*>>(
     override val fallbackColor: AtomikColor,
     private val colors: Map<E, AtomikColor>

@@ -1,12 +1,5 @@
 package me.kevinschildhorn.atomik.atomic.atoms
 
-import me.kevinschildhorn.atomik.atomic.atoms.interfaces.AtomType
-import me.kevinschildhorn.atomik.atomic.atoms.interfaces.PaddingAtom
-import me.kevinschildhorn.atomik.atomic.atoms.interfaces.TextAtom
-import me.kevinschildhorn.atomik.color.base.AtomikColor
-import me.kevinschildhorn.atomik.color.base.AtomikColorType
-import me.kevinschildhorn.atomik.typography.base.AtomikFontFamily
-import me.kevinschildhorn.atomik.typography.base.AtomikTypographyType
 /*
 class TextViewAtom(
     override val textColor: AtomikColor,

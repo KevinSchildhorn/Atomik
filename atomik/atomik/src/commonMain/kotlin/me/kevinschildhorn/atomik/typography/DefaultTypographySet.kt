@@ -1,8 +1,5 @@
 package me.kevinschildhorn.atomik.typography
 
-import me.kevinschildhorn.atomik.typography.base.AtomikTypography
-import me.kevinschildhorn.atomik.typography.base.TypographySet
-import me.kevinschildhorn.atomik.typography.base.AtomikTypographyType
 /*
 data class DefaultTypographySet(
     val h1: AtomikTypography? = null,

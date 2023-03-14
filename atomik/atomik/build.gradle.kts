@@ -1,18 +1,17 @@
-import org.jetbrains.kotlin.gradle.plugin.mpp.Framework.BitcodeEmbeddingMode.BITCODE
 
 plugins {
     kotlin("multiplatform")
-    kotlin("native.cocoapods")
     id("com.android.library")
     id("com.github.ben-manes.versions") version "0.43.0"
     id("org.jlleitschuh.gradle.ktlint") version "11.0.0"
-    id("org.jetbrains.dokka") version "1.7.20"
+    id("org.jetbrains.dokka") version "1.7.10"
 }
 
 group = "me.kevinschildhorn"
 version = "1.0"
 
 kotlin {
+    /*
     cocoapods {
         summary = "Some description for a Kotlin/Native module"
         homepage = "Link to a Kotlin/Native module homepage"
@@ -22,7 +21,7 @@ kotlin {
             isStatic = false
             embedBitcode(BITCODE)
         }
-    }
+    }*/
 
     android()
     ios()
@@ -41,7 +40,7 @@ kotlin {
         }
         val androidMain by getting {
             dependencies {
-                api("androidx.appcompat:appcompat:1.6.0")
+                api("androidx.appcompat:appcompat:1.6.1")
                 api("androidx.core:core-ktx:1.9.0")
                 implementation("androidx.compose.ui:ui:1.3.3")
                 implementation("androidx.compose.foundation:foundation:1.3.1")
@@ -70,10 +69,10 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.3.0"
+        kotlinCompilerExtensionVersion = "1.4.0"
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_15
-        targetCompatibility = JavaVersion.VERSION_15
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
 }
