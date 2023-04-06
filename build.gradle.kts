@@ -4,9 +4,6 @@ buildscript {
         gradlePluginPortal()
         mavenCentral()
         mavenLocal()
-        maven("https://androidx.dev/storage/compose-compiler/repository/")
-        maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
-        maven("https://maven.pkg.jetbrains.space/kotlin/p/kotlin/dev/")
     }
     dependencies {
         classpath("com.android.tools.build:gradle:7.4.2")
@@ -14,13 +11,8 @@ buildscript {
     }
 }
 
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
-        mavenLocal()
-        maven("https://androidx.dev/storage/compose-compiler/repository/")
-        maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
-        maven("https://maven.pkg.jetbrains.space/kotlin/p/kotlin/dev/")
-    }
+project.ext {
+    set("versionCode",1)
+    set("versionName","0.0.1")
+    set("namespace","com.kevinschildhorn")
 }

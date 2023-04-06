@@ -64,11 +64,11 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
-
+/*
 val fontFamily = FontFamily(
     Font(R.font.quicksand_regular),
     Font(R.font.quicksand_bold, FontWeight.Bold),
     Font(R.font.quicksand_light, FontWeight.Light),
     Font(R.font.quicksand_medium, FontWeight.Medium),
     Font(R.font.quicksand_semibold, FontWeight.SemiBold),
-)
+)*/
