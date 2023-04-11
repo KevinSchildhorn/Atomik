@@ -25,7 +25,7 @@ class ComposeNoNativePlugin : org.jetbrains.kotlin.gradle.plugin.KotlinCompilerP
 }
 apply<ComposeNoNativePlugin>() // Re-adding Compose Compilers only for non-native environments
 
-group = "com.kevinschildhorn"
+group = "com.kevinschildhorn.atomik"
 version = "0.0.1"
 
 kotlin {
