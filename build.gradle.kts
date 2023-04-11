@@ -4,8 +4,6 @@ buildscript {
         gradlePluginPortal()
         mavenCentral()
         mavenLocal()
-        maven { url 'https://jitpack.io' }
-
     }
     dependencies {
         classpath("com.android.tools.build:gradle:7.4.2")

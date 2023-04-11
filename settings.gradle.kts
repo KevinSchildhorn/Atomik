@@ -38,6 +38,7 @@ dependencyResolutionManagement {
         maven("https://maven.pkg.jetbrains.space/kotlin/p/kotlin/dev/")
         maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
         maven("https://plugins.gradle.org/m2/")
+        maven("https://jitpack.io")
     }
 }
 
