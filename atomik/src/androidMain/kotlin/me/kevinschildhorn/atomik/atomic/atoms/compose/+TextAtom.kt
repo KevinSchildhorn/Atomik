@@ -4,7 +4,6 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.sp
 import me.kevinschildhorn.atomik.atomic.atoms.interfaces.TextAtom
-import me.kevinschildhorn.atomik.color.base.composeColor
 import me.kevinschildhorn.atomik.typography.fontWeight
 
 val TextAtom.textStyle: TextStyle

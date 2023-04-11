@@ -1,32 +1,25 @@
 plugins {
     id("com.android.application")
     kotlin("android")
-    id("org.jlleitschuh.gradle.ktlint") version "11.0.0"
+    id("org.jlleitschuh.gradle.ktlint")
+    id("org.jetbrains.compose")
 }
 
-group = "me.kevinschildhorn"
-version = "1.0"
-
-repositories {
-    mavenCentral()
-    maven {
-        url = uri("https://plugins.gradle.org/m2/")
-    }
-}
+group = "com.kevinschildhorn"
+version = "0.0.2"
 
 dependencies {
     implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation(project(":atomik"))
+    //implementation("com.kevinschildhorn:atomik:0.0.2")
     implementation(project(":sample:common"))
-    implementation("androidx.lifecycle:lifecycle-runtime-compose:2.6.0")
-    implementation("androidx.compose.ui:ui:1.4.0-rc01")
-    implementation("androidx.compose.foundation:foundation:1.4.0-rc01")
-    implementation("androidx.compose.material:material:1.4.0-rc01")
-    implementation("androidx.compose.runtime:runtime:1.4.0-rc01")
-    implementation("androidx.activity:activity-compose:1.6.1")
-    implementation("androidx.compose.ui:ui-tooling-preview:1.4.0-rc01")
-    implementation("androidx.compose.ui:ui-viewbinding:1.4.0-rc01")
-    debugImplementation("androidx.compose.ui:ui-tooling:1.4.0-rc01")
+    implementation("androidx.lifecycle:lifecycle-runtime-compose:2.6.1")
+    implementation(compose.runtime)
+    implementation(compose.foundation)
+    implementation(compose.material)
+    implementation(compose.preview)
+    implementation(compose.ui)
+    implementation("androidx.activity:activity-compose:1.7.0")
+
     debugImplementation("androidx.customview:customview:1.2.0-alpha02")
     debugImplementation("androidx.customview:customview-poolingcontainer:1.0.0")
     implementation("androidx.cardview:cardview:1.0.0")
@@ -34,10 +27,11 @@ dependencies {
 
 @Suppress("UnstableApiUsage")
 android {
+
     compileSdk = 33
     defaultConfig {
-        applicationId = "me.kevinschildhorn.android"
-        minSdk = 24
+        applicationId = "com.kevinschildhorn.sampleandroid"
+        minSdk = 26
         targetSdk = 33
         versionCode = 1
         versionName = "1.0"
@@ -51,11 +45,8 @@ android {
         viewBinding = true
         compose = true
     }
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.3"
-    }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_15
+        targetCompatibility = JavaVersion.VERSION_15
     }
 }

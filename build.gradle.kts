@@ -1,12 +1,11 @@
-group = "me.kevinschildhorn"
-version = "1.0"
-
 buildscript {
     repositories {
         google()
         gradlePluginPortal()
         mavenCentral()
-        maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
+        mavenLocal()
+        maven { url 'https://jitpack.io' }
+
     }
     dependencies {
         classpath("com.android.tools.build:gradle:7.4.2")
@@ -14,11 +13,8 @@ buildscript {
     }
 }
 
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
-        maven("https://androidx.dev/storage/compose-compiler/repository/")
-        maven("https://maven.pkg.jetbrains.space/kotlin/p/kotlin/dev/")
-    }
+project.ext {
+    set("versionCode",1)
+    set("versionName","0.0.2")
+    set("namespace","com.kevinschildhorn")
 }
