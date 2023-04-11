@@ -1,4 +1,5 @@
 # Atomik
+[![](https://jitpack.io/v/KevinSchildhorn/Atomik.svg)](https://jitpack.io/#KevinSchildhorn/Atomik)
 
 Atomik is a Kotlin Multiplatform library that acts as an implementation of a design system in your shared code. It's in an experimental early stage, and should be used for testing purposes only.
 
