@@ -27,7 +27,7 @@ apply<ComposeNoNativePlugin>() // Re-adding Compose Compilers only for non-nativ
 
 
 group = "com.kevinschildhorn"
-version = "0.0.1"
+version = "0.0.2"
 
 kotlin {
     cocoapods {
@@ -50,7 +50,7 @@ kotlin {
                 implementation("co.touchlab:kermit-koin:1.2.2")
                 implementation(compose.runtime)
                 api(project(":atomik"))
-                //implementation("com.kevinschildhorn.atomik:atomik:0.0.1")
+                //implementation("com.kevinschildhorn.atomik:atomik:0.0.2")
             }
         }
     }

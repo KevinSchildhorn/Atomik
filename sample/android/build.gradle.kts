@@ -6,11 +6,11 @@ plugins {
 }
 
 group = "com.kevinschildhorn"
-version = "0.0.1"
+version = "0.0.2"
 
 dependencies {
     implementation("androidx.appcompat:appcompat:1.6.1")
-    //implementation("com.kevinschildhorn:atomik:0.0.1")
+    //implementation("com.kevinschildhorn:atomik:0.0.2")
     implementation(project(":sample:common"))
     implementation("androidx.lifecycle:lifecycle-runtime-compose:2.6.1")
     implementation(compose.runtime)
