@@ -47,3 +47,4 @@ rootProject.name = "Atomik"
 include(":atomik")
 include(":sample:common")
 include(":sample:android")
+includeBuild("convention-plugins")

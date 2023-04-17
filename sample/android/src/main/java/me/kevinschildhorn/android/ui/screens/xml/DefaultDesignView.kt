@@ -10,11 +10,14 @@ import androidx.appcompat.widget.LinearLayoutCompat
 import androidx.core.view.setPadding
 import me.kevinschildhorn.android.databinding.SampleViewBinding
 import me.kevinschildhorn.atomik.DesignSystem
+import me.kevinschildhorn.atomik.ExperimentalAtomik
 import me.kevinschildhorn.atomik.atomic.atoms.xml.applyColorAtom
 import me.kevinschildhorn.atomik.atomic.atoms.xml.applyTextAtom
 import me.kevinschildhorn.common.design.theme.kevinrestart.KevinAtoms
 
-internal class DefaultDesignView @JvmOverloads constructor(
+@OptIn(ExperimentalAtomik::class)
+internal class DefaultDesignView
+@JvmOverloads constructor(
     context: Context,
     designSystem: DesignSystem? = null,
     attrs: AttributeSet? = null,

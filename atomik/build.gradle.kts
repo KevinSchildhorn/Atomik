@@ -10,7 +10,8 @@ plugins {
     id("org.jetbrains.compose")
     id("org.jetbrains.dokka")
     id("org.jlleitschuh.gradle.ktlint")
-    id("maven-publish")
+    //id("maven-publish")
+    id("convention.publication")
 }
 
 // Exclude compose from iOS
@@ -25,17 +26,13 @@ class ComposeNoNativePlugin : org.jetbrains.kotlin.gradle.plugin.KotlinCompilerP
 }
 apply<ComposeNoNativePlugin>() // Re-adding Compose Compilers only for non-native environments
 
-group = "com.kevinschildhorn.atomik"
+group = "io.github.kevinschildhorn"
 version = "0.0.2"
 
 kotlin {
-    publishing {
-        repositories {
-            mavenLocal()
-        }
+    android {
+        publishLibraryVariants("release", "debug")
     }
-
-    android()
     ios {
         binaries {
             framework {
@@ -44,7 +41,7 @@ kotlin {
         }
     }
     sourceSets {
-        commonMain {
+        val commonMain by getting {
             dependencies {
                 implementation(kotlin("stdlib-common"))
                 implementation("co.touchlab:kermit:1.2.2")
@@ -56,6 +53,7 @@ kotlin {
             }
         }
         val androidMain by getting {
+            dependsOn(commonMain)
             dependencies {
                 api("androidx.appcompat:appcompat:1.6.1")
                 api("androidx.core:core-ktx:1.10.0")
@@ -66,6 +64,7 @@ kotlin {
             }
         }
         val iosMain by getting {
+            dependsOn(commonMain)
             dependencies {
             }
         }

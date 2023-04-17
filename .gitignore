@@ -34,3 +34,5 @@ ios/FotoPresenter.xcodeproj/xcuserdata/kevinschildhorn.xcuserdatad/xcschemes/xcs
 *.xcbkptlist
 ios/Pods
 *.hprof
+local.properties
+keyring.gpg

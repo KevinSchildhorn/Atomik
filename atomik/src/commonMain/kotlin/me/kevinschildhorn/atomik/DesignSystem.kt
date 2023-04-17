@@ -5,6 +5,11 @@ import me.kevinschildhorn.atomik.color.base.ColorSet
 import me.kevinschildhorn.atomik.typography.base.AtomikFontFamily
 import me.kevinschildhorn.atomik.typography.base.TypographySet
 
+
+@RequiresOptIn(message = "This API Is Experimental")
+@Retention(AnnotationRetention.BINARY)
+@Target(AnnotationTarget.CLASS, AnnotationTarget.FUNCTION, AnnotationTarget.PROPERTY)
+annotation class ExperimentalAtomik
 /**
  * A Design System
  *
@@ -16,6 +21,7 @@ import me.kevinschildhorn.atomik.typography.base.TypographySet
  * @property[components] the atomic components to be used in this Design System
  * @property[fontFamily] the font family passed into the Design System from the Platform level
  */
+@ExperimentalAtomik
 open class DesignSystem(
     open val colorSet: ColorSet,
     open val typographySet: TypographySet,
