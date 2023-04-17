@@ -2,15 +2,16 @@ package me.kevinschildhorn.atomik.atomic.atoms.interfaces
 
 import me.kevinschildhorn.atomik.atomic.atoms.Atom
 
-interface PaddingAtom : AtomInterface {
-    val padding: Int?
-    val paddingHorizontal: Int?
-    val paddingVertical: Int?
-    val paddingLeft: Int?
-    val paddingRight: Int?
-    val paddingTop: Int?
-    val paddingBottom: Int?
+public interface PaddingAtom : AtomInterface {
+    public val padding: Int?
+    public val paddingHorizontal: Int?
+    public val paddingVertical: Int?
+    public val paddingLeft: Int?
+    public val paddingRight: Int?
+    public val paddingTop: Int?
+    public val paddingBottom: Int?
 }
 
-val Atom.paddingAtom: PaddingAtom?
+public val Atom.paddingAtom: PaddingAtom?
     get() = this.asAtom<PaddingAtom>()
+

@@ -1,6 +1,7 @@
 package me.kevinschildhorn.atomik.atomic.atoms
 
-/*class ImageAtom<T>(
+/*
+class ImageAtom<T>(
     color: AtomikColor,
     override val image: T,
 ) : Atom(), ResourceAtom<T> {

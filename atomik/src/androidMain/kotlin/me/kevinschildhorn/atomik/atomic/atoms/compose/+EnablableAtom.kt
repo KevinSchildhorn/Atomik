@@ -1,3 +1,4 @@
+// ktlint-disable filename
 package me.kevinschildhorn.atomik.atomic.atoms.compose
 
 /*

@@ -4,7 +4,7 @@ import me.kevinschildhorn.atomik.typography.base.AtomikTypography
 import me.kevinschildhorn.atomik.typography.base.AtomikTypographyType
 import me.kevinschildhorn.atomik.typography.base.TypographySet
 
-class CustomTypographySet(
+public class CustomTypographySet(
     override val fallbackTypography: AtomikTypography,
     private val typographies: Map<AtomikTypographyType, AtomikTypography>
 ) : TypographySet {
@@ -13,11 +13,11 @@ class CustomTypographySet(
         typographies[type] ?: fallbackTypography
 }
 
-class CustomTypographySetTyped<E : Enum<*>>(
+public class CustomTypographySetTyped<E : Enum<*>>(
     override val fallbackTypography: AtomikTypography,
     private val typographies: Map<E, AtomikTypography>
 ) : TypographySet {
 
-    fun getTypography(type: E): AtomikTypography = typographies[type] ?: fallbackTypography
+    public fun getTypography(type: E): AtomikTypography = typographies[type] ?: fallbackTypography
     override fun getTypography(type: AtomikTypographyType): AtomikTypography = fallbackTypography
 }

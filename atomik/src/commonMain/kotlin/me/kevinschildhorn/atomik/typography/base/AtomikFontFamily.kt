@@ -5,4 +5,4 @@ package me.kevinschildhorn.atomik.typography.base
  *
  * This is either a group of UIFonts in iOS or a FontFamily in compose. It is needed to use platform specific font functionality
  */
-expect class AtomikFontFamily
+public expect class AtomikFontFamily

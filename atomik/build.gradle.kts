@@ -10,7 +10,7 @@ plugins {
     id("org.jetbrains.compose")
     id("org.jetbrains.dokka")
     id("org.jlleitschuh.gradle.ktlint")
-    //id("maven-publish")
+    // id("maven-publish")
     id("convention.publication")
 }
 
@@ -30,6 +30,7 @@ group = "io.github.kevinschildhorn"
 version = "0.0.2"
 
 kotlin {
+    explicitApi()
     android {
         publishLibraryVariants("release", "debug")
     }

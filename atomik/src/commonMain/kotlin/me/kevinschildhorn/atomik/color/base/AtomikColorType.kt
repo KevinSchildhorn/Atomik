@@ -1,6 +1,7 @@
 package me.kevinschildhorn.atomik.color.base
 
-interface AtomikColorType {
-    val id: String
-    val color: AtomikColor
+@Suppress("SpellCheckingInspection")
+public interface AtomikColorType {
+    public val id: String
+    public val color: AtomikColor
 }

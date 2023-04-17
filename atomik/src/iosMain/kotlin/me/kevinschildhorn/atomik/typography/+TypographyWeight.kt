@@ -1,3 +1,4 @@
+// ktlint-disable filename
 package me.kevinschildhorn.atomik.typography
 
 import me.kevinschildhorn.atomik.typography.base.AtomikTypographyWeight

@@ -1,5 +1,5 @@
 package me.kevinschildhorn.common.design.theme.fluent
-
+/*
 import me.kevinschildhorn.atomik.color.CustomColorSet
 import me.kevinschildhorn.atomik.color.base.AtomikColor
 import me.kevinschildhorn.atomik.color.base.AtomikColorType
@@ -28,4 +28,4 @@ val fluentColorSet = CustomColorSet(
     FluentColors.values().map {
         it.id to it.color
     }.toMap()
-)
+)*/

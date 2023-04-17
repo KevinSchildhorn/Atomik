@@ -2,10 +2,11 @@ package me.kevinschildhorn.atomik.atomic.atoms.interfaces
 
 import me.kevinschildhorn.atomik.atomic.atoms.Atom
 
-interface FixedSizeAtom : AtomInterface {
-    val width: Int?
-    val height: Int?
+public interface FixedSizeAtom : AtomInterface {
+    public val width: Int?
+    public val height: Int?
 }
 
-val Atom.fixedSizeAtom: FixedSizeAtom?
+public val Atom.fixedSizeAtom: FixedSizeAtom?
     get() = this.asAtom<FixedSizeAtom>()
+

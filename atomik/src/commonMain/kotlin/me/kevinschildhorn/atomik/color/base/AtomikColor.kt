@@ -1,22 +1,25 @@
 package me.kevinschildhorn.atomik.color.base
 
-import kotlin.math.roundToInt
-
 /**
  * A common implementation of a Color
  *
- * This contains platform specific implementations in the actual versions
+ * This contains platform specific implementations in the actual versions. Can be created from
+ * either a hex Long or an RGBA value
+ *
+ * @property hexString The hex value of the color (#RRGGBBAA)
+ * @property r The red Value (0-255)
+ * @property g The red Value (0-255)
+ * @property b The red Value (0-255)
+ * @property a The alpha Value (0-1) (Defaults to 1)
  */
-expect class AtomikColor {
+@Suppress("SpellCheckingInspection")
+public expect class AtomikColor {
 
-    /*
-     * hex code for color (#RRGGBBAA) (alpha optional)
-     */
-    val hexString: String
-    val r: Int
-    val g: Int
-    val b: Int
-    val a: Float
+    public val hexString: String
+    public val r: Int
+    public val g: Int
+    public val b: Int
+    public val a: Float
 
     /**
      * Constructor with hex variable
@@ -24,7 +27,7 @@ expect class AtomikColor {
      * @constructor Creates a color based on the hex value(i.e. 0xFFFFFF)
      * @param hex - The Hex Value of the color (#RRGGBBAA)
      */
-    constructor(hex: Long)
+    public constructor(hex: Long)
 
     /**
      * Constructor with r, g, b, a
@@ -33,7 +36,7 @@ expect class AtomikColor {
      *  @param r - Red value (0-255)
      *  @param g - Green Value (0-255)
      *  @param b - Blue Value (0-255)
-     *  @param a - Alpha value (0-1)
+     *  @param a - Alpha value (0-1) (defaults to 1)
      */
-    constructor(r: Int, g: Int, b: Int, a: Float? = null)
+    public constructor(r: Int, g: Int, b: Int, a: Float? = null)
 }

@@ -12,7 +12,7 @@ class AtomikColorTest {
         val r: Int,
         val g: Int,
         val b: Int,
-        val a: Float = 1F,
+        val a: Float = 1F
     )
 
     private val colorTestNoAlpha = ColorTest(
@@ -20,7 +20,7 @@ class AtomikColorTest {
         hexColorString = "#A63028",
         r = 166,
         g = 48,
-        b = 40,
+        b = 40
     )
 
     private val colorTestAlpha = ColorTest(

@@ -2,7 +2,6 @@ package me.kevinschildhorn.android.ui.screens.compose
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import me.kevinschildhorn.atomik.DesignSystem
 
 @Preview
 @Composable

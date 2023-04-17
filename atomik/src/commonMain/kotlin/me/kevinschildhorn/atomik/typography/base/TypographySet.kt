@@ -7,13 +7,15 @@ package me.kevinschildhorn.atomik.typography.base
  *
  * @property[fallbackTypography] the Typography that is passed if the requested color cannot be found
  */
-interface TypographySet {
-    val fallbackTypography: AtomikTypography
+
+public interface TypographySet {
+    public val fallbackTypography: AtomikTypography
 
     /**
      * Gets the color based on a name
      * @param[type] The type of typograpnhy you want to get
      * @return the [AtomikTypography] based on the type passed
      */
-    fun getTypography(type: AtomikTypographyType): AtomikTypography
+    public fun getTypography(type: AtomikTypographyType): AtomikTypography
 }
+

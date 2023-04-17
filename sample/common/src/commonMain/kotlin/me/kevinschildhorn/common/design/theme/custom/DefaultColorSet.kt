@@ -1,5 +1,5 @@
 package me.kevinschildhorn.common.design.theme.custom
-
+/*
 import me.kevinschildhorn.atomik.color.DefaultColorSet
 import me.kevinschildhorn.atomik.color.base.AtomikColor
 
@@ -31,4 +31,4 @@ object DefaultColorSet {
         surfaceText = AtomikColor(0xFFFFA500),
         errorText = AtomikColor(0xFF5A1111),
     )
-}
+}*/

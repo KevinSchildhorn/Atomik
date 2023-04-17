@@ -1,7 +1,8 @@
 package me.kevinschildhorn.atomik.color
-
+/*
 import me.kevinschildhorn.atomik.color.base.AtomikColor
 import me.kevinschildhorn.atomik.color.base.ColorSet
+
 
 val disabledColor: AtomikColor = AtomikColor(0xFF888888)
 
@@ -34,4 +35,4 @@ data class DefaultColorSet(
             "errorText" -> errorText
             else -> primary
         }
-}
+}*/

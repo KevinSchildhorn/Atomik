@@ -1,3 +1,4 @@
+// ktlint-disable filename
 package me.kevinschildhorn.atomik.atomic.atoms
 
 import androidx.compose.ui.Alignment
@@ -6,7 +7,7 @@ import me.kevinschildhorn.atomik.atomic.atoms.interfaces.AtomikConstraintX
 import me.kevinschildhorn.atomik.atomic.atoms.interfaces.AtomikConstraintY
 import me.kevinschildhorn.atomik.atomic.atoms.interfaces.ConstrainedAtom
 
-val ConstrainedAtom.alignmentVertical: Alignment.Vertical
+public val ConstrainedAtom.alignmentVertical: Alignment.Vertical
     get() = when (this.constraintY) {
         AtomikConstraintY.ALIGN_TOP -> Alignment.Top
         AtomikConstraintY.ALIGN_BOTTOM -> Alignment.Bottom
@@ -14,7 +15,7 @@ val ConstrainedAtom.alignmentVertical: Alignment.Vertical
         AtomikConstraintY.SCALE -> Alignment.CenterVertically
     }
 
-val ConstrainedAtom.alignmentHorizontal: Alignment.Horizontal
+public val ConstrainedAtom.alignmentHorizontal: Alignment.Horizontal
     get() = when (this.constraintX) {
         AtomikConstraintX.ALIGN_LEFT -> Alignment.Start
         AtomikConstraintX.ALIGN_RIGHT -> Alignment.End
@@ -38,5 +39,6 @@ private val ConstrainedAtom.horizontalBias: Float
         AtomikConstraintX.SCALE -> 0f
     }
 
-val ConstrainedAtom.alignment: Alignment
+public val ConstrainedAtom.alignment: Alignment
     get() = BiasAlignment(horizontalBias, verticalBias)
+

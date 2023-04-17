@@ -12,7 +12,7 @@ import me.kevinschildhorn.atomik.color.base.AtomikColor
 import me.kevinschildhorn.atomik.typography.base.AtomikFontFamily
 import me.kevinschildhorn.atomik.typography.base.AtomikTypographyType
 
-open class FigmaBaseAtom(
+public open class FigmaBaseAtom(
     override val type: AtomType,
     override val width: Int?,
     override val height: Int?,
@@ -20,7 +20,7 @@ open class FigmaBaseAtom(
     override val constraintY: AtomikConstraintY,
 ) : Atom(), FixedSizeAtom, ConstrainedAtom
 
-class FigmaShapeAtom(
+public class FigmaShapeAtom(
     override val type: AtomType = AtomType.VIEW,
     override val subComponents: List<Atom> = emptyList(),
     override val width: Int? = null,
@@ -41,7 +41,7 @@ class FigmaShapeAtom(
     ColorAtom,
     PaddingAtom
 
-class FigmaTextAtom(
+public class FigmaTextAtom(
     override val type: AtomType = AtomType.TEXT,
     override val subComponents: List<Atom> = emptyList(),
     override val width: Int? = null,

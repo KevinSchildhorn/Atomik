@@ -1,6 +1,6 @@
 package me.kevinschildhorn.atomik.typography.base
 
-enum class AtomikTypographyWeight {
+public enum class AtomikTypographyWeight {
     THIN,
     EXTRALIGHT,
     LIGHT,

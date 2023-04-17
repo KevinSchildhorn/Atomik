@@ -1,6 +1,7 @@
 package me.kevinschildhorn.atomik.typography.base
 
-interface AtomikTypographyType {
-    val id: String
-    val typography: AtomikTypography
+public interface AtomikTypographyType {
+    public val id: String
+    public val typography: AtomikTypography
 }
+
