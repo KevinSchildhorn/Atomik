@@ -24,11 +24,10 @@ class ComposeNoNativePlugin : org.jetbrains.kotlin.gradle.plugin.KotlinCompilerP
 apply<ComposeNoNativePlugin>() // Re-adding Compose Compilers only for non-native environments
 
 group = "io.github.kevinschildhorn"
-version = "0.0.2"
-
+version = "0.0.2-SNAPSHOT"
 
 mavenPublishing {
-    coordinates("io.github.kevinschildhorn.atomik", "atomik", "0.0.2")
+    coordinates("io.github.kevinschildhorn.atomik", "atomik", "0.0.2-SNAPSHOT")
 
     pom {
         name.set("Atomik")
@@ -56,16 +55,16 @@ mavenPublishing {
         }
     }
 
-    publishToMavenCentral(SonatypeHost.DEFAULT)
+    publishToMavenCentral(SonatypeHost.S01)
     signAllPublications()
 }
 
-
 kotlin {
     explicitApi()
-    //android {
+    android()
+    // android {
     //    publishLibraryVariants("release", "debug")
-    //}
+    // }
     ios {
         binaries {
             framework {
@@ -85,7 +84,6 @@ kotlin {
                 implementation(kotlin("test"))
             }
         }
-        /*
         val androidMain by getting {
             dependsOn(commonMain)
             dependencies {
@@ -96,7 +94,7 @@ kotlin {
                 implementation(compose.material)
                 implementation(compose.ui)
             }
-        }*/
+        }
         val iosMain by getting {
             dependsOn(commonMain)
             dependencies {

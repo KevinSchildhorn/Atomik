@@ -1,3 +1,5 @@
+// ktlint-disable filename
+
 package com.kevinschildhorn.common
 
 import com.kevinschildhorn.atomik.color.base.AtomikColor

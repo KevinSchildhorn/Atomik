@@ -24,7 +24,6 @@ fun TabBar(buttons: Map<String, () -> Unit>) {
             .height(55.dp)
             .background(Color.Black)
     ) {
-
         buttons.forEach { (title, onClick) ->
             Button(
                 onClick = onClick,
@@ -48,7 +47,7 @@ fun TabBarPreview() {
         buttons = mapOf<String, () -> Unit>(
             "A" to {},
             "B" to {},
-            "C" to {},
+            "C" to {}
         )
     )
 }

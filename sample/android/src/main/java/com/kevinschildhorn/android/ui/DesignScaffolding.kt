@@ -32,7 +32,7 @@ fun <T : View> DesignScaffolding(composeView: @Composable () -> Unit, androidVie
                 modifier = Modifier
                     .fillMaxWidth()
                     .background(Color.LightGray),
-                horizontalArrangement = Arrangement.End,
+                horizontalArrangement = Arrangement.End
             ) {
                 Text("Compose")
                 Switch(
@@ -40,7 +40,8 @@ fun <T : View> DesignScaffolding(composeView: @Composable () -> Unit, androidVie
                     onCheckedChange = { checkedState.value = it }
                 )
                 Text(
-                    "XML", modifier = Modifier.padding(end = 5.dp)
+                    "XML",
+                    modifier = Modifier.padding(end = 5.dp)
                 )
             }
         },

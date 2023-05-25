@@ -21,7 +21,7 @@ object KevinAtoms {
         constraintY = AtomikConstraintY.SCALE,
         textColor = kevinColorSet.getColor("errorText"), // GOOD
         typography = tempType,
-        padding = 12,
+        padding = 12
     )
 
     val errorViewAtom = FigmaShapeAtom(

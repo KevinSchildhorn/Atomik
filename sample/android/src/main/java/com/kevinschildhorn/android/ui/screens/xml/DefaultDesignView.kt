@@ -21,7 +21,7 @@ internal class DefaultDesignView
     context: Context,
     designSystem: DesignSystem? = null,
     attrs: AttributeSet? = null,
-    defStyleAttr: Int = 0,
+    defStyleAttr: Int = 0
 ) : FrameLayout(context, attrs, defStyleAttr) {
 
     private val binding: SampleViewBinding
@@ -29,8 +29,8 @@ internal class DefaultDesignView
     init {
         binding = SampleViewBinding.inflate(LayoutInflater.from(context), this, true)
         initErrorView()
-        //initCard()
-        //initImage()
+        // initCard()
+        // initImage()
     }
 
     private fun initErrorView() = with(binding.errorView) {

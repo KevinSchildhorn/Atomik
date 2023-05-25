@@ -8,9 +8,6 @@ import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.ui.text.font.Font
-import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import com.kevinschildhorn.android.ui.TabBar
 import com.kevinschildhorn.android.ui.screens.DesignScaffolding
@@ -42,7 +39,7 @@ class MainActivity : AppCompatActivity() {
                     buttons = mapOf(
                         "A" to { screenState.value = Screen.A },
                         "B" to { screenState.value = Screen.B },
-                        "C" to { screenState.value = Screen.C },
+                        "C" to { screenState.value = Screen.C }
                     )
                 )
             }

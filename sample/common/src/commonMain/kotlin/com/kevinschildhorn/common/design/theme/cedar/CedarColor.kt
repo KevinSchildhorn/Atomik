@@ -58,7 +58,7 @@ enum class CedarColor(val value: String, val hex: Long) {
     // Links
     TextLinkRest("color-text-link-rest", 0x406EB5),
     TextLinkVisited("color-text-link-visited", 0x406EB5),
-    TextLinkDisabled("color-text-link-disabled", 0xD1CBBD),
+    TextLinkDisabled("color-text-link-disabled", 0xD1CBBD)
 }
 /*
 val cedarColorSet = CustomColorSetTyped(

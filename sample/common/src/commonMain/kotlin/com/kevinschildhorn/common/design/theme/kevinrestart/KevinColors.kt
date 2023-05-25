@@ -28,6 +28,6 @@ val kevinColorSet = CustomColorSet(
         "surfaceDarkText" to AtomikColor(255, 165, 0),
         "errorDark" to AtomikColor(209, 0, 0),
         "errorDarkText" to AtomikColor(90, 18, 18),
-        "Alert & Status/Red/Red 100" to AtomikColor(255, 232, 235, 1F),
-    ),
+        "Alert & Status/Red/Red 100" to AtomikColor(255, 232, 235, 1F)
+    )
 )
