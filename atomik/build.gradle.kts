@@ -64,9 +64,6 @@ mavenPublishing {
 kotlin {
     explicitApi()
     android()
-    // android {
-    //    publishLibraryVariants("release", "debug")
-    // }
     ios {
         binaries {
             framework {
