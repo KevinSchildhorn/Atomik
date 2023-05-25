@@ -1,7 +1,7 @@
-package me.kevinschildhorn.common.design.theme.kevinrestart
+package com.kevinschildhorn.common.design.theme.kevinrestart
 
-import me.kevinschildhorn.atomik.color.CustomColorSet
-import me.kevinschildhorn.atomik.color.base.AtomikColor
+import com.kevinschildhorn.atomik.color.CustomColorSet
+import com.kevinschildhorn.atomik.color.base.AtomikColor
 
 private val primary = AtomikColor(255, 165, 0)
 

@@ -1,4 +1,4 @@
-package me.kevinschildhorn.android.ui
+package com.kevinschildhorn.android.ui
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Row

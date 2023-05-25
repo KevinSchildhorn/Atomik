@@ -1,3 +1,3 @@
-package me.kevinschildhorn.common.design.theme.cedar.components
+package com.kevinschildhorn.common.design.theme.cedar.components
 
 object CedarAtoms

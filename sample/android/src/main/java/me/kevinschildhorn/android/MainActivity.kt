@@ -1,4 +1,4 @@
-package me.kevinschildhorn.android
+package com.kevinschildhorn.android
 
 import android.os.Bundle
 import androidx.activity.compose.setContent
@@ -12,11 +12,11 @@ import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
-import me.kevinschildhorn.android.ui.TabBar
-import me.kevinschildhorn.android.ui.screens.DesignScaffolding
-import me.kevinschildhorn.android.ui.screens.Screen
-import me.kevinschildhorn.android.ui.screens.compose.DefaultDesignComposable
-import me.kevinschildhorn.android.ui.screens.xml.DefaultDesignView
+import com.kevinschildhorn.android.ui.TabBar
+import com.kevinschildhorn.android.ui.screens.DesignScaffolding
+import com.kevinschildhorn.android.ui.screens.Screen
+import com.kevinschildhorn.android.ui.screens.compose.DefaultDesignComposable
+import com.kevinschildhorn.android.ui.screens.xml.DefaultDesignView
 
 class MainActivity : AppCompatActivity() {
 

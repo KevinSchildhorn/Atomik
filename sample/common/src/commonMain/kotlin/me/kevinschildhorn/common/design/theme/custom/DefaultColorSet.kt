@@ -1,7 +1,7 @@
-package me.kevinschildhorn.common.design.theme.custom
+package com.kevinschildhorn.common.design.theme.custom
 /*
-import me.kevinschildhorn.atomik.color.DefaultColorSet
-import me.kevinschildhorn.atomik.color.base.AtomikColor
+import com.kevinschildhorn.atomik.color.DefaultColorSet
+import com.kevinschildhorn.atomik.color.base.AtomikColor
 
 object DefaultColorSet {
     val light = DefaultColorSet(

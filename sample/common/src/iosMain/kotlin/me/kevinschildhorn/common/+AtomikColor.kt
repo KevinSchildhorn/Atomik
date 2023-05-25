@@ -1,6 +1,6 @@
-package me.kevinschildhorn.common
+package com.kevinschildhorn.common
 
-import me.kevinschildhorn.atomik.color.base.AtomikColor
+import com.kevinschildhorn.atomik.color.base.AtomikColor
 import platform.UIKit.UIColor
 
 @Suppress("unused")

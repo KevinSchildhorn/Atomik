@@ -22,6 +22,7 @@ pluginManagement {
         id("org.jetbrains.compose").version("1.3.1").apply(false)
         id("org.jetbrains.dokka").version("1.7.10").apply(false)
         id("org.jlleitschuh.gradle.ktlint").version("11.3.1").apply(false)
+        id("com.vanniktech.maven.publish").version("0.25.2").apply(false)
     }
 }
 
@@ -47,4 +48,4 @@ rootProject.name = "Atomik"
 include(":atomik")
 include(":sample:common")
 include(":sample:android")
-includeBuild("convention-plugins")
+//includeBuild("convention-plugins")

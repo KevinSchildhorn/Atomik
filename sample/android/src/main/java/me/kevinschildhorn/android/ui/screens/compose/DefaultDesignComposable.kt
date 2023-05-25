@@ -1,4 +1,4 @@
-package me.kevinschildhorn.android.ui.screens.compose
+package com.kevinschildhorn.android.ui.screens.compose
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview

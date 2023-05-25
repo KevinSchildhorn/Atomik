@@ -1,4 +1,4 @@
-package me.kevinschildhorn.common.design.theme.fluent.components
+package com.kevinschildhorn.common.design.theme.fluent.components
 
 /*
 object FluentAtoms {

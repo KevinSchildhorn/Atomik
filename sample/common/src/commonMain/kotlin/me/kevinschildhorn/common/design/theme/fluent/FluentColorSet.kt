@@ -1,8 +1,8 @@
-package me.kevinschildhorn.common.design.theme.fluent
+package com.kevinschildhorn.common.design.theme.fluent
 /*
-import me.kevinschildhorn.atomik.color.CustomColorSet
-import me.kevinschildhorn.atomik.color.base.AtomikColor
-import me.kevinschildhorn.atomik.color.base.AtomikColorType
+import com.kevinschildhorn.atomik.color.CustomColorSet
+import com.kevinschildhorn.atomik.color.base.AtomikColor
+import com.kevinschildhorn.atomik.color.base.AtomikColorType
 
 // Taken from the Microsoft Fluent Android Figma file
 enum class FluentColors(override val id: String, override val color: AtomikColor) : AtomikColorType {

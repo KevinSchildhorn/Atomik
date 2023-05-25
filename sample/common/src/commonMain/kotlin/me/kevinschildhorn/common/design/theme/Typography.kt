@@ -1,8 +1,8 @@
-package me.kevinschildhorn.common.design.theme
+package com.kevinschildhorn.common.design.theme
 /*
-import me.kevinschildhorn.atomik.typography.DefaultTypographySet
-import me.kevinschildhorn.atomik.typography.base.AtomikTypography
-import me.kevinschildhorn.atomik.typography.base.AtomikTypographyWeight
+import com.kevinschildhorn.atomik.typography.DefaultTypographySet
+import com.kevinschildhorn.atomik.typography.base.AtomikTypography
+import com.kevinschildhorn.atomik.typography.base.AtomikTypographyWeight
 
 internal val sharedTypography = DefaultTypographySet(
     h1 = AtomikTypography(size = 96),

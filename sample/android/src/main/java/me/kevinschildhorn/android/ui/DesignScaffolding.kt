@@ -1,4 +1,4 @@
-package me.kevinschildhorn.android.ui.screens
+package com.kevinschildhorn.android.ui.screens
 
 import android.content.Context
 import android.view.View

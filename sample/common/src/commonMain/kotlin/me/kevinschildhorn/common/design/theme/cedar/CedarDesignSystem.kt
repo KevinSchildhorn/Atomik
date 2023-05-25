@@ -1,4 +1,4 @@
-package me.kevinschildhorn.common.design.theme.cedar
+package com.kevinschildhorn.common.design.theme.cedar
 
 // Cedar Design System
 // https://rei.github.io/rei-cedar-docs/

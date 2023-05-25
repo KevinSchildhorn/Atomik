@@ -1,4 +1,4 @@
-package me.kevinschildhorn.common.design.theme.cedar
+package com.kevinschildhorn.common.design.theme.cedar
 
 // https://www.figma.com/community/file/1057385750878897703
 // https://rei.github.io/rei-cedar-docs/tokens/all-tokens/

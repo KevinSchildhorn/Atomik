@@ -1,17 +1,17 @@
-package me.kevinschildhorn.android.ui.screens.compose
+package com.kevinschildhorn.android.ui.screens.compose
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import me.kevinschildhorn.atomik.atomic.atoms.FigmaShapeAtom
-import me.kevinschildhorn.atomik.atomic.atoms.FigmaTextAtom
-import me.kevinschildhorn.atomik.atomic.atoms.alignment
-import me.kevinschildhorn.atomik.atomic.atoms.atomikColor
-import me.kevinschildhorn.atomik.atomic.atoms.interfaces.textAtom
-import me.kevinschildhorn.atomik.atomic.atoms.textStyle
-import me.kevinschildhorn.common.design.theme.kevinrestart.KevinAtoms
+import com.kevinschildhorn.atomik.atomic.atoms.FigmaShapeAtom
+import com.kevinschildhorn.atomik.atomic.atoms.FigmaTextAtom
+import com.kevinschildhorn.atomik.atomic.atoms.alignment
+import com.kevinschildhorn.atomik.atomic.atoms.atomikColor
+import com.kevinschildhorn.atomik.atomic.atoms.interfaces.textAtom
+import com.kevinschildhorn.atomik.atomic.atoms.textStyle
+import com.kevinschildhorn.common.design.theme.kevinrestart.KevinAtoms
 
 @Preview
 @Composable

@@ -1,5 +1,5 @@
-package me.kevinschildhorn.common
+package com.kevinschildhorn.common
 
-import me.kevinschildhorn.atomik.atomic.atoms.interfaces.TextAtom
+import com.kevinschildhorn.atomik.atomic.atoms.interfaces.TextAtom
 
 typealias AtomikTextAtom = TextAtom

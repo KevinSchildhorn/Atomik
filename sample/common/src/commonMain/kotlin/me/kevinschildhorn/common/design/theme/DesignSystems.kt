@@ -1,4 +1,4 @@
-package me.kevinschildhorn.common.design.theme
+package com.kevinschildhorn.common.design.theme
 
 /*
 val designSystem = DefaultDesignSystem(

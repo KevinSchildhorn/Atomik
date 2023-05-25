@@ -1,4 +1,4 @@
-package me.kevinschildhorn.android.ui.screens.xml
+package com.kevinschildhorn.android.ui.screens.xml
 
 import android.content.Context
 import android.util.AttributeSet
@@ -8,12 +8,12 @@ import android.widget.FrameLayout
 import android.widget.ImageView
 import androidx.appcompat.widget.LinearLayoutCompat
 import androidx.core.view.setPadding
-import me.kevinschildhorn.android.databinding.SampleViewBinding
-import me.kevinschildhorn.atomik.DesignSystem
-import me.kevinschildhorn.atomik.ExperimentalAtomik
-import me.kevinschildhorn.atomik.atomic.atoms.xml.applyColorAtom
-import me.kevinschildhorn.atomik.atomic.atoms.xml.applyTextAtom
-import me.kevinschildhorn.common.design.theme.kevinrestart.KevinAtoms
+import com.kevinschildhorn.android.databinding.SampleViewBinding
+import com.kevinschildhorn.atomik.DesignSystem
+import com.kevinschildhorn.atomik.ExperimentalAtomik
+import com.kevinschildhorn.atomik.atomic.atoms.xml.applyColorAtom
+import com.kevinschildhorn.atomik.atomic.atoms.xml.applyTextAtom
+import com.kevinschildhorn.common.design.theme.kevinrestart.KevinAtoms
 
 @OptIn(ExperimentalAtomik::class)
 internal class DefaultDesignView

@@ -1,11 +1,11 @@
-package me.kevinschildhorn.common.design.theme.kevinrestart
+package com.kevinschildhorn.common.design.theme.kevinrestart
 
-import me.kevinschildhorn.atomik.atomic.atoms.FigmaShapeAtom
-import me.kevinschildhorn.atomik.atomic.atoms.FigmaTextAtom
-import me.kevinschildhorn.atomik.atomic.atoms.interfaces.AtomikConstraintX
-import me.kevinschildhorn.atomik.atomic.atoms.interfaces.AtomikConstraintY
-import me.kevinschildhorn.atomik.typography.base.AtomikTypography
-import me.kevinschildhorn.atomik.typography.base.AtomikTypographyType
+import com.kevinschildhorn.atomik.atomic.atoms.FigmaShapeAtom
+import com.kevinschildhorn.atomik.atomic.atoms.FigmaTextAtom
+import com.kevinschildhorn.atomik.atomic.atoms.interfaces.AtomikConstraintX
+import com.kevinschildhorn.atomik.atomic.atoms.interfaces.AtomikConstraintY
+import com.kevinschildhorn.atomik.typography.base.AtomikTypography
+import com.kevinschildhorn.atomik.typography.base.AtomikTypographyType
 
 object KevinAtoms {
 

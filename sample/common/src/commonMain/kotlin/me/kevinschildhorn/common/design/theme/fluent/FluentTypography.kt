@@ -1,4 +1,4 @@
-package me.kevinschildhorn.common.design.theme.fluent
+package com.kevinschildhorn.common.design.theme.fluent
 
 /*
 enum class FluentTypographies(override val id: String, override val typography: AtomikTypography) : AtomikTypographyType {

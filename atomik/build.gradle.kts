@@ -1,7 +1,5 @@
+import com.vanniktech.maven.publish.SonatypeHost
 import org.jetbrains.compose.ComposeCompilerKotlinSupportPlugin
-import org.jetbrains.kotlin.gradle.plugin.KotlinCompilation
-import org.jetbrains.kotlin.gradle.plugin.KotlinCompilerPluginSupportPlugin
-import org.jetbrains.kotlin.gradle.plugin.KotlinPlatformType
 
 plugins {
     kotlin("multiplatform")
@@ -10,8 +8,7 @@ plugins {
     id("org.jetbrains.compose")
     id("org.jetbrains.dokka")
     id("org.jlleitschuh.gradle.ktlint")
-    // id("maven-publish")
-    id("convention.publication")
+    id("com.vanniktech.maven.publish")
 }
 
 // Exclude compose from iOS
@@ -29,11 +26,46 @@ apply<ComposeNoNativePlugin>() // Re-adding Compose Compilers only for non-nativ
 group = "io.github.kevinschildhorn"
 version = "0.0.2"
 
+
+mavenPublishing {
+    coordinates("io.github.kevinschildhorn.atomik", "atomik", "0.0.2")
+
+    pom {
+        name.set("Atomik")
+        description.set("Atomik is a Kotlin Multiplatform library that acts as an implementation of a design system in your shared code.")
+        inceptionYear.set("2023")
+        url.set("https://github.com/KevinSchildhorn/Atomik/")
+        licenses {
+            license {
+                name.set("The Apache License, Version 2.0")
+                url.set("http://www.apache.org/licenses/LICENSE-2.0.txt")
+                distribution.set("http://www.apache.org/licenses/LICENSE-2.0.txt")
+            }
+        }
+        developers {
+            developer {
+                id.set("kevinschildhorn")
+                name.set("Kevin Schildhorn")
+                url.set("https://github.com/KevinSchildhorn/")
+            }
+        }
+        scm {
+            url.set("https://github.com/KevinSchildhorn/Atomik/")
+            connection.set("scm:git:git://github.com/KevinSchildhorn/Atomik.git")
+            developerConnection.set("scm:git:ssh://git@github.com/KevinSchildhorn/Atomik.git")
+        }
+    }
+
+    publishToMavenCentral(SonatypeHost.DEFAULT)
+    signAllPublications()
+}
+
+
 kotlin {
     explicitApi()
-    android {
-        publishLibraryVariants("release", "debug")
-    }
+    //android {
+    //    publishLibraryVariants("release", "debug")
+    //}
     ios {
         binaries {
             framework {
@@ -53,17 +85,18 @@ kotlin {
                 implementation(kotlin("test"))
             }
         }
+        /*
         val androidMain by getting {
             dependsOn(commonMain)
             dependencies {
                 api("androidx.appcompat:appcompat:1.6.1")
-                api("androidx.core:core-ktx:1.10.0")
+                api("androidx.core:core-ktx:1.10.1")
                 implementation(compose.runtime)
                 implementation(compose.foundation)
                 implementation(compose.material)
                 implementation(compose.ui)
             }
-        }
+        }*/
         val iosMain by getting {
             dependsOn(commonMain)
             dependencies {
