@@ -1,5 +1,7 @@
 import com.vanniktech.maven.publish.SonatypeHost
 import org.jetbrains.compose.ComposeCompilerKotlinSupportPlugin
+import com.vanniktech.maven.publish.KotlinMultiplatform
+import com.vanniktech.maven.publish.JavadocJar
 
 plugins {
     kotlin("multiplatform")
@@ -24,10 +26,10 @@ class ComposeNoNativePlugin : org.jetbrains.kotlin.gradle.plugin.KotlinCompilerP
 apply<ComposeNoNativePlugin>() // Re-adding Compose Compilers only for non-native environments
 
 group = "io.github.kevinschildhorn"
-version = "0.0.2-SNAPSHOT"
+version = "0.0.3"
 
 mavenPublishing {
-    coordinates("io.github.kevinschildhorn.atomik", "atomik", "0.0.2-SNAPSHOT")
+    coordinates("io.github.kevinschildhorn", "atomik", "0.0.3")
 
     pom {
         name.set("Atomik")
@@ -55,7 +57,7 @@ mavenPublishing {
         }
     }
 
-    publishToMavenCentral(SonatypeHost.S01)
+    publishToMavenCentral(SonatypeHost.S01, true)
     signAllPublications()
 }
 

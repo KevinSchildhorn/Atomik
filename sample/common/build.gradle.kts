@@ -49,7 +49,7 @@ kotlin {
                 implementation("co.touchlab:kermit-koin:1.2.2")
                 implementation(compose.runtime)
                 //api(project(":atomik"))
-                implementation("com.github.KevinSchildhorn:Atomik:0.0.2-SNAPSHOT")
+                implementation("io.github.kevinschildhorn:atomik:0.0.3")
             }
         }
     }
