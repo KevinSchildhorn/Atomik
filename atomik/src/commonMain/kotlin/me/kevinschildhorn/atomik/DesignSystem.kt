@@ -7,22 +7,16 @@ import me.kevinschildhorn.atomik.typography.CustomTypographySet
 import me.kevinschildhorn.atomik.typography.base.AtomikFontFamily
 import me.kevinschildhorn.atomik.typography.base.TypographySet
 
-
-@RequiresOptIn(message = "This API Is Experimental")
-@Retention(AnnotationRetention.BINARY)
-@Target(AnnotationTarget.CLASS, AnnotationTarget.FUNCTION, AnnotationTarget.PROPERTY)
-public annotation class ExperimentalAtomik
-
 /**
  * A Design System
  *
  * This is the core of the Atomik Library, representing a Design Systems components.
  * This is based on atomic design which is included in the Design System
  *
- * @property[colorSet] the collection of colors to be used in this Design System
- * @property[typographySet] the collection of typohraphies to be used in this Design System
- * @property[components] the atomic components to be used in this Design System
- * @property[fontFamily] the font family passed into the Design System from the Platform level
+ * @property colorSet the collection of colors to be used in this Design System
+ * @property typographySet  the collection of typohraphies to be used in this Design System
+ * @property components  the atomic components to be used in this Design System
+ * @property fontFamily  the font family passed into the Design System from the Platform level
  */
 @ExperimentalAtomik
 public open class DesignSystem(
@@ -48,11 +42,22 @@ class DefaultDesignSystem(
     override var fontFamily: AtomikFontFamily?,
 ) : DesignSystem(colorSet, typographySet, components, fontFamily)
 */
+
+/**
+ * A Custom implementation of a Design System
+ *
+ * This inherits the [DesignSystem], and uses Custom implementations of the properties
+ * This is based on atomic design which is included in the Design System
+ *
+ * @property colorSet the custom collection of colors to be used in this Design System
+ * @property typographySet the custom collection of typohraphies to be used in this Design System
+ * @property components the atomic components to be used in this Design System
+ * @property fontFamily the font family passed into the Design System from the Platform level
+ */
 @OptIn(ExperimentalAtomik::class)
-public class CustomDesignSystem(
+internal class CustomDesignSystem(
     override val colorSet: CustomColorSet,
     override val typographySet: CustomTypographySet,
     override val components: Map<String, Atom>,
-    override var fontFamily: AtomikFontFamily?,
+    override var fontFamily: AtomikFontFamily?
 ) : DesignSystem(colorSet, typographySet, components, fontFamily)
-

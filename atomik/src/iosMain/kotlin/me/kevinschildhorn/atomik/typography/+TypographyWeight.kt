@@ -10,7 +10,11 @@ import platform.UIKit.UIFontWeightRegular
 import platform.UIKit.UIFontWeightThin
 import platform.UIKit.UIFontWeightUltraLight
 
-val AtomikTypographyWeight.fontWeight: UIFontWeight
+/**
+ * the UIFontWeight based on the common [AtomikTypographyWeight]
+ */
+@Suppress("SpellCheckingInspection")
+internal val AtomikTypographyWeight.fontWeight: UIFontWeight
     get() = when (this) {
         AtomikTypographyWeight.NORMAL -> UIFontWeightRegular
         AtomikTypographyWeight.BOLD -> UIFontWeightBold

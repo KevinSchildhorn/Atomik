@@ -7,6 +7,9 @@ import me.kevinschildhorn.atomik.atomic.atoms.interfaces.AtomikConstraintX
 import me.kevinschildhorn.atomik.atomic.atoms.interfaces.AtomikConstraintY
 import me.kevinschildhorn.atomik.atomic.atoms.interfaces.ConstrainedAtom
 
+/**
+ * The Vertical compose Alignment, based on the [ConstrainedAtom]
+ */
 public val ConstrainedAtom.alignmentVertical: Alignment.Vertical
     get() = when (this.constraintY) {
         AtomikConstraintY.ALIGN_TOP -> Alignment.Top
@@ -15,6 +18,9 @@ public val ConstrainedAtom.alignmentVertical: Alignment.Vertical
         AtomikConstraintY.SCALE -> Alignment.CenterVertically
     }
 
+/**
+ * The Horizontal compose Alignment, based on the [ConstrainedAtom]
+ */
 public val ConstrainedAtom.alignmentHorizontal: Alignment.Horizontal
     get() = when (this.constraintX) {
         AtomikConstraintX.ALIGN_LEFT -> Alignment.Start
@@ -22,6 +28,12 @@ public val ConstrainedAtom.alignmentHorizontal: Alignment.Horizontal
         AtomikConstraintX.CENTER -> Alignment.CenterHorizontally
         AtomikConstraintX.SCALE -> Alignment.CenterHorizontally
     }
+
+/**
+ * The compose Alignment, based on the [ConstrainedAtom]. Combines both vertical and horizontal
+ */
+public val ConstrainedAtom.alignment: Alignment
+    get() = BiasAlignment(horizontalBias, verticalBias)
 
 private val ConstrainedAtom.verticalBias: Float
     get() = when (this.constraintY) {
@@ -38,7 +50,3 @@ private val ConstrainedAtom.horizontalBias: Float
         AtomikConstraintX.CENTER -> 0f
         AtomikConstraintX.SCALE -> 0f
     }
-
-public val ConstrainedAtom.alignment: Alignment
-    get() = BiasAlignment(horizontalBias, verticalBias)
-

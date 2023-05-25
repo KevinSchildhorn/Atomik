@@ -2,10 +2,17 @@ package me.kevinschildhorn.atomik.atomic.atoms.interfaces
 
 import me.kevinschildhorn.atomik.atomic.atoms.Atom
 
-public interface RoundedAtom : AtomInterface {
+/**
+ * An atom that has rounded edges
+ *
+ * @property radius the radius of the rounded edges (in dp / pt)
+ */
+internal interface RoundedAtom : AtomInterface {
     public val radius: Int
 }
 
-public val Atom.roundedAtom: RoundedAtom?
-    get() = this.asAtom<RoundedAtom>()
-
+/**
+ * Convenience function to get the atom as a rounded atom
+ */
+internal val Atom.roundedAtom: RoundedAtom?
+    get() = this.asAtom()
