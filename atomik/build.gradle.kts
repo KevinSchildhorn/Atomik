@@ -61,6 +61,12 @@ mavenPublishing {
     signAllPublications()
 }
 
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
+    kotlinOptions {
+        jvmTarget = "15"
+    }
+}
+
 kotlin {
     explicitApi()
     android()
@@ -71,6 +77,7 @@ kotlin {
             }
         }
     }
+    jvmToolchain(15)
     sourceSets {
         val commonMain by getting {
             dependencies {

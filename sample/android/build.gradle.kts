@@ -8,6 +8,12 @@ plugins {
 group = "com.kevinschildhorn"
 version = "0.0.2"
 
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
+    kotlinOptions {
+        jvmTarget = "15"
+    }
+}
+
 dependencies {
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation(project(":sample:common"))

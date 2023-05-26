@@ -25,8 +25,15 @@ class ComposeNoNativePlugin : org.jetbrains.kotlin.gradle.plugin.KotlinCompilerP
 }
 apply<ComposeNoNativePlugin>() // Re-adding Compose Compilers only for non-native environments
 
+
 group = "com.kevinschildhorn"
 version = "0.0.2"
+
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
+    kotlinOptions {
+        jvmTarget = "15"
+    }
+}
 
 kotlin {
     cocoapods {
@@ -39,6 +46,8 @@ kotlin {
         }
     }
 
+    jvmToolchain(15)
+
     android()
     ios()
     sourceSets {
@@ -49,7 +58,7 @@ kotlin {
                 implementation("co.touchlab:kermit-koin:1.2.2")
                 implementation(compose.runtime)
                 //api(project(":atomik"))
-                implementation("io.github.kevinschildhorn:atomik:0.0.3")
+                api("io.github.kevinschildhorn:atomik:0.0.3")
             }
         }
     }
