@@ -33,6 +33,8 @@ dependencies {
 @Suppress("UnstableApiUsage")
 android {
 
+    namespace = "com.kevinschildhorn.android"
+
     compileSdk = 33
     defaultConfig {
         applicationId = "com.kevinschildhorn.sampleandroid"

@@ -1,7 +1,4 @@
 import org.jetbrains.compose.ComposeCompilerKotlinSupportPlugin
-import org.jetbrains.kotlin.gradle.plugin.KotlinCompilation
-import org.jetbrains.kotlin.gradle.plugin.KotlinCompilerPluginSupportPlugin
-import org.jetbrains.kotlin.gradle.plugin.KotlinPlatformType
 import org.jetbrains.kotlin.gradle.plugin.mpp.Framework.BitcodeEmbeddingMode.BITCODE
 
 plugins {
@@ -58,7 +55,7 @@ kotlin {
                 implementation("co.touchlab:kermit-koin:1.2.2")
                 implementation(compose.runtime)
                 //api(project(":atomik"))
-                api("io.github.kevinschildhorn:atomik:0.0.3")
+                api("io.github.kevinschildhorn:atomik:0.0.6")
             }
         }
     }

@@ -1,7 +1,6 @@
+import com.vanniktech.maven.publish.AndroidMultiVariantLibrary
 import com.vanniktech.maven.publish.SonatypeHost
 import org.jetbrains.compose.ComposeCompilerKotlinSupportPlugin
-import com.vanniktech.maven.publish.KotlinMultiplatform
-import com.vanniktech.maven.publish.JavadocJar
 
 plugins {
     kotlin("multiplatform")
@@ -26,10 +25,13 @@ class ComposeNoNativePlugin : org.jetbrains.kotlin.gradle.plugin.KotlinCompilerP
 apply<ComposeNoNativePlugin>() // Re-adding Compose Compilers only for non-native environments
 
 group = "io.github.kevinschildhorn"
-version = "0.0.3"
+version = "0.0.6"
+android {
+    namespace = "com.kevinschildhorn.atomik"
+}
 
 mavenPublishing {
-    coordinates("io.github.kevinschildhorn", "atomik", "0.0.3")
+    coordinates("io.github.kevinschildhorn", "atomik", "0.0.6")
 
     pom {
         name.set("Atomik")
@@ -69,7 +71,9 @@ tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach 
 
 kotlin {
     explicitApi()
-    android()
+    android {
+        publishLibraryVariants("debug", "release")
+    }
     ios {
         binaries {
             framework {
@@ -132,6 +136,11 @@ android {
         named("main") {
             manifest.srcFile("src/androidMain/AndroidManifest.xml")
             res.srcDirs("src/androidMain/res")
+        }
+    }
+    buildTypes {
+        release {
+            isMinifyEnabled = true
         }
     }
 }
