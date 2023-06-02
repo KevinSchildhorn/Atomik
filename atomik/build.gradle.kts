@@ -1,7 +1,6 @@
+import com.vanniktech.maven.publish.AndroidMultiVariantLibrary
+import com.vanniktech.maven.publish.SonatypeHost
 import org.jetbrains.compose.ComposeCompilerKotlinSupportPlugin
-import org.jetbrains.kotlin.gradle.plugin.KotlinCompilation
-import org.jetbrains.kotlin.gradle.plugin.KotlinCompilerPluginSupportPlugin
-import org.jetbrains.kotlin.gradle.plugin.KotlinPlatformType
 
 plugins {
     kotlin("multiplatform")
@@ -10,7 +9,7 @@ plugins {
     id("org.jetbrains.compose")
     id("org.jetbrains.dokka")
     id("org.jlleitschuh.gradle.ktlint")
-    id("maven-publish")
+    id("com.vanniktech.maven.publish")
 }
 
 // Exclude compose from iOS
@@ -25,17 +24,56 @@ class ComposeNoNativePlugin : org.jetbrains.kotlin.gradle.plugin.KotlinCompilerP
 }
 apply<ComposeNoNativePlugin>() // Re-adding Compose Compilers only for non-native environments
 
-group = "com.kevinschildhorn.atomik"
-version = "0.0.2"
+group = "io.github.kevinschildhorn"
+version = "0.0.6"
+android {
+    namespace = "com.kevinschildhorn.atomik"
+}
 
-kotlin {
-    publishing {
-        repositories {
-            mavenLocal()
+mavenPublishing {
+    coordinates("io.github.kevinschildhorn", "atomik", "0.0.6")
+
+    pom {
+        name.set("Atomik")
+        description.set("Atomik is a Kotlin Multiplatform library that acts as an implementation of a design system in your shared code.")
+        inceptionYear.set("2023")
+        url.set("https://github.com/KevinSchildhorn/Atomik/")
+        licenses {
+            license {
+                name.set("The Apache License, Version 2.0")
+                url.set("http://www.apache.org/licenses/LICENSE-2.0.txt")
+                distribution.set("http://www.apache.org/licenses/LICENSE-2.0.txt")
+            }
+        }
+        developers {
+            developer {
+                id.set("kevinschildhorn")
+                name.set("Kevin Schildhorn")
+                url.set("https://github.com/KevinSchildhorn/")
+            }
+        }
+        scm {
+            url.set("https://github.com/KevinSchildhorn/Atomik/")
+            connection.set("scm:git:git://github.com/KevinSchildhorn/Atomik.git")
+            developerConnection.set("scm:git:ssh://git@github.com/KevinSchildhorn/Atomik.git")
         }
     }
 
-    android()
+    publishToMavenCentral(SonatypeHost.S01, true)
+    signAllPublications()
+}
+
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
+    kotlinOptions {
+        jvmTarget = "15"
+    }
+}
+
+kotlin {
+    explicitApi()
+    android {
+        publishLibraryVariants("debug", "release")
+    }
     ios {
         binaries {
             framework {
@@ -43,8 +81,9 @@ kotlin {
             }
         }
     }
+    jvmToolchain(15)
     sourceSets {
-        commonMain {
+        val commonMain by getting {
             dependencies {
                 implementation(kotlin("stdlib-common"))
                 implementation("co.touchlab:kermit:1.2.2")
@@ -56,9 +95,10 @@ kotlin {
             }
         }
         val androidMain by getting {
+            dependsOn(commonMain)
             dependencies {
                 api("androidx.appcompat:appcompat:1.6.1")
-                api("androidx.core:core-ktx:1.10.0")
+                api("androidx.core:core-ktx:1.10.1")
                 implementation(compose.runtime)
                 implementation(compose.foundation)
                 implementation(compose.material)
@@ -66,6 +106,7 @@ kotlin {
             }
         }
         val iosMain by getting {
+            dependsOn(commonMain)
             dependencies {
             }
         }
@@ -95,6 +136,11 @@ android {
         named("main") {
             manifest.srcFile("src/androidMain/AndroidManifest.xml")
             res.srcDirs("src/androidMain/res")
+        }
+    }
+    buildTypes {
+        release {
+            isMinifyEnabled = true
         }
     }
 }

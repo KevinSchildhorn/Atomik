@@ -1,8 +1,5 @@
-import org.jetbrains.kotlin.gradle.plugin.mpp.Framework.BitcodeEmbeddingMode.BITCODE
 import org.jetbrains.compose.ComposeCompilerKotlinSupportPlugin
-import org.jetbrains.kotlin.gradle.plugin.KotlinCompilation
-import org.jetbrains.kotlin.gradle.plugin.KotlinCompilerPluginSupportPlugin
-import org.jetbrains.kotlin.gradle.plugin.KotlinPlatformType
+import org.jetbrains.kotlin.gradle.plugin.mpp.Framework.BitcodeEmbeddingMode.BITCODE
 
 plugins {
     kotlin("multiplatform")
@@ -29,6 +26,12 @@ apply<ComposeNoNativePlugin>() // Re-adding Compose Compilers only for non-nativ
 group = "com.kevinschildhorn"
 version = "0.0.2"
 
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
+    kotlinOptions {
+        jvmTarget = "15"
+    }
+}
+
 kotlin {
     cocoapods {
         summary = "Some description for a Kotlin/Native module"
@@ -40,6 +43,8 @@ kotlin {
         }
     }
 
+    jvmToolchain(15)
+
     android()
     ios()
     sourceSets {
@@ -49,8 +54,8 @@ kotlin {
                 implementation("co.touchlab:kermit:1.2.2")
                 implementation("co.touchlab:kermit-koin:1.2.2")
                 implementation(compose.runtime)
-                api(project(":atomik"))
-                //implementation("com.github.KevinSchildhorn:Atomik:0.0.2")
+                //api(project(":atomik"))
+                api("io.github.kevinschildhorn:atomik:0.0.6")
             }
         }
     }
