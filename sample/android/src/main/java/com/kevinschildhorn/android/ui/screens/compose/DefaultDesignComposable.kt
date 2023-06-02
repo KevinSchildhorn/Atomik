@@ -3,6 +3,9 @@ package com.kevinschildhorn.android.ui.screens.compose
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 
+/*
+ * A basic Composable to showcase an ErrorView, will be removed to add more customizable views
+ */
 @Preview
 @Composable
 fun DefaultDesignComposable(/*designSystem: DesignSystem? = null*/) {
