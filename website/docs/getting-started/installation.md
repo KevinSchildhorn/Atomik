@@ -13,10 +13,11 @@ Atomik is a Kotlin Multiplatform library that acts as an implementation of a des
 ## Getting Started
 
 To start using `Atomik`, follow these docs:
+<!--
 1. [Creating a Design System](docs/CREATING_A_DESIGN_SYSTEM.MD)
 2. [Creating an atom](docs/CREATING_AN_ATOM.MD)
 3. [Using an atom](docs/USING_AN_ATOM.MD)
-
+-->
 ## Pre-Requisites
 ### What is a Design System
 
