@@ -42,7 +42,10 @@ fun ColorSampleComposable(/*designSystem: DesignSystem? = null*/) {
         )
         Spacer(modifier = Modifier.size(0.dp, 20.dp))
         subtitle("Text View")
-        Text(text = "Here is some text")
+        Text(
+            text = "Here is some text",
+            color = simpleAtom.color.composeColor
+        )
         Spacer(modifier = Modifier.size(0.dp, 20.dp))
         subtitle("Button")
         Button(onClick = { }) {

@@ -24,7 +24,7 @@ public expect class AtomikColor {
 
 AtomikColors can be created either with an RGBA value or with a hex value, represented as a Long. Both support an optional alpha value
 
-```
+```kotlin
 AtomikColor(0xFFFFFF)
 AtomikColor(r = 255, g = 255, b = 255)
 // With Alpha
