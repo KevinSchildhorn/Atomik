@@ -22,7 +22,7 @@ Additional components include: Elevation, Spacing, and Accessibility.
   * ~~Android~~
   * iOS
 * Applying AtomikColor to Typography Atoms
-  * Android
+  * ~~Android~~
   * iOS
 * Applying AtomikColor to Iconography Atoms
   * Android
