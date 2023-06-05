@@ -36,11 +36,12 @@ internal class ColorSampleView
         binding.editText.applyMolecule(ColorSampleAtoms.simpleTextFieldMolecule)
     }
 
-    private fun initHeaders() {
-        binding.titleView.applyTextAtom(ScaffoldingAtoms.headerTitle)
+    private fun initHeaders() = with(binding) {
+        titleView.applyTextAtom(ScaffoldingAtoms.headerTitle)
         val subtitleAtom = ScaffoldingAtoms.headerSubtitle
-        binding.simpleTitle.applyTextAtom(subtitleAtom)
-        binding.textViewTitle.applyTextAtom(subtitleAtom)
-        binding.buttonTitle.applyTextAtom(subtitleAtom)
+        simpleTitle.applyTextAtom(subtitleAtom)
+        textViewTitle.applyTextAtom(subtitleAtom)
+        buttonTitle.applyTextAtom(subtitleAtom)
+        textFieldTitle.applyTextAtom(subtitleAtom)
     }
 }
