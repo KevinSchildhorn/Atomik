@@ -6,4 +6,5 @@
     <string name="here_is_some_text">Here is some text</string>
     <string name="button">Button</string>
     <string name="simple_image_content_description">simple image for color</string>
+    <string name="text_field">Text Field</string>
 </resources>
