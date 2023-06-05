@@ -5,7 +5,7 @@ import com.kevinschildhorn.atomik.color.base.AtomikColor
 
 private val primary = AtomikColor(255, 165, 0)
 
-val kevinColorSet = CustomColorSet(
+val sampleColorSet = CustomColorSet(
     fallbackColor = primary,
     colors = mapOf(
         "primary" to primary,

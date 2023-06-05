@@ -12,7 +12,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.kevinschildhorn.android.ui.TabBar
 import com.kevinschildhorn.android.ui.screens.DesignScaffolding
 import com.kevinschildhorn.android.ui.screens.Screen
+import com.kevinschildhorn.android.ui.screens.compose.ColorSampleComposable
 import com.kevinschildhorn.android.ui.screens.compose.DefaultDesignComposable
+import com.kevinschildhorn.android.ui.screens.xml.ColorSampleView
 import com.kevinschildhorn.android.ui.screens.xml.DefaultDesignView
 
 class MainActivity : AppCompatActivity() {
@@ -37,7 +39,7 @@ class MainActivity : AppCompatActivity() {
             bottomBar = {
                 TabBar(
                     buttons = mapOf(
-                        "A" to { screenState.value = Screen.A },
+                        "Color" to { screenState.value = Screen.A },
                         "B" to { screenState.value = Screen.B },
                         "C" to { screenState.value = Screen.C }
                     )
@@ -46,8 +48,8 @@ class MainActivity : AppCompatActivity() {
         ) { _ ->
             when (screenState.value) {
                 Screen.A -> DesignScaffolding(
-                    composeView = { DefaultDesignComposable() },
-                    androidView = { DefaultDesignView(it) }
+                    composeView = { ColorSampleComposable() },
+                    androidView = { ColorSampleView(it) }
                 )
                 Screen.B -> DesignScaffolding(
                     composeView = { DefaultDesignComposable() },

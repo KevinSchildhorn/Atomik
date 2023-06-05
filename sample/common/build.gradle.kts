@@ -54,8 +54,8 @@ kotlin {
                 implementation("co.touchlab:kermit:1.2.2")
                 implementation("co.touchlab:kermit-koin:1.2.2")
                 implementation(compose.runtime)
-                //api(project(":atomik"))
-                api("io.github.kevinschildhorn:atomik:0.0.6")
+                api(project(":atomik"))
+                //api("io.github.kevinschildhorn:atomik:0.0.6")
             }
         }
     }

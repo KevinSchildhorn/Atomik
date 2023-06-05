@@ -13,7 +13,7 @@ import com.kevinschildhorn.atomik.DesignSystem
 import com.kevinschildhorn.atomik.ExperimentalAtomik
 import com.kevinschildhorn.atomik.atomic.atoms.xml.applyColorAtom
 import com.kevinschildhorn.atomik.atomic.atoms.xml.applyTextAtom
-import com.kevinschildhorn.common.design.theme.kevinrestart.KevinAtoms
+import com.kevinschildhorn.common.design.theme.kevinrestart.atoms.ColorSampleAtoms
 
 @OptIn(ExperimentalAtomik::class)
 internal class DefaultDesignView
@@ -34,7 +34,7 @@ internal class DefaultDesignView
     }
 
     private fun initErrorView() = with(binding.errorView) {
-        val textViewAtom = KevinAtoms.errorViewAtom
+        val textViewAtom = ColorSampleAtoms.errorViewAtom
         applyColorAtom(textViewAtom)
 
         applyTextAtom(textViewAtom.subAtom())
