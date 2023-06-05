@@ -10,7 +10,7 @@ import TabItem from '@theme/TabItem';
 <!-- [Dokka](../../../atomik/build/dokka/html/index.html) // Doesnt work -->
 
 
-### Color Atom
+## Color Atom
 
 ```kotlin
 public interface ColorAtom : AtomInterface {
@@ -18,9 +18,11 @@ public interface ColorAtom : AtomInterface {
 }
 ``` 
 
-Simply contains a color.
+Simply contains a color. This Atom can be used to apply a color to your view. Note that the color applies to the atom, so for a simple view or button, it would be the background color, but with a text atom it would be the text color.
 
-#### Usage
+### Usage
+
+#### View
 
 <Tabs
   defaultValue="android-xml"
@@ -43,16 +45,48 @@ Simply contains a color.
 </TabItem>
 <TabItem value="ios-view">
 
-```swift
-TODO
-```
+    TODO
 
 </TabItem>
 <TabItem value="ios-swiftui">
 
-```swift
-TODO
-```
+    TODO
+
+</TabItem>
+</Tabs>
+
+#### Text
+
+<Tabs
+  defaultValue="android-xml"
+  values={[
+      { label: 'Android (XML)', value: 'android-xml', },
+      { label: 'Android (Compose)', value: 'android-compose', },
+      { label: 'iOS (UIView)', value: 'ios-view', },
+      { label: 'iOS (SwiftUI)', value: 'ios-swiftui', },
+  ]}
+>
+<TabItem value="android-xml">
+
+    view.applyColorAtom(yourAtom)
+
+</TabItem>
+<TabItem value="android-compose">
+
+    Text(
+        text = "",
+        color = yourAtom.color.composeColor
+    )
+
+</TabItem>
+<TabItem value="ios-view">
+
+    TODO
+
+</TabItem>
+<TabItem value="ios-swiftui">
+
+    TODO
 
 </TabItem>
 </Tabs>

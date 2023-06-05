@@ -30,7 +30,8 @@ internal class ColorSampleView
     init {
         binding = ColorSampleViewBinding.inflate(LayoutInflater.from(context), this, true)
         initHeaders()
-        binding.simpleImage.applyColorAtom(ColorSampleAtoms.simplePrimaryAtom)
+        binding.simpleImage.applyColorAtom(ColorSampleAtoms.simpleSquareAtom)
+        binding.textView.applyColorAtom(ColorSampleAtoms.simpleSquareAtom)
     }
 
     private fun initHeaders() {
