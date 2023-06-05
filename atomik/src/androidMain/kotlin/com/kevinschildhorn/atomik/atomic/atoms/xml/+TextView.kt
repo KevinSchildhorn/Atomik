@@ -5,6 +5,7 @@ import android.widget.TextView
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
 import com.kevinschildhorn.atomik.atomic.atoms.interfaces.TextAtom
+import com.kevinschildhorn.atomik.typography.typeFace
 
 /**
  * Applies a [TextAtom] to a [TextView], setting the text color and size
@@ -14,6 +15,7 @@ import com.kevinschildhorn.atomik.atomic.atoms.interfaces.TextAtom
 public fun TextView.applyTextAtom(textAtom: TextAtom?) {
     textAtom?.let {
         setTextColor(it.textColor.viewColor)
+        typeface = it.typography.typography.typeFace
         textSize = it.typography.typography.size.toFloat()
     }
 }

@@ -19,7 +19,7 @@ Additional components include: Elevation, Spacing, and Accessibility.
 * ~~Adding Support for a shared Color called AtomikColor~~
 * Adding AtomikColor to DesignSystem classes
 * Applying AtomikColor to base Atoms
-  * Android
+  * ~~Android~~
   * iOS
 * Applying AtomikColor to Typography Atoms
   * Android

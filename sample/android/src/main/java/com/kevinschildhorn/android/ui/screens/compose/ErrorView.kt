@@ -11,11 +11,11 @@ import com.kevinschildhorn.atomik.atomic.atoms.alignment
 import com.kevinschildhorn.atomik.atomic.atoms.atomikColor
 import com.kevinschildhorn.atomik.atomic.atoms.interfaces.textAtom
 import com.kevinschildhorn.atomik.atomic.atoms.textStyle
-import com.kevinschildhorn.common.design.theme.kevinrestart.KevinAtoms
+import com.kevinschildhorn.common.design.theme.kevinrestart.atoms.ColorSampleAtoms
 
 @Preview
 @Composable
-fun ErrorView(text: String, molecule: FigmaShapeAtom = KevinAtoms.errorViewAtom) {
+fun ErrorView(text: String, molecule: FigmaShapeAtom = ColorSampleAtoms.errorViewAtom) {
     Box(
         contentAlignment = molecule.alignment,
         modifier = Modifier.atomikColor(molecule)

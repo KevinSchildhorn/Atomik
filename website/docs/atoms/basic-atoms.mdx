@@ -1,0 +1,59 @@
+---
+sidebar_position: 1
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Basic Atoms
+
+<!-- [Dokka](../../../atomik/build/dokka/html/index.html) // Doesnt work -->
+
+
+### Color Atom
+
+```kotlin
+public interface ColorAtom : AtomInterface {
+    public val color: AtomikColor
+}
+``` 
+
+Simply contains a color.
+
+#### Usage
+
+<Tabs
+  defaultValue="android-xml"
+  values={[
+      { label: 'Android (XML)', value: 'android-xml', },
+      { label: 'Android (Compose)', value: 'android-compose', },
+      { label: 'iOS (UIView)', value: 'ios-view', },
+      { label: 'iOS (SwiftUI)', value: 'ios-swiftui', },
+  ]}
+>
+<TabItem value="android-xml">
+
+    view.applyColorAtom(yourAtom)
+
+</TabItem>
+<TabItem value="android-compose">
+
+    Box(modifier = Modifier.atomikColor(yourAtom))
+
+</TabItem>
+<TabItem value="ios-view">
+
+```swift
+TODO
+```
+
+</TabItem>
+<TabItem value="ios-swiftui">
+
+```swift
+TODO
+```
+
+</TabItem>
+</Tabs>
+
