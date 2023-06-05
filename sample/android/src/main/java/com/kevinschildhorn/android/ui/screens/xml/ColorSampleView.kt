@@ -9,6 +9,7 @@ import com.kevinschildhorn.android.databinding.ColorSampleViewBinding
 import com.kevinschildhorn.atomik.DesignSystem
 import com.kevinschildhorn.atomik.ExperimentalAtomik
 import com.kevinschildhorn.atomik.atomic.atoms.xml.applyColorAtom
+import com.kevinschildhorn.atomik.atomic.atoms.xml.applyMolecule
 import com.kevinschildhorn.atomik.atomic.atoms.xml.applyTextAtom
 import com.kevinschildhorn.common.design.theme.kevinrestart.ScaffoldingAtoms
 import com.kevinschildhorn.common.design.theme.kevinrestart.atoms.ColorSampleAtoms
@@ -30,8 +31,9 @@ internal class ColorSampleView
     init {
         binding = ColorSampleViewBinding.inflate(LayoutInflater.from(context), this, true)
         initHeaders()
-        binding.simpleImage.applyColorAtom(ColorSampleAtoms.simpleSquareAtom)
-        binding.textView.applyColorAtom(ColorSampleAtoms.simpleSquareAtom)
+        binding.simpleImage.applyColorAtom(ColorSampleAtoms.simplePrimaryAtom)
+        binding.textView.applyColorAtom(ColorSampleAtoms.simplePrimaryAtom)
+        binding.editText.applyMolecule(ColorSampleAtoms.simpleTextFieldMolecule)
     }
 
     private fun initHeaders() {
