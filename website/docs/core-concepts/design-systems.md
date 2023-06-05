@@ -13,7 +13,7 @@ Existing Design Systems:
 
 The `DesignSystem` takes in four variables, a `ColorSet`, a `TypographySet`, a map of `atoms`, and a `fontFamily`
 
-```
+```kotlin
 open class DesignSystem(
     open val colorSet: ColorSet,
     open val typographySet: TypographySet,
