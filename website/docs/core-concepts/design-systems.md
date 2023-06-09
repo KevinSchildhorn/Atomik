@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Creating a Design System
+# Design System
 
 
 First, create a `DesignSystem`, which can be made using a preset or as a new custom System.
@@ -113,3 +113,35 @@ let fontFamily = [
 ]
 UIDesignKt.designSystem.fontFamily = AtomikAtomikFontFamily(uiFonts: fontFamily)
 ```
+
+
+## Pre-Requisites
+### What is a Design System
+
+A design system is a collection of reusable components, guided by clear standards, that can be assembled together to build any number of applications.
+(This collection of reusable components can also be referred to as a Pattern Library). The design system for developer purposes consists of five major sections:
+* **Layout** - The spacing and organization of components
+* **Typography** - The font and styling of text
+* **Color** - The colors used in the design
+* **Components** - UI elements used in the design
+* **Iconography** - logos and images used in the design
+
+
+
+
+
+
+## Atomik
+
+### Design System
+
+```kotlin
+open class DesignSystem(
+    open val colorSet: ColorSet,
+    open val typographySet: TypographySet,
+    open val atoms: Map<String, Atom>,
+    open var fontFamily: AtomikFontFamily? = null
+)
+```
+
+An Atomik Design System handles three parts of the design System: color, typography and components.

@@ -1,0 +1,118 @@
+---
+sidebar_position: 1
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+Atomik is a Kotlin Multiplatform library that acts as an implementation of a design system in your shared code. It allows you to share design information in common code, and apply it to your UI with ease. It's in an experimental early stage, and should be used for testing purposes only.
+
+### What is Atomic Design
+
+First off, Atomik is based around Atomic Design. If you are unfamiliar with that concept please learn more [here](https://bradfrost.com/blog/post/atomic-web-design/)
+
+In short, atomic design is methodology for creating design systems, in which you create components that can be made up of sub-components, similarly to atoms and molecules.
+
+> **For example**: a Search Bar Organism can contain a Button molecule and a Text Field atom together.
+
+The first layer of components are known as atoms, and are generally a single UI element such as a Text View. Each atom contains color, Typography and iconography data when applicable.
+
+# Installation
+
+The Atomik dependency is located in Maven Central, and should be added to your commonMain source set in your Kotlin Multiplatform module.
+
+```
+implementation("io.github.kevinschildhorn:atomik:X.Y.Z")
+```
+
+## Getting Started
+:::note
+
+As this library is evolving some logic may change.
+
+:::
+
+Atomik has a lot of components and can be hard to jump into. Documentation on each aspect can be found under [Core Concepts](./category/core-concepts).
+
+**Components**:
+* [Atoms](./core-concepts/atoms.md) - The building blocks of Atomik. Modular UI data that can be applied to the UI
+* Molecules and beyond - A hierarchy of atom groups, each containing multiple of the subgroup
+* [Design Systems](./core-concepts/design-systems.md) - A collection of Atoms, Colors, Typographies and Iconographies.
+
+In addition to components, Atomik has specific shared UI details:
+* [AtomikColor](./core-concepts/colors.md) - A common representation of Color, either with Hex or RGBA values
+* AtomikTypography - A common representation of Typography, such as font, size, and weight.
+* AtomikIconography
+
+### Sample Code
+
+#### Atom
+```kotlin
+val color = AtomikColor(r = 100, g = 100, b = 100, a = null)
+val typography = AtomikTypography(size = 14)
+
+val sampleAtom = FigmaShapeAtom(
+    constraintX = AtomikConstraintX.ALIGN_LEFT,
+    constraintY = AtomikConstraintY.ALIGN_TOP,
+    color = color,
+)
+```
+
+#### Design System
+```kotlin
+val colorSet = DefaultColorSet(
+    primary = color,
+    ...
+)
+
+val typographySet = DefaultTypographySet(
+    body = typography,
+    ...
+)
+
+val designSystem = DefaultDesignSystem(
+    colorSet = colorSet,
+    typographySet = typographySet,
+    components = mapOf("sample" to sampleAtom),
+    fontFamily = null,
+)
+```
+
+#### Platform Code
+
+:::danger
+
+These calls will be updated in the future to be more global
+
+:::
+
+<Tabs
+  defaultValue="android-xml"
+  values={[
+      { label: 'Android (XML)', value: 'android-xml', },
+      { label: 'Android (Compose)', value: 'android-compose', },
+      { label: 'iOS (UIView)', value: 'ios-view', },
+      { label: 'iOS (SwiftUI)', value: 'ios-swiftui', },
+  ]}
+>
+<TabItem value="android-xml">
+
+    view.applyColorAtom(yourAtom)
+
+</TabItem>
+<TabItem value="android-compose">
+
+    Box(modifier = Modifier.atomikColor(yourAtom))
+
+</TabItem>
+<TabItem value="ios-view">
+
+    TODO
+
+</TabItem>
+<TabItem value="ios-swiftui">
+
+    TODO
+
+</TabItem>
+</Tabs>
