@@ -52,6 +52,20 @@
                 android:layout_marginBottom="20dp"/>
 
             <TextView
+                android:id="@+id/text_field_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/text_field"
+                android:layout_marginBottom="20dp"/>
+
+            <EditText
+                android:id="@+id/edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/here_is_some_text"
+                android:layout_marginBottom="20dp"/>
+
+            <TextView
                 android:id="@+id/button_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

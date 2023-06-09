@@ -1,6 +1,5 @@
 package com.kevinschildhorn.android.ui.screens.compose
 
-import android.icu.text.CaseMap.Title
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -10,15 +9,19 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.Button
 import androidx.compose.material.Text
-import androidx.compose.material.TextButton
+import androidx.compose.material.TextField
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.kevinschildhorn.android.ui.screens.compose.scaffolding.subtitle
 import com.kevinschildhorn.android.ui.screens.compose.scaffolding.title
-import com.kevinschildhorn.atomik.atomic.atoms.alignment
 import com.kevinschildhorn.atomik.atomic.atoms.atomikColor
+import com.kevinschildhorn.atomik.atomic.molecules.colors
 import com.kevinschildhorn.common.design.theme.kevinrestart.atoms.ColorSampleAtoms
 
 /*
@@ -27,6 +30,11 @@ import com.kevinschildhorn.common.design.theme.kevinrestart.atoms.ColorSampleAto
 @Preview
 @Composable
 fun ColorSampleComposable(/*designSystem: DesignSystem? = null*/) {
+
+    var textFieldValue by remember { mutableStateOf("Here is some text") }
+    val simpleAtom = ColorSampleAtoms.simplePrimaryAtom
+    val textFieldMolecule = ColorSampleAtoms.simpleTextFieldMolecule
+
     Column(
         modifier = Modifier
             .verticalScroll(rememberScrollState())
@@ -34,7 +42,6 @@ fun ColorSampleComposable(/*designSystem: DesignSystem? = null*/) {
     ) {
         title("Color Samples")
         subtitle("View")
-        val simpleAtom = ColorSampleAtoms.simpleSquareAtom
         Box(
             modifier = Modifier
                 .atomikColor(simpleAtom)
@@ -45,6 +52,13 @@ fun ColorSampleComposable(/*designSystem: DesignSystem? = null*/) {
         Text(
             text = "Here is some text",
             color = simpleAtom.color.composeColor
+        )
+        Spacer(modifier = Modifier.size(0.dp, 20.dp))
+        subtitle("Text Field")
+        TextField(
+            value = textFieldValue,
+            onValueChange = { textFieldValue = it },
+            colors = textFieldMolecule.colors(),
         )
         Spacer(modifier = Modifier.size(0.dp, 20.dp))
         subtitle("Button")

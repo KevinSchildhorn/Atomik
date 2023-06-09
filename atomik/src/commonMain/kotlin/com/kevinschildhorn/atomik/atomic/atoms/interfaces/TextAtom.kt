@@ -23,3 +23,14 @@ public interface TextAtom : AtomInterface {
  */
 public val Atom.textAtom: TextAtom?
     get() = this.asAtom()
+
+/**
+ * Convenience class to only get the Text Atom
+ */
+public class SimpleTextAtom(
+    override val textColor: AtomikColor,
+    override val typography: AtomikTypographyType,
+    override val fontFamily: AtomikFontFamily?
+) : Atom(), TextAtom {
+    override val type: AtomType = AtomType.TEXT
+}

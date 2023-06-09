@@ -17,3 +17,10 @@ public interface ColorAtom : AtomInterface {
  */
 internal val Atom.colorAtom: ColorAtom?
     get() = this.asAtom()
+
+/**
+ * Convenience class to only get the Color Atom
+ */
+public class SimpleColorAtom(override val color: AtomikColor) : Atom(), ColorAtom {
+    override val type: AtomType = AtomType.VIEW
+}
