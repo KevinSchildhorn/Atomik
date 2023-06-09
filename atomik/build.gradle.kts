@@ -30,6 +30,10 @@ android {
     namespace = "com.kevinschildhorn.atomik"
 }
 
+tasks.dokkaHtml.configure {
+    outputDirectory.set(file("../docs/dokka/html"))
+}
+
 mavenPublishing {
     coordinates("io.github.kevinschildhorn", "atomik", "0.0.6")
 

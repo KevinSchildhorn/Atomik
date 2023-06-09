@@ -1,17 +1,22 @@
 ---
-sidebar_position: 1
+sidebar_position: 3
 ---
 
-# Creating a Design System
+# Design System
 
+A design system is a collection of reusable components, guided by clear standards, that can be assembled together to build any number of applications.
+(This collection of reusable components can also be referred to as a Pattern Library). The design system for developer purposes consists of five major sections:
+* **Layout** - The spacing and organization of components
+* **Typography** - The font and styling of text
+* **Color** - The colors used in the design
+* **Components** - UI elements used in the design
+* **Iconography** - logos and images used in the design
 
-First, create a `DesignSystem`, which can be made using a preset or as a new custom System.
-Existing Design Systems:
-* `PlatformDesignSystem`
-* `DefaultDesignSystem`
-* `CustomDesignSystem` 
+## Defining a Design System
 
-The `DesignSystem` takes in four variables, a `ColorSet`, a `TypographySet`, a map of `atoms`, and a `fontFamily`
+An Atomik Design System currently handles three parts of the design System: color, typography and components.
+
+The `DesignSystem` takes in four variables, a `ColorSet`, a `TypographySet`, a map of `Atoms`, and a `fontFamily`
 
 ```kotlin
 open class DesignSystem(
@@ -21,29 +26,54 @@ open class DesignSystem(
     open var fontFamily: AtomikFontFamily? = null
 )
 ```
+  
+:::note
+
+The font family is a temporary addition and can be removed once common fonts are added
+
+:::
+
+### Preset Design Systems
+
+The `DesignSystem` should encompass all of the elements of your other Atomik classes. The `DesignSystem` takes in interfaces for colors and typography, and can be easily customized. Additionally there are some existing presets that are recommended based on what you need:
+* `DefaultDesignSystem` - A default implementation of a `DesignSystem`, contains useful data for most cases
+* `PlatformDesignSystem` - Based on the Platforms structure, meshes well with structures like compose Typograhy.
+* `CustomDesignSystem`  - A customizeable `DesignSystem`, supports a completely unique pattern rather than using standards like `h1` and `body` for typography
+
+
+## Design System Elements
 
 ### ColorSet
 
 ![Color Set](img/colorset.png)
 
-`ColorSet` is an interface that can be implemented, however there's also a `DefaultColorSet` for a standard set. There is also a `CustomColorSet` that can be used for more granularity.
-
-`ColorSets` are made up of various `AtomikColor`, which are created with hex codes
+`ColorSet` is an interface that is meant to contain all colors in your project. Most ColorSets are classes that contain a Map of Colors and a fallback color in case it's not found.
 
 ```kotlin
-    val colorSet = DefaultColorSet(
-        primary = AtomikColor(0xFFFFA500),
-        secondary = AtomikColor(0xFFFFD383),
-        background = AtomikColor(0xFFFFFFFF),
-        surface = AtomikColor(0xFFFFFFFF),
-        error = AtomikColor(0xFFFF0000),
+public interface ColorSet {
+    public val fallbackColor: AtomikColor
+    public fun getColor(name: String): AtomikColor
+}
+```
 
-        primaryText = AtomikColor(0xFF402900),
-        secondaryText = AtomikColor(0xFFFFA500),
-        backgroundText = AtomikColor(0xFF25231F),
-        surfaceText = AtomikColor(0xFFFFA500),
-        errorText = AtomikColor(0xFF9E1F1F),
-    )
+`ColorSets` are made up of various [AtomikColor](./colors.md)
+
+They can be implemented, however there's also a `DefaultColorSet` for a standard set. There is also a `CustomColorSet` that can be used for more granularity.
+
+```kotlin
+val colorSet = DefaultColorSet(
+    primary = AtomikColor(0xFFFFA500),
+    secondary = AtomikColor(0xFFFFD383),
+    background = AtomikColor(0xFFFFFFFF),
+    surface = AtomikColor(0xFFFFFFFF),
+    error = AtomikColor(0xFFFF0000),
+
+    primaryText = AtomikColor(0xFF402900),
+    secondaryText = AtomikColor(0xFFFFA500),
+    backgroundText = AtomikColor(0xFF25231F),
+    surfaceText = AtomikColor(0xFFFFA500),
+    errorText = AtomikColor(0xFF9E1F1F),
+)
 ```
 
 ### TypographySet
@@ -51,9 +81,9 @@ open class DesignSystem(
 ![Typography Set](img/typographyset.png)
 
 
-`TypographySet` is an interface that can be implemented, however there's also a `DefaultTypographySet` for a standard set. There is also a `CustomTypographySet` that can be used for granularity.
+`TypographySet` is an interface that is meant to contain all typography data in your project. It is an interface that can be implemented, however there's also a `DefaultTypographySet` for a standard set. There is also a `CustomTypographySet` that can be used for granularity.
 
-`TypographySets` are made up of various `AtomikTypography`, which are referenced by a `TypographyType`.
+`TypographySets` are made up of various `AtomikTypography`, which are referenced by a [TypographyType](./typography).
 
 ```kotlin
 val typographySet = DefaultTypographySet(
@@ -67,26 +97,16 @@ val typographySet = DefaultTypographySet(
     caption = AtomikTypography(weight = AtomikTypographyWeight.BOLD, size = 14),
 )
 ```
-### Atoms
-
-`Atoms` are interface representations of Atoms in Atomic Design. They can be grabbed from the `DesignSystem`. For a quick start you can pass in an empty map. 
-
-To see how to create an `Atom` see //[Creating an atom](design-systems.md)
-
-### DesignSystem
-
-```kotlin
-val designSystem = DefaultDesignSystem(
-    colorSet = ColorSets.light,
-    typographySet = sharedTypography,
-    atoms = emptyMap(),
-    fontFamily = null
-)
-```
 
 ### FontFamily
 
 The `AtomikFontFamily` is an expect/actual class for platform specific fonts. When initializing the Design System it's easier to set it to null and pass in the `FontFamily` later, when the app is started
+
+:::note
+
+The font family is a temporary addition and can be removed once common fonts are added
+
+:::
 
 #### Android
 
