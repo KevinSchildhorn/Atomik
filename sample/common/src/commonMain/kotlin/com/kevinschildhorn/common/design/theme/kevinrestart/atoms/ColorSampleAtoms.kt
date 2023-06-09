@@ -24,7 +24,7 @@ object ColorSampleAtoms {
         override val id: String
             get() = ""
         override val typography: AtomikTypography
-            get() = AtomikTypography(size = 16) // SIZE GOOD
+            get() = AtomikTypography(size = 16)
     }
 
 
@@ -48,7 +48,7 @@ object ColorSampleAtoms {
     private val errorTextAtom = FigmaTextAtom(
         constraintX = AtomikConstraintX.SCALE,
         constraintY = AtomikConstraintY.SCALE,
-        textColor = sampleColorSet.getColor("errorText"), // GOOD
+        textColor = sampleColorSet.getColor("errorText"),
         typography = sampleTypographyType,
         padding = 12
     )
@@ -56,7 +56,7 @@ object ColorSampleAtoms {
     val errorViewAtom = FigmaShapeAtom(
         constraintX = AtomikConstraintX.SCALE,
         constraintY = AtomikConstraintY.ALIGN_TOP,
-        color = sampleColorSet.getColor("Alert & Status/Red/Red 100"), // GOOD
+        color = sampleColorSet.getColor("Alert & Status/Red/Red 100"),
         subComponents = listOf(errorTextAtom)
     )
 }

@@ -31,13 +31,13 @@ Additional components include: Elevation, Spacing, and Accessibility.
   * Android
   * iOS
 * AtomikColor Support for Text/TextView
-  * Android
+  * ~~Android~~
   * iOS
 * AtomikColor Support for Buttons
   * Android
   * iOS
 * AtomikColor Support for TextFields
-  * Android
+  * ~~Android~~
   * iOS
 
 ## Typography
