@@ -9,7 +9,7 @@ Atomik is a Kotlin Multiplatform library that acts as an implementation of a des
 
 :::caution
 
-It's in an experimental early stage, and should be used for testing purposes only.
+Atomik is in an experimental early stage, and should be used for testing purposes only.
 
 :::
 
@@ -21,7 +21,7 @@ In short, atomic design is methodology for creating design systems, in which you
 
 > **For example**: a Search Bar Organism can contain a Button molecule and a Text Field atom together.
 
-The first layer of components are known as atoms, and are generally a single UI element such as a Text View. Each atom contains color, Typography and iconography data when applicable.
+The first layer of components are known as atoms, and are generally a single UI element such as a Text View. Each atom contains color, typography and iconography data when applicable.
 
 # Installation
 
@@ -41,21 +41,21 @@ As this library is evolving some logic may change.
 Atomik has a lot of components and can be hard to jump into. Documentation on each aspect can be found under [Core Concepts](./category/core-concepts).
 
 **Components**:
-* [Atoms](./core-concepts/atoms.md) - The building blocks of Atomik. Modular UI data that can be applied to the UI
-* Molecules and beyond - A hierarchy of atom groups, each containing multiple of the subgroup
+* [Atoms](./core-concepts/atoms) - The building blocks of Atomik. Modular UI data that can be applied to UI elements
+* Molecules and beyond - A hierarchy of atom groups, each containing multiple of their respective subgroup
 * [Design Systems](./core-concepts/design-systems.md) - A collection of Atoms, Colors, Typographies and Iconographies.
 
 In addition to components, Atomik has specific shared UI details:
-* [AtomikColor](./core-concepts/colors.md) - A common representation of Color, either with Hex or RGBA values
-* AtomikTypography - A common representation of Typography, such as font, size, and weight.
-* AtomikIconography
+* [AtomikColor](./core-concepts/colors) - A common representation of Color, either with Hex or RGBA values
+* [AtomikTypography](./core-concepts/typography) - A common representation of Typography, such as font, size, and weight.
+* AtomikIconography - TBD
 
-### Sample Code
+### Example
 
+While it's recommended to read more of the core concepts first, here is a preview of what an `Atomik` design system looks like.
 #### Atom
 ```kotlin
 val color = AtomikColor(r = 100, g = 100, b = 100, a = null)
-val typography = AtomikTypography(size = 14)
 
 val sampleAtom = FigmaShapeAtom(
     constraintX = AtomikConstraintX.ALIGN_LEFT,
@@ -66,6 +66,9 @@ val sampleAtom = FigmaShapeAtom(
 
 #### Design System
 ```kotlin
+val color = AtomikColor(r = 100, g = 100, b = 100, a = null)
+val typography = AtomikTypography(size = 14)
+
 val colorSet = DefaultColorSet(
     primary = color,
     ...
@@ -88,7 +91,7 @@ val designSystem = DefaultDesignSystem(
 
 :::danger
 
-These calls will be updated in the future to be more global
+These calls will be updated in the future to be more generalized
 
 :::
 

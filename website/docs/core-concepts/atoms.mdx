@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
 ---
 
 import Tabs from '@theme/Tabs';
@@ -34,6 +34,8 @@ public interface ColorAtom : AtomInterface {
 }
 ```
 
+> For example a Text View may have an atom that is a `ColorAtom` and a `TextAtom`.
+
 ## Defining Atoms
 
 You may want to create a custom atom for a specific element by adding the `AtomInterfaces` that you want.
@@ -47,11 +49,11 @@ public class MyAtom(
 }
 ```
 
-More Atoms can be found in the [Atoms](../category/atoms) section.
+Here we've added a `ColorAtom` and `BorderAtom`, which are then implemented in the constructor. More Atoms can be found in the [Atoms](../category/atoms) section.
 
 ### Preset Atoms
 
-In addition to creating your own custom Atoms, Atomik also contains some preset atoms for ease of use. You can find them under [preset atoms](../atoms/preset-atoms.mdx). One example of a preset is the `FigmaShapeAtom` which contains data entered in a Figma component.
+In addition to creating your own custom Atoms, Atomik also contains some preset atoms for ease of use. You can find them under [preset atoms](../atoms/preset-atoms.mdx). One example of a preset is the `FigmaShapeAtom` which contains data generally entered in a Figma component.
 
 ```kotlin
 val color = AtomikColor(r = 100, g = 100, b = 100, a = null)

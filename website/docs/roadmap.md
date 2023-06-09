@@ -76,3 +76,4 @@ Additional components include: Elevation, Spacing, and Accessibility.
 * Initial Docusaurus Documentation Audit
 * Full Dokka support
 * Possible Cocoapods or SPM helper framework
+* Support for figma export

@@ -32,16 +32,4 @@ AtomikColor(0xFFFFFF00)
 AtomikColor(r = 255, g = 255, b = 255, a = 0)
 ```
 
-# ColorSets
-
-Most ColorSets are classes that contain a Map of Colors and a fallback color in case it's not found. There are multiple kinds of `ColorSets` currently such as `CustomColorSet` and `CustomColorSetTyped`
-
-```kotlin
-public interface ColorSet {
-    public val fallbackColor: AtomikColor
-    public fun getColor(name: String): AtomikColor
-}
-```
-
-A `ColorSet` should be passed into a Design System and should be a single representation of all of your colors in the Design System.
-
+After creating `AtomikColor` they should be added into your  [Color Set](./design-systems#colorset))
