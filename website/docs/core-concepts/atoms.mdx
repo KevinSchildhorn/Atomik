@@ -1,0 +1,108 @@
+---
+sidebar_position: 2
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Atoms
+
+Atoms are the defining feature in Atomic Design, and are the building blocks of Atomik. They're modular UI data that can be applied to the UI.
+
+In Atomik, Atoms are an abstract class that contain information about a UI Element and should be inherited and customized.
+
+```kotlin
+public abstract class Atom {
+    public abstract val type: AtomType
+    public open val subComponents: List<Atom>
+}
+```
+
+Each atom has optional subcomponents, as well as an `AtomType` which is the type of UI element associated with this Atom. 
+
+:::note
+
+The structure of the `Atom` is prone to change as development goes on, but the concept to remain the same.
+
+:::
+
+Then in addition to this base `Atom`, there are multiple `AtomInterfaces`, which can then define more UI Details. One example of this is the `ColorAtom`:
+
+```kotlin
+public interface ColorAtom : AtomInterface {
+    public val color: AtomikColor
+}
+```
+
+## Defining Atoms
+
+You may want to create a custom atom for a specific element by adding the `AtomInterfaces` that you want.
+
+```kotlin
+public class MyAtom(
+    override val color: AtomikColor,
+    override val borderColor: AtomikColor = color,
+) : Atom(), ColorAtom, BorderedAtom {
+    override val type: AtomType = AtomType.VIEW
+}
+```
+
+More Atoms can be found in the [Atoms](../category/atoms) section.
+
+### Preset Atoms
+
+In addition to creating your own custom Atoms, Atomik also contains some preset atoms for ease of use. You can find them under [preset atoms](../atoms/preset-atoms.mdx). One example of a preset is the `FigmaShapeAtom` which contains data entered in a Figma component.
+
+```kotlin
+val color = AtomikColor(r = 100, g = 100, b = 100, a = null)
+
+val sampleAtom = FigmaShapeAtom(
+    constraintX = AtomikConstraintX.ALIGN_LEFT,
+    constraintY = AtomikConstraintY.ALIGN_TOP,
+    color = color,
+)
+```
+
+This can be useful when your designer is using Figma for your project. If you look under the hood, you can see that this is really an Atom that implements the 
+`ColorAtom`, `PaddingAtom`, `FixedSizeAtom`, and `ConstrainedAtom`
+
+## Applying Atoms
+
+:::caution
+
+This section is under construction
+
+:::
+
+Once you've defined your atoms in shared code, you'll need to apply them to your UI elements. 
+
+<Tabs
+  defaultValue="android-xml"
+  values={[
+      { label: 'Android (XML)', value: 'android-xml', },
+      { label: 'Android (Compose)', value: 'android-compose', },
+      { label: 'iOS (UIView)', value: 'ios-view', },
+      { label: 'iOS (SwiftUI)', value: 'ios-swiftui', },
+  ]}
+>
+<TabItem value="android-xml">
+
+    view.applyColorAtom(yourAtom)
+
+</TabItem>
+<TabItem value="android-compose">
+
+    Box(modifier = Modifier.atomikColor(yourAtom))
+
+</TabItem>
+<TabItem value="ios-view">
+
+    TODO
+
+</TabItem>
+<TabItem value="ios-swiftui">
+
+    TODO
+
+</TabItem>
+</Tabs>

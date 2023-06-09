@@ -5,7 +5,13 @@ sidebar_position: 1
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Atomik is a Kotlin Multiplatform library that acts as an implementation of a design system in your shared code. It allows you to share design information in common code, and apply it to your UI with ease. It's in an experimental early stage, and should be used for testing purposes only.
+Atomik is a Kotlin Multiplatform library that acts as an implementation of a design system in your shared code. It allows you to share design information in common code, and apply it to your UI with ease.
+
+:::caution
+
+It's in an experimental early stage, and should be used for testing purposes only.
+
+:::
 
 ### What is Atomic Design
 
@@ -21,7 +27,7 @@ The first layer of components are known as atoms, and are generally a single UI 
 
 The Atomik dependency is located in Maven Central, and should be added to your commonMain source set in your Kotlin Multiplatform module.
 
-```
+```kotlin
 implementation("io.github.kevinschildhorn:atomik:X.Y.Z")
 ```
 
