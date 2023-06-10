@@ -73,6 +73,15 @@ const config = {
             label: 'Roadmap',
             to: '/docs/roadmap',
           },
+          {
+            label: 'Dokka',
+            to: 'pathname:///dokka/index.html',
+          },
+          {
+            position: 'right',
+            label: 'GitHub',
+            href: 'https://github.com/KevinSchildhorn/Atomik',
+          },
         ],
       },
       footer: {
@@ -82,8 +91,16 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Docs',
-                to: '/docs/intro',
+                label: 'Home',
+                to: '/',
+              },
+              {
+                label: 'Dokka',
+                to: 'pathname:///dokka/index.html',
+              },
+              {
+                label: 'GitHub',
+                href: 'https://github.com/KevinSchildhorn/Atomik',
               },
             ],
           },
