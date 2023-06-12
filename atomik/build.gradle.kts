@@ -31,7 +31,7 @@ android {
 }
 
 tasks.dokkaHtml.configure {
-    outputDirectory.set(file("../docs/dokka/html"))
+    outputDirectory.set(file("../website/static/dokka"))
 }
 
 mavenPublishing {
