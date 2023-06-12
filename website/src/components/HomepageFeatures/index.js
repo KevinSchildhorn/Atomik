@@ -5,7 +5,7 @@ import styles from './styles.module.css';
 const FeatureList = [
   {
     title: 'Kotlin Multiplatform',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    Svg: require('@site/static/img/cross-app.svg').default,
     description: (
       <>
         Atomik can be used on Android and iOS, supporting both traditional and declarative UI.
@@ -14,7 +14,7 @@ const FeatureList = [
   },
   {
     title: 'Simple options make it easy to setup',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    Svg: require('@site/static/img/easy.svg').default,
     description: (
       <>
         With options that match figma you can jump into Atomik with ease.
@@ -23,7 +23,7 @@ const FeatureList = [
   },
   {
     title: 'Flexibility',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: require('@site/static/img/flexible.svg').default,
     description: (
       <>
         With many different atomic modifiers you can easily customize atoms.
